@@ -1,13 +1,301 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>portfolioyiningzhou</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="portfolio-shell">
+      <aside class="sidebar" aria-label="Portfolio navigation">
+        <div class="sidebar-heading">
+          <p class="site-label">Portfolio</p>
+          <h1>Yining Zhou</h1>
+          <nav class="nav-list nav-list-primary" aria-label="Primary sections">
+            <button class="nav-link is-active" type="button" data-target="about">About Me</button>
+            <button class="nav-link" type="button" data-target="resume">Resume</button>
+          </nav>
+        </div>
 
-  <script src="script.js"></script>
-</body>
+        <nav class="nav-list nav-list-projects" aria-label="Projects">
+          <button class="nav-link nav-link-project" type="button" data-target="project-one">
+            <span>Vitband</span>
+            <small>UIUX Design</small>
+          </button>
+          <button class="nav-link" type="button" data-target="project-two">作品二</button>
+          <button class="nav-link" type="button" data-target="project-three">作品三</button>
+        </nav>
+
+        <div class="sidebar-footer">
+          <dl class="contact-list">
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:Cecilyzhou74@gmail.com">Cecilyzhou74@gmail.com</a></dd>
+            </div>
+            <div>
+              <dt>Phone</dt>
+              <dd><a href="tel:+13477204693">(347) 720-4693</a></dd>
+            </div>
+          </dl>
+        </div>
+      </aside>
+
+      <section class="content-panel" aria-label="Portfolio content">
+        <article class="section-block about-section" id="about">
+          <div class="section-copy">
+            <p class="eyebrow">About Me</p>
+            <h2>Hi, I am Yining Zhou.</h2>
+            <div class="about-text">
+              <p class="about-lede">
+                I'm a content creator.<br />
+                I'm a designer.<br />
+                I'm a marketer.
+              </p>
+              <p>
+                I studied Communication Design before earning my master's degree in
+                Visual Arts Administration at New York University. My background allows
+                me to move naturally between design, marketing, and creative strategy,
+                seeing both the visual details and the bigger picture.
+              </p>
+              <p>
+                I've planned social campaigns, developed creator strategies, designed
+                visual assets, and analyzed audience insights. Whether I'm building a
+                campaign or shaping a brand story, I'm always looking for ideas that are
+                culturally relevant, visually compelling, and meaningful to people.
+              </p>
+              <p>
+                I believe great creative isn't just about making something look good.
+                It's about making people stop, feel, and remember.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="section-block resume-section" id="resume">
+          <div class="resume-header">
+            <h2>Resume</h2>
+          </div>
+
+          <div class="resume-grid">
+            <section class="resume-card resume-contact" aria-label="Resume contact">
+              <h3>Contact</h3>
+              <dl>
+                <div>
+                  <dt>Location</dt>
+                  <dd>Long Island City, NY</dd>
+                </div>
+                <div>
+                  <dt>Email</dt>
+                  <dd><a href="mailto:Cecilyzhou74@gmail.com">Cecilyzhou74@gmail.com</a></dd>
+                </div>
+                <div>
+                  <dt>Phone</dt>
+                  <dd><a href="tel:+13477204693">(347) 720-4693</a></dd>
+                </div>
+                <div>
+                  <dt>Work Authorization</dt>
+                  <dd>No sponsorship required</dd>
+                </div>
+              </dl>
+            </section>
+
+            <section class="resume-card" aria-label="Professional summary">
+              <h3>Summary</h3>
+              <p>
+                Digital marketing professional with hands-on experience in social media,
+                content creation, and customer insights. Enjoy working at the intersection
+                of marketing, design, and data to create engaging digital experiences.
+                Experienced in TikTok content, campaign coordination, audience research,
+                and marketing analytics.
+              </p>
+            </section>
+
+            <section class="resume-card resume-education" aria-label="Education">
+              <h3>Education</h3>
+              <div class="resume-item">
+                <div class="resume-item-head">
+                  <h4>Parsons School of Design, The New School</h4>
+                  <span>Aug. 2020 - May 2024</span>
+                </div>
+                <p>Bachelor of Arts in Communication Design</p>
+                <p>
+                  Parsons School of Design Scholarship $52,000; Parsons School of
+                  Design Nominee for Honors Graduate.
+                </p>
+              </div>
+              <div class="resume-item">
+                <div class="resume-item-head">
+                  <h4>New York University</h4>
+                  <span>Aug. 2024 - May 2026</span>
+                </div>
+                <p>Master of Arts in Visual Arts Administration</p>
+              </div>
+            </section>
+
+            <section class="resume-card resume-experience" aria-label="Work experience">
+              <h3>Experience</h3>
+              <div class="resume-item">
+                <div class="resume-number">01</div>
+                <div>
+                  <div class="resume-item-head">
+                    <h4>J&J Solutions Consulting Inc.</h4>
+                    <span>Feb. 2026 - Apr. 2026</span>
+                  </div>
+                  <p class="resume-role">Marketing & Customer Strategy Consultant Intern</p>
+                  <ul>
+                    <li>Used SQL and Python to analyze 1.6K+ campaign records across Google Ads, Instagram, and Facebook.</li>
+                    <li>Analyzed customer behavior using SQL, Excel, and Adobe Analytics to identify marketing opportunities and customer trends.</li>
+                    <li>Built KPI dashboard insights that supported targeting adjustments and a 5% CVR increase.</li>
+                    <li>Used data to answer business questions and support marketing recommendations.</li>
+                    <li>Reviewed website user behavior and customer journeys to identify opportunities for improving conversion rates and the digital experience.</li>
+                    <li>Organized survey results, campaign data, customer feedback, and competitor research for marketing discussions.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="resume-item">
+                <div class="resume-number">02</div>
+                <div>
+                  <div class="resume-item-head">
+                    <h4>VITBAND</h4>
+                    <span>May 2025 - Feb. 2026</span>
+                  </div>
+                  <p class="resume-role">UI/UX Designer</p>
+                  <ul>
+                    <li>Worked with the product team to improve user experience based on customer feedback and usability research.</li>
+                    <li>Designed app interface layouts, visual assets, and user-facing marketing materials for a fitness wearable app.</li>
+                    <li>Designed product screens, landing page assets, and marketing materials for new feature launches.</li>
+                    <li>Researched competitor apps, user flows, interaction patterns, and emerging UI trends.</li>
+                    <li>Helped redesign a muscle energy tracking feature into a more motivating progress-based system.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="resume-item">
+                <div class="resume-number">03</div>
+                <div>
+                  <div class="resume-item-head">
+                    <h4>Freelance</h4>
+                    <span>Aug. 2020 - Aug. 2024</span>
+                  </div>
+                  <p class="resume-role">Independent Designer</p>
+                  <ul>
+                    <li>Edited TikTok videos and promotional clips for restaurants, beauty brands, and student-led events.</li>
+                    <li>Created short-form videos for restaurants, beauty brands, and local businesses across TikTok and Instagram.</li>
+                    <li>Planned content around seasonal campaigns, trending topics, and audience interests.</li>
+                    <li>Designed social media graphics, animated posts, event visuals, captions, and campaign content ideas.</li>
+                    <li>Worked directly with clients on branding, content ideas, and social media strategy.</li>
+                    <li>Produced social content generating over 200K cumulative views across TikTok.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="resume-item">
+                <div class="resume-number">04</div>
+                <div>
+                  <div class="resume-item-head">
+                    <h4>Dongsheng Media</h4>
+                    <span>Oct. 2022 - Mar. 2024</span>
+                  </div>
+                  <p class="resume-role">Co-Founder & Social Content Strategist</p>
+                  <ul>
+                    <li>Coordinated KOLs and livestream creators for TikTok-based livestream projects.</li>
+                    <li>Recruited and managed KOLs and livestream creators, collaborating on content strategy and campaign execution for TikTok livestream projects.</li>
+                    <li>Managed private audience groups with 1,500+ members through interaction, announcements, and community engagement.</li>
+                    <li>Created livestream previews, trending-topic posts, and community content to drive audience traffic and retention.</li>
+                    <li>Helped increase audience activity through regular group interaction, giveaways, and livestream reminders.</li>
+                    <li>Developed traffic-driving strategies for livestreams reaching 20,000+ peak concurrent viewers and $140K+ average monthly revenue.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="resume-item">
+                <div class="resume-number">05</div>
+                <div>
+                  <div class="resume-item-head">
+                    <h4>LINC Chic</h4>
+                    <span>Nov. 2023 - Dec. 2023</span>
+                  </div>
+                  <p class="resume-role">Market Researcher</p>
+                  <ul>
+                    <li>Conducted in-store retail observation research across SoHo and Fifth Avenue.</li>
+                    <li>Conducted customer research across retail locations in New York to better understand shopping behavior and consumer preferences.</li>
+                    <li>Collected and summarized survey findings on pricing, product preferences, and seasonal trends.</li>
+                    <li>Analyzed surveys, merchandising, store layout, and social media-driven product displays.</li>
+                    <li>Compared competitor stores, merchandising, and social media campaigns to identify emerging consumer trends.</li>
+                    <li>Identified interest in neutral-tone collections and minimalist visual displays for internal trend discussions.</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section class="resume-card resume-skills" aria-label="Skills and tools">
+              <h3>Skills & Tools</h3>
+              <div>
+                <h4>Creative Skills</h4>
+                <p>
+                  Social media content planning, campaign coordination, newsletter content,
+                  audience research, competitor analysis, community engagement, content
+                  calendar management, marketing reporting, project tracking, social media
+                  graphics, video editing, motion graphics, typography, visual storytelling,
+                  art direction, and campaign creative development.
+                </p>
+              </div>
+              <div>
+                <h4>Tools</h4>
+                <p>
+                  Canva, Adobe Creative Suite, Photoshop, Illustrator, InDesign, Premiere Pro,
+                  After Effects, Figma, Google Analytics, SQL, Python, Microsoft Excel,
+                  Google Workspace, CapCut, and HTML.
+                </p>
+              </div>
+            </section>
+          </div>
+        </article>
+
+        <article class="section-block project-section" id="project-one">
+          <div class="project-meta">
+            <p class="eyebrow">Project 01</p>
+            <h2>Vitband</h2>
+            <p class="project-tag">UIUX Design</p>
+            <p>
+              这里介绍作品一的背景、目标、你的角色、使用的方法，以及最终成果。之后可以放图片、过程图、视频或链接。
+            </p>
+          </div>
+          <div class="project-visual visual-one" aria-hidden="true">
+            <span></span>
+          </div>
+        </article>
+
+        <article class="section-block project-section" id="project-two">
+          <div class="project-meta">
+            <p class="eyebrow">Project 02</p>
+            <h2>作品二标题</h2>
+            <p>
+              这里可以展示第二个作品的核心亮点。比如研究过程、设计系统、交互原型、视觉方向或最终落地效果。
+            </p>
+          </div>
+          <div class="project-visual visual-two" aria-hidden="true">
+            <span></span>
+          </div>
+        </article>
+
+        <article class="section-block project-section" id="project-three">
+          <div class="project-meta">
+            <p class="eyebrow">Project 03</p>
+            <h2>作品三标题</h2>
+            <p>
+              第三个作品区可以用来放更实验性的内容、课程项目、品牌设计、影像、装置、插画或网页项目。
+            </p>
+          </div>
+          <div class="project-visual visual-three" aria-hidden="true">
+            <span></span>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
 </html>
