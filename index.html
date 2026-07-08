@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-   <link rel="stylesheet" href="./style.css" />
-
+    <link rel="stylesheet" href="styles.css?v=20260708-vitband-subnav-mockup" />
   </head>
   <body>
     <main class="portfolio-shell">
@@ -20,10 +19,18 @@
         </div>
 
         <nav class="nav-list nav-list-projects" aria-label="Projects">
-          <button class="nav-link nav-link-project" type="button" data-target="project-one">
-            <span>Vitband</span>
-            <small>UIUX Design</small>
-          </button>
+          <div class="nav-project-group" data-project-nav>
+            <button class="nav-link nav-link-project" type="button" data-target="project-one" aria-expanded="false">
+              <span>Vitband</span>
+              <small>UIUX Design</small>
+            </button>
+            <div class="nav-sublist" aria-label="Vitband sections">
+              <button class="nav-sublink" type="button" data-target="vitband-overview">Overview</button>
+              <button class="nav-sublink" type="button" data-target="vitband-research">Research</button>
+              <button class="nav-sublink" type="button" data-target="vitband-insights">Audience Insights</button>
+              <button class="nav-sublink" type="button" data-target="vitband-highfi">High-Fi</button>
+            </div>
+          </div>
           <button class="nav-link" type="button" data-target="project-two">作品二</button>
           <button class="nav-link" type="button" data-target="project-three">作品三</button>
         </nav>
@@ -255,17 +262,331 @@
           </div>
         </article>
 
-        <article class="section-block project-section" id="project-one">
-          <div class="project-meta">
-            <p class="eyebrow">Project 01</p>
+        <article class="section-block project-case" id="project-one">
+          <header class="case-hero">
             <h2>Vitband</h2>
             <p class="project-tag">UIUX Design</p>
-            <p>
-              这里介绍作品一的背景、目标、你的角色、使用的方法，以及最终成果。之后可以放图片、过程图、视频或链接。
-            </p>
-          </div>
-          <div class="project-visual visual-one" aria-hidden="true">
-            <span></span>
+          </header>
+
+          <div class="case-grid">
+            <section class="case-block case-block-large case-overview" id="vitband-overview">
+              <img
+                class="case-device-cutout"
+                src="assets/vitband-hand-phone.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <h3>Overview</h3>
+              <p>
+                VITBAND is an AI-powered fitness wearable designed to help athletes
+                better understand muscle activation, fatigue, and recovery throughout
+                their training. The project focused on creating an intuitive mobile
+                experience that transforms complex biometric data into actionable
+                insights, making performance tracking easier to understand and more
+                motivating for everyday users.
+              </p>
+            </section>
+
+            <section class="case-block case-role">
+              <h3>My Role</h3>
+              <p>
+                As the UI/UX Designer, I was responsible for designing user-centered
+                experiences across the mobile application while collaborating closely
+                with the product team throughout the design process.
+              </p>
+            </section>
+
+            <section class="case-block case-block-large" id="vitband-research">
+              <h3>Responsibilities</h3>
+              <ul>
+                <li>Designed user flows and mobile UI for key features including Dashboard, History, and AI Coach.</li>
+                <li>Created wireframes, high-fidelity interfaces, and interaction prototypes in Figma.</li>
+                <li>Developed visual assets and marketing materials to maintain a consistent brand identity.</li>
+                <li>Conducted competitor analysis across fitness wearables and health tracking applications, identifying opportunities to improve usability and information hierarchy.</li>
+                <li>Worked with the team to simplify complex performance metrics into more intuitive visualizations.</li>
+                <li>Redesigned the muscle energy system from a countdown model (100% -> 0%) to a progress-based model (0% -> 100%), creating a more rewarding and motivating user experience.</li>
+              </ul>
+            </section>
+
+            <section class="case-block case-block-large">
+              <h3>Research</h3>
+              <p>
+                Before designing the product, we explored the current fitness wearable
+                market and interviewed potential users to better understand their
+                training habits and expectations.
+              </p>
+              <div class="case-question-list">
+                <p>Our research focused on three key questions:</p>
+                <ul>
+                  <li>What information do athletes care about most during training?</li>
+                  <li>How can complex biometric data be translated into simple, actionable insights?</li>
+                  <li>How can AI coaching create a more engaging training experience instead of simply displaying numbers?</li>
+                </ul>
+              </div>
+              <p>
+                We also evaluated products such as Polar, WHOOP, and Aura Ring to
+                understand their interaction patterns, information architecture, and
+                wearable experience. Based on these findings, we explored opportunities
+                to create a more approachable and motivating experience.
+              </p>
+            </section>
+
+            <section class="case-block case-insights" id="vitband-insights">
+              <h3>Audience Insights</h3>
+              <div class="insight-chart" aria-label="Audience insight chart">
+                <p class="chart-question">
+                  Question: What would you expect from such a tool?
+                </p>
+                <div class="chart-row">
+                  <p>An indicator of muscle fatigue</p>
+                  <div class="chart-bar-track">
+                    <span class="chart-bar" style="--value: 75"><span>75</span></span>
+                  </div>
+                </div>
+                <div class="chart-row">
+                  <p>Developed strength</p>
+                  <div class="chart-bar-track">
+                    <span class="chart-bar" style="--value: 35"><span>35</span></span>
+                  </div>
+                </div>
+                <div class="chart-row">
+                  <p>Performance asymmetry</p>
+                  <div class="chart-bar-track">
+                    <span class="chart-bar" style="--value: 56"><span>56</span></span>
+                  </div>
+                </div>
+                <div class="chart-row">
+                  <p>Muscle activation level</p>
+                  <div class="chart-bar-track">
+                    <span class="chart-bar" style="--value: 48"><span>48</span></span>
+                  </div>
+                </div>
+                <div class="chart-row">
+                  <p>Alerts to avoid overtraining</p>
+                  <div class="chart-bar-track">
+                    <span class="chart-bar" style="--value: 54"><span>54</span></span>
+                  </div>
+                </div>
+                <div class="chart-row">
+                  <p>Advice for optimizing performance</p>
+                  <div class="chart-bar-track">
+                    <span class="chart-bar" style="--value: 63"><span>63</span></span>
+                  </div>
+                </div>
+                <div class="chart-row">
+                  <p>Recommendations for exercise or recovery adapted to your muscles</p>
+                  <div class="chart-bar-track">
+                    <span class="chart-bar" style="--value: 51"><span>51</span></span>
+                  </div>
+                </div>
+                <div class="chart-row">
+                  <p>Track my progress and performance</p>
+                  <div class="chart-bar-track">
+                    <span class="chart-bar" style="--value: 48"><span>48</span></span>
+                  </div>
+                </div>
+                <div class="chart-axis" aria-hidden="true">
+                  <div class="chart-axis-scale">
+                    <span>0</span>
+                    <span>20</span>
+                    <span>40</span>
+                    <span>60</span>
+                    <span>80</span>
+                  </div>
+                </div>
+              </div>
+              <div class="insight-list">
+                <article>
+                  <span>Insight 01</span>
+                  <p>
+                    Users wanted more than raw performance data. They expected clear
+                    explanations and practical recommendations that could help improve
+                    future workouts.
+                  </p>
+                </article>
+                <article>
+                  <span>Insight 02</span>
+                  <p>
+                    Traditional dashboards often felt overly technical. Participants
+                    preferred a cleaner interface with stronger visual hierarchy and
+                    easier navigation between key features.
+                  </p>
+                </article>
+                <article>
+                  <span>Insight 03</span>
+                  <p>
+                    Muscle fatigue was consistently ranked as one of the most valuable
+                    metrics. Users wanted to understand when to push harder and when to
+                    prioritize recovery.
+                  </p>
+                </article>
+                <article>
+                  <span>Insight 04</span>
+                  <p>
+                    Displaying muscle energy as something that grows over time felt
+                    significantly more motivating than watching it decrease throughout a
+                    workout.
+                  </p>
+                </article>
+              </div>
+            </section>
+
+            <section class="case-block case-concept">
+              <h3>Creative Concept</h3>
+              <div>
+                <h4>Design Goal</h4>
+                <p>
+                  Transform complex physiological data into an experience that feels
+                  intuitive, motivating, and actionable.
+                </p>
+              </div>
+              <div>
+                <h4>Design Principles</h4>
+                <ul>
+                  <li>Make performance data easy to understand at a glance.</li>
+                  <li>Prioritize the most important metrics through stronger visual hierarchy.</li>
+                  <li>Replace technical language with conversational AI coaching.</li>
+                  <li>Encourage long-term engagement through positive feedback and progress visualization.</li>
+                  <li>Build a clean, modern visual language inspired by premium fitness technology while remaining approachable for everyday users.</li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="case-block case-block-large case-lowfi">
+              <h3>Low-Fi</h3>
+              <figure class="lowfi-frame">
+                <img src="assets/vitband/low-fidelity.png" alt="Vitband low-fidelity wireframes" />
+              </figure>
+            </section>
+
+            <section class="case-block case-block-large case-highfi" id="vitband-highfi">
+              <h3>High-Fi</h3>
+              <div class="screen-carousel" data-carousel>
+                <button class="carousel-button carousel-button-prev" type="button" data-carousel-prev aria-label="Previous screens">
+                  <span aria-hidden="true">‹</span>
+                </button>
+                <div class="carousel-viewport">
+                  <div class="carousel-track">
+                    <figure class="screen-slide">
+                      <img src="assets/vitband/dashboard-performance.png" alt="Dashboard performance overview screen" />
+                    </figure>
+                    <figure class="screen-slide">
+                      <img src="assets/vitband/dashboard-activation.png" alt="Dashboard activation detail screen" />
+                    </figure>
+                    <figure class="screen-slide">
+                      <img src="assets/vitband/dashboard-load.png" alt="Dashboard internal and external load screen" />
+                    </figure>
+                    <figure class="screen-slide">
+                      <img src="assets/vitband/dashboard-force.png" alt="Dashboard force and velocity screen" />
+                    </figure>
+                    <figure class="screen-slide">
+                      <img src="assets/vitband/dashboard-fatigue.png" alt="Dashboard fatigue detail screen" />
+                    </figure>
+                    <figure class="screen-slide">
+                      <img src="assets/vitband/coach-start.png" alt="AI coach start screen" />
+                    </figure>
+                    <figure class="screen-slide">
+                      <img src="assets/vitband/coach-chat-2.png" alt="AI coach quick actions screen" />
+                    </figure>
+                    <figure class="screen-slide">
+                      <img src="assets/vitband/coach-chat-1.png" alt="AI coach response screen" />
+                    </figure>
+                    <figure class="screen-slide">
+                      <img src="assets/vitband/coach-past-chat.png" alt="AI coach past chat history screen" />
+                    </figure>
+                  </div>
+                </div>
+                <button class="carousel-button carousel-button-next" type="button" data-carousel-next aria-label="Next screens">
+                  <span aria-hidden="true">›</span>
+                </button>
+              </div>
+
+              <div class="feature-copy">
+                <section class="feature-text">
+                  <h4>Dashboard</h4>
+                  <p>
+                    The dashboard was designed to transform complex biomechanical data
+                    into an experience that users could understand within seconds.
+                  </p>
+                  <p>
+                    Instead of overwhelming athletes with technical metrics, we
+                    prioritized the most actionable information through a clear visual
+                    hierarchy, progressive disclosure, and simple data visualization.
+                    The goal was to help users quickly assess their physical condition
+                    before deciding whether to push harder, recover, or adjust their
+                    training intensity.
+                  </p>
+                  <p>
+                    Each metric was intentionally grouped around a single question:
+                    <strong>How is my body performing today?</strong>
+                  </p>
+                </section>
+                <section class="feature-text">
+                  <h4>AI Coach</h4>
+                  <p>
+                    The AI Coach was designed to bridge the gap between performance data
+                    and meaningful action.
+                  </p>
+                  <p>
+                    Rather than acting as a traditional chatbot, the experience
+                    functions as a personalized training companion that interprets
+                    physiological data and delivers context-aware recommendations in
+                    natural language. The objective was to reduce the effort required
+                    for users to understand their performance while increasing
+                    confidence in training decisions.
+                  </p>
+                  <p>
+                    Instead of asking users to interpret charts themselves, the AI
+                    transforms data into personalized guidance.
+                  </p>
+                </section>
+                <section class="feature-decisions">
+                  <h4>Key Design Decisions</h4>
+                  <ul>
+                    <li>Prioritized high-value metrics such as fatigue, muscle activation, and load balance.</li>
+                    <li>Used expandable cards to progressively reveal detailed analytics without increasing cognitive load.</li>
+                    <li>Simplified scientific terminology into language that everyday athletes could understand.</li>
+                    <li>Created a soft visual system using gradients and generous spacing to make health data feel approachable rather than clinical.</li>
+                    <li>Highlighted trends instead of isolated numbers, encouraging users to focus on long-term performance rather than daily fluctuations.</li>
+                  </ul>
+                </section>
+
+                <section class="feature-decisions">
+                  <h4>Key Design Decisions</h4>
+                  <ul>
+                    <li>Introduced suggested prompts to reduce decision fatigue and help users start conversations naturally.</li>
+                    <li>Added conversation history, allowing users to revisit previous recommendations and monitor long-term progress.</li>
+                    <li>Designed quick actions such as Workout Suggestion, Soreness Prediction, Tips, and Make a Plan to support common user goals with a single tap.</li>
+                    <li>Focused on conversational language instead of technical terminology to improve accessibility.</li>
+                    <li>Built a flexible interaction model where AI recommendations adapt to users' latest performance metrics, creating a more personalized coaching experience.</li>
+                  </ul>
+                </section>
+              </div>
+            </section>
+
+            <section class="case-block case-block-large case-mockup">
+              <h3>Mockup</h3>
+              <div class="mockup-grid">
+                <figure class="mockup-cell mockup-cell-01">
+                  <img src="assets/vitband/mockups/mockup-01.jpg" alt="Vitband dashboard phone mockup in hand" />
+                </figure>
+                <figure class="mockup-cell mockup-cell-02">
+                  <img src="assets/vitband/mockups/mockup-02.jpg" alt="Vitband analytics phone mockup in hand" />
+                </figure>
+                <figure class="mockup-cell mockup-cell-03">
+                  <img src="assets/vitband/mockups/mockup-03.jpg" alt="Vitband AI coach phone mockup outdoors" />
+                </figure>
+                <figure class="mockup-cell mockup-cell-04">
+                  <img src="assets/vitband/mockups/mockup-04.jpg" alt="Vitband dashboard athletic phone mockup" />
+                </figure>
+                <figure class="mockup-cell mockup-cell-05">
+                  <img src="assets/vitband/mockups/mockup-05.jpg" alt="Vitband chat history phone mockup" />
+                </figure>
+                <figure class="mockup-cell mockup-cell-06">
+                  <img src="assets/vitband/mockups/mockup-06.jpg" alt="Vitband coach close-up phone mockup" />
+                </figure>
+              </div>
+            </section>
           </div>
         </article>
 
@@ -297,6 +618,6 @@
       </section>
     </main>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20260708-vitband-subnav-mockup"></script>
   </body>
 </html>
