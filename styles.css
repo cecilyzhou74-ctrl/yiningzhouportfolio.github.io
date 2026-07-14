@@ -148,7 +148,6 @@ h1 {
   font-size: 0.62rem;
   font-weight: 300;
   line-height: 1;
-  text-transform: uppercase;
 }
 
 .nav-project-group {
@@ -851,6 +850,291 @@ h1 {
   object-position: 50% 48%;
 }
 
+.heytea-case .case-hero {
+  min-height: clamp(220px, 24vw, 320px);
+}
+
+.heytea-case .case-grid {
+  row-gap: clamp(24px, 3.4vw, 44px);
+}
+
+.heytea-case .case-block p {
+  max-width: 760px;
+  margin: 0;
+  color: #303030;
+  font-size: 0.86rem;
+  font-weight: 360;
+  line-height: 1.34;
+}
+
+.heytea-hero .project-tag {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 420;
+  line-height: 1.2;
+}
+
+.heytea-image {
+  margin: 18px 0 0;
+}
+
+.heytea-image img,
+.heytea-image-grid img,
+.heytea-poster-grid img,
+.heytea-logo-mark img,
+.heytea-digital-stack img,
+.heytea-social-posts img {
+  display: block;
+  width: 100%;
+  height: auto;
+  image-rendering: auto;
+}
+
+.heytea-image-narrow {
+  max-width: 920px;
+}
+
+.heytea-two-column,
+.type-specimen {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 18px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+}
+
+.heytea-two-column > div,
+.type-specimen > div {
+  min-width: 0;
+  background: var(--bg);
+}
+
+.heytea-two-column > div,
+.type-specimen > div {
+  padding: 18px;
+}
+
+.heytea-case h4 {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 850;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.tone-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 18px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+}
+
+.tone-cards article {
+  min-height: 150px;
+  padding: 18px;
+  background: var(--bg);
+}
+
+.tone-cards h4 {
+  font-size: clamp(1rem, 1.7vw, 1.55rem);
+  line-height: 1;
+}
+
+.tone-cards p {
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 320;
+  line-height: 1.3;
+}
+
+.type-specimen {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.type-specimen span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 520;
+  text-transform: uppercase;
+}
+
+.type-specimen strong {
+  display: block;
+  color: var(--accent);
+  font-size: clamp(1.45rem, 3vw, 3.2rem);
+  font-weight: 820;
+  line-height: 0.95;
+}
+
+.type-specimen div:first-child strong {
+  font-family: Didot, "Bodoni 72", "Times New Roman", serif;
+  font-weight: 700;
+}
+
+.type-specimen div:nth-child(2) strong {
+  font-family: "Marker Felt", "Chalkboard SE", "Apple Chancery", cursive;
+  font-size: clamp(1.25rem, 2.4vw, 2.6rem);
+}
+
+.color-swatches {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 18px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+}
+
+.color-swatches span {
+  position: relative;
+  min-height: 112px;
+  padding: 12px;
+  background: var(--swatch);
+  color: #ffffff;
+  font-size: 0.62rem;
+  font-weight: 560;
+  line-height: 1;
+}
+
+.color-swatches span:nth-child(2) {
+  color: var(--accent-2);
+}
+
+.color-swatches span::after {
+  content: "";
+  position: absolute;
+  inset: auto 12px 12px 12px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.45;
+}
+
+.heytea-image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 18px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+}
+
+.heytea-image-grid-two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.heytea-app-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: start;
+}
+
+.heytea-image-grid figure {
+  min-width: 0;
+  margin: 0;
+  background: var(--bg);
+}
+
+.heytea-logo-layout {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.34fr) minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
+  margin-top: 18px;
+}
+
+.heytea-logo-mark {
+  max-width: 220px;
+  margin: 0;
+}
+
+.heytea-logo-copy {
+  display: grid;
+  gap: 12px;
+}
+
+.heytea-elements-image {
+  margin-top: 20px;
+  padding: 18px 0 6px;
+}
+
+.heytea-poster-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 18px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+}
+
+.heytea-poster-grid figure {
+  margin: 0;
+  background: #ffffff;
+}
+
+.heytea-social-posts {
+  max-width: 920px;
+  margin-top: 12px;
+}
+
+.heytea-media-title {
+  margin-top: 18px;
+}
+
+.heytea-digital-stack {
+  display: grid;
+  gap: 1px;
+  margin-top: 12px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+}
+
+.heytea-digital-stack figure {
+  margin: 0;
+  background: var(--bg);
+}
+
+.nomoo-case {
+  background: var(--bg);
+}
+
+.nomoo-hero {
+  min-height: auto;
+  padding-bottom: clamp(28px, 4vw, 54px);
+}
+
+.nomoo-hero .project-tag {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 420;
+  line-height: 1.2;
+}
+
+.nomoo-gallery {
+  display: grid;
+  gap: 0;
+  max-width: 1180px;
+  padding-top: 0;
+}
+
+.nomoo-spread {
+  margin: 0;
+}
+
+.nomoo-spread img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--bg);
+  image-rendering: auto;
+}
+
 .about-text {
   display: grid;
   gap: 10px;
@@ -1255,6 +1539,20 @@ h1 {
   }
 
   .mockup-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .heytea-two-column,
+  .tone-cards,
+  .type-specimen,
+  .heytea-image-grid,
+  .heytea-image-grid-two,
+  .heytea-app-grid,
+  .heytea-poster-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .color-swatches {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 

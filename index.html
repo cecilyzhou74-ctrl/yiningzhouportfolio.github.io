@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css?v=20260708-vitband-subnav-mockup" />
+    <link rel="stylesheet" href="styles.css?v=20260713-nomoo-grey-tight" />
   </head>
   <body>
     <main class="portfolio-shell">
@@ -31,8 +31,22 @@
               <button class="nav-sublink" type="button" data-target="vitband-highfi">High-Fi</button>
             </div>
           </div>
-          <button class="nav-link" type="button" data-target="project-two">作品二</button>
-          <button class="nav-link" type="button" data-target="project-three">作品三</button>
+          <div class="nav-project-group" data-project-nav>
+            <button class="nav-link nav-link-project" type="button" data-target="project-two" aria-expanded="false">
+              <span>Heytea Rebrand</span>
+              <small>Non-commercial Case Study</small>
+            </button>
+            <div class="nav-sublist" aria-label="Heytea sections">
+              <button class="nav-sublink" type="button" data-target="heytea-introduction">Introduction</button>
+              <button class="nav-sublink" type="button" data-target="heytea-visualization">Visualization</button>
+              <button class="nav-sublink" type="button" data-target="heytea-posters">Posters</button>
+              <button class="nav-sublink" type="button" data-target="heytea-applications">Applications</button>
+            </div>
+          </div>
+          <button class="nav-link nav-link-project" type="button" data-target="project-three">
+            <span>NOMOO</span>
+            <small>publication+web</small>
+          </button>
         </nav>
 
         <div class="sidebar-footer">
@@ -296,7 +310,7 @@
               </p>
             </section>
 
-            <section class="case-block case-block-large" id="vitband-research">
+            <section class="case-block case-block-large">
               <h3>Responsibilities</h3>
               <ul>
                 <li>Designed user flows and mobile UI for key features including Dashboard, History, and AI Coach.</li>
@@ -308,7 +322,7 @@
               </ul>
             </section>
 
-            <section class="case-block case-block-large">
+            <section class="case-block case-block-large" id="vitband-research">
               <h3>Research</h3>
               <p>
                 Before designing the product, we explored the current fitness wearable
@@ -590,34 +604,255 @@
           </div>
         </article>
 
-        <article class="section-block project-section" id="project-two">
-          <div class="project-meta">
-            <p class="eyebrow">Project 02</p>
-            <h2>作品二标题</h2>
-            <p>
-              这里可以展示第二个作品的核心亮点。比如研究过程、设计系统、交互原型、视觉方向或最终落地效果。
-            </p>
-          </div>
-          <div class="project-visual visual-two" aria-hidden="true">
-            <span></span>
+        <article class="section-block project-case heytea-case" id="project-two">
+          <header class="case-hero heytea-hero">
+            <h2>Heytea Rebrand</h2>
+            <p class="project-tag">Non-commercial Case Study</p>
+          </header>
+
+          <div class="case-grid">
+            <section class="case-block case-block-large" id="heytea-introduction">
+              <h3>Introduction</h3>
+              <p>
+                The concept is Liquor + Tea. By blending the sophisticated flavor of spirits with the rich cultural
+                heritage of tea, HEYTEA stands out in a saturated beverage market while creating a more sophisticated
+                and historical brand experience.
+              </p>
+            </section>
+
+            <section class="case-block case-block-large heytea-strategy">
+              <h3>Values & Positioning</h3>
+              <div class="heytea-two-column">
+                <div>
+                  <h4>Values</h4>
+                  <p>
+                    The brand offers high-quality, culturally deep tea and liquor blended beverages. By blending
+                    traditional tea art with modern liquor craft, it focuses on the purity of ingredients, elegance
+                    of vibe, and a relaxing and enjoyable experience for consumers.
+                  </p>
+                </div>
+                <div>
+                  <h4>Positioning</h4>
+                  <p>
+                    HEYTEA is positioned as an innovative and powerful beverage brand for young consumers looking
+                    for fresh experience and cultural depth. The brand combines Chinese art aesthetics with modern
+                    minimalist design to convey an elegant and pure brand image.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section class="case-block case-block-large heytea-tone">
+              <h3>Tone</h3>
+              <div class="tone-cards" aria-label="Heytea tone keywords">
+                <article>
+                  <h4>Elegant</h4>
+                  <p>
+                    The brand's elegant style brings a sense of refinement and premium lifestyle to consumers.
+                  </p>
+                </article>
+                <article>
+                  <h4>Traditional</h4>
+                  <p>
+                    The visual direction is rooted in Chinese tea culture, giving HEYTEA a deeper cultural context.
+                  </p>
+                </article>
+                <article>
+                  <h4>Pure</h4>
+                  <p>
+                    A pure tone communicates simplicity, clarity, and the quality of the ingredients.
+                  </p>
+                </article>
+                <article>
+                  <h4>Relaxable</h4>
+                  <p>
+                    The relaxed atmosphere gives consumers a feeling of comfort, serenity, and enjoyment.
+                  </p>
+                </article>
+              </div>
+            </section>
+
+            <section class="case-block case-block-large" id="heytea-visualization">
+              <h3>Visualization</h3>
+              <p>
+                The visualization system is built from the logo, typography, color palette, graphic elements, images,
+                and interface applications. Each part supports the Liquor + Tea concept through a minimal black,
+                white, and gray visual language.
+              </p>
+            </section>
+
+            <section class="case-block case-block-large heytea-logo-section">
+              <h3>Logo</h3>
+              <div class="heytea-logo-layout">
+                <figure class="heytea-logo-mark">
+                  <img src="assets/heytea/processed/logo-symbol-transparent.png" alt="Heytea logo symbol extracted from the guideline" />
+                </figure>
+                <div class="heytea-logo-copy">
+                  <p>
+                    The logo expresses our products very clearly and directly. At the same time, the logo is simple,
+                    modern and elegant. It can be used in many different contexts, such as product packaging, posters
+                    and advertisements.
+                  </p>
+                  <p>
+                    The logo design is inspired by the shape of ancient Chinese wine altars and modern milk tea cups.
+                    The serif typeface gives the brand a more elegant and historical character.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section class="case-block case-block-large heytea-type">
+              <h3>Typography</h3>
+              <p>
+                Didot is used as the primary headline typeface. Aa WuDaoJia supports the slogan and calligraphic
+                feeling, while Inter is used for body copy, legal text, and app interface information.
+              </p>
+              <div class="type-specimen" aria-label="Heytea typography system">
+                <div>
+                  <span>English Title</span>
+                  <strong>Didot</strong>
+                </div>
+                <div>
+                  <span>Slogan</span>
+                  <strong>Joy & Inspiration</strong>
+                </div>
+                <div>
+                  <span>Body & UI</span>
+                  <strong>Inter</strong>
+                </div>
+              </div>
+            </section>
+
+            <section class="case-block case-block-large heytea-color">
+              <h3>Color</h3>
+              <p>
+                The colors are inspired by traditional Chinese ink paintings, with black and white as the main base
+                and a range of grays used in the illustrations to highlight the hierarchy of the design. All secondary
+                colors can be flexibly applied to all illustration elements.
+              </p>
+              <div class="color-swatches" aria-label="Heytea color palette">
+                <span style="--swatch: #000000">#000000</span>
+                <span style="--swatch: #ffffff">#FFFFFF</span>
+                <span style="--swatch: #4d4d4d">#4D4D4D</span>
+                <span style="--swatch: #666666">#666666</span>
+                <span style="--swatch: #808080">#808080</span>
+                <span style="--swatch: #909090">#909090</span>
+                <span style="--swatch: #6e6e6e">#6E6E6E</span>
+              </div>
+            </section>
+
+            <section class="case-block case-block-large">
+              <h3>Elements</h3>
+              <p>
+                Wine jars, bottles, wine glasses, teacups, teapots and other containers are used for tea and liquor.
+                Mountains are the most frequent element in ink paintings, and they also exist as a secondary graphic
+                in our visual system. Mountains can be irregular and random.
+              </p>
+              <figure class="heytea-image heytea-elements-image">
+                <img src="assets/heytea/processed/elements-transparent.png" alt="Heytea visual elements extracted from the guideline" />
+              </figure>
+            </section>
+
+            <section class="case-block case-block-large" id="heytea-posters">
+              <h3>Posters</h3>
+              <p>
+                Posters are used to draw the brand image to consumers. The visual language keeps the same logo,
+                illustration elements, slogan, and black-white-gray structure.
+              </p>
+              <div class="heytea-poster-grid">
+                <figure>
+                  <img src="assets/heytea/processed/poster-hires-01.png" alt="Heytea poster design one" />
+                </figure>
+                <figure>
+                  <img src="assets/heytea/processed/poster-hires-02.png" alt="Heytea poster design two" />
+                </figure>
+                <figure>
+                  <img src="assets/heytea/processed/poster-hires-03.png" alt="Heytea poster design three" />
+                </figure>
+                <figure>
+                  <img src="assets/heytea/processed/poster-hires-04.png" alt="Heytea poster design four" />
+                </figure>
+              </div>
+            </section>
+
+            <section class="case-block case-block-large" id="heytea-applications">
+              <h3>Physical Applications</h3>
+              <p>
+                The physical applications include packaging, paper bags, cups, stickers, straws, and business cards.
+                The brand system is applied through clean surfaces, large logo marks, and the same black-white-gray
+                illustration language.
+              </p>
+              <div class="heytea-image-grid heytea-image-grid-two">
+                <figure>
+                  <img src="assets/heytea/magazine-mockup.png" alt="Heytea magazine mockup held above a rock" />
+                </figure>
+                <figure>
+                  <img src="assets/heytea/packaging-system.jpg" alt="Heytea cup, sticker, straw, and packaging system" />
+                </figure>
+                <figure>
+                  <img src="assets/heytea/paper-bag.png" alt="Heytea branded paper bag mockups" />
+                </figure>
+                <figure>
+                  <img src="assets/heytea/card-mockup.png" alt="Heytea business card mockup" />
+                </figure>
+              </div>
+            </section>
+
+            <section class="case-block case-block-large">
+              <h3>Digital Applications</h3>
+              <h4 class="heytea-media-title">Content Design</h4>
+              <figure class="heytea-image heytea-social-posts">
+                <img src="assets/heytea/processed/social-media-posts-transparent.png" alt="Heytea social media post examples extracted from the guideline" />
+              </figure>
+              <h4 class="heytea-media-title">UI/UX</h4>
+              <div class="heytea-digital-stack">
+                <figure>
+                  <img src="assets/heytea/iphone-home-rock-hires.png" alt="Heytea home screen on iPhone mockup with white rocks" />
+                </figure>
+                <figure>
+                  <img src="assets/heytea/iphone-product-rock-hires.png" alt="Heytea product detail screen on iPhone mockup with white rock" />
+                </figure>
+              </div>
+            </section>
           </div>
         </article>
 
-        <article class="section-block project-section" id="project-three">
-          <div class="project-meta">
-            <p class="eyebrow">Project 03</p>
-            <h2>作品三标题</h2>
-            <p>
-              第三个作品区可以用来放更实验性的内容、课程项目、品牌设计、影像、装置、插画或网页项目。
-            </p>
-          </div>
-          <div class="project-visual visual-three" aria-hidden="true">
-            <span></span>
+        <article class="section-block project-case nomoo-case" id="project-three">
+          <header class="case-hero nomoo-hero">
+            <h2>NOMOO</h2>
+            <p class="project-tag">publication+web</p>
+          </header>
+
+          <div class="nomoo-gallery" aria-label="NOMOO project spreads">
+            <figure class="nomoo-spread">
+              <img src="assets/nomoo/nomoo-01-grey.jpg" alt="NOMOO process, mindmap, proposal, and logo process spread" />
+            </figure>
+            <figure class="nomoo-spread">
+              <img src="assets/nomoo/nomoo-02-grey.jpg" alt="NOMOO inspiration and research spread" />
+            </figure>
+            <figure class="nomoo-spread">
+              <img src="assets/nomoo/nomoo-03-grey.jpg" alt="NOMOO publication process spread" />
+            </figure>
+            <figure class="nomoo-spread">
+              <img src="assets/nomoo/nomoo-04-grey.jpg" alt="NOMOO book outcome spread" />
+            </figure>
+            <figure class="nomoo-spread">
+              <img src="assets/nomoo/nomoo-05-grey.jpg" alt="NOMOO web process spread" />
+            </figure>
+            <figure class="nomoo-spread">
+              <img src="assets/nomoo/nomoo-06-grey.jpg" alt="NOMOO web development spread" />
+            </figure>
+            <figure class="nomoo-spread">
+              <img src="assets/nomoo/nomoo-07-grey.jpg" alt="NOMOO web development and interaction spread" />
+            </figure>
+            <figure class="nomoo-spread">
+              <img src="assets/nomoo/nomoo-08-grey.jpg" alt="NOMOO web outcome spread" />
+            </figure>
           </div>
         </article>
       </section>
     </main>
 
-    <script src="script.js?v=20260708-vitband-subnav-mockup"></script>
+    <script src="script.js?v=20260713-nomoo-grey-tight"></script>
   </body>
 </html>

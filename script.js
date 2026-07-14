@@ -1,20 +1,25 @@
 const contentPanel = document.querySelector(".content-panel");
 const navButtons = [...document.querySelectorAll(".nav-link")];
 const subNavButtons = [...document.querySelectorAll(".nav-sublink")];
-const projectNavGroup = document.querySelector("[data-project-nav]");
-const projectNavButton = projectNavGroup?.querySelector(".nav-link-project");
+const projectNavGroups = [...document.querySelectorAll("[data-project-nav]")];
 const sections = [...document.querySelectorAll(".section-block")];
-const vitbandSubSections = ["vitband-overview", "vitband-research", "vitband-insights", "vitband-highfi"];
+const subSectionIds = subNavButtons.map((button) => button.dataset.target);
 
 function setActiveNav(targetId) {
   navButtons.forEach((button) => {
-    const isProjectChild = targetId.startsWith("vitband-") && button.dataset.target === "project-one";
+    const group = button.closest("[data-project-nav]");
+    const childTargets = group ? [...group.querySelectorAll(".nav-sublink")].map((link) => link.dataset.target) : [];
+    const isProjectChild = childTargets.includes(targetId);
     button.classList.toggle("is-active", button.dataset.target === targetId || isProjectChild);
   });
 
-  const isVitband = targetId === "project-one" || targetId.startsWith("vitband-");
-  projectNavGroup?.classList.toggle("is-expanded", isVitband);
-  projectNavButton?.setAttribute("aria-expanded", String(isVitband));
+  projectNavGroups.forEach((group) => {
+    const projectButton = group.querySelector(".nav-link-project");
+    const childTargets = [...group.querySelectorAll(".nav-sublink")].map((link) => link.dataset.target);
+    const isExpanded = projectButton?.dataset.target === targetId || childTargets.includes(targetId);
+    group.classList.toggle("is-expanded", isExpanded);
+    projectButton?.setAttribute("aria-expanded", String(isExpanded));
+  });
 
   subNavButtons.forEach((button) => {
     button.classList.toggle("is-active", button.dataset.target === targetId);
@@ -75,7 +80,7 @@ const subSectionObserver = new IntersectionObserver(
   },
 );
 
-vitbandSubSections.forEach((id) => {
+subSectionIds.forEach((id) => {
   const section = document.getElementById(id);
   if (section) subSectionObserver.observe(section);
 });
