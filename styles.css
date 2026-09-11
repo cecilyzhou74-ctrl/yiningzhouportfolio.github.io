@@ -1135,6 +1135,50 @@ h1 {
   image-rendering: auto;
 }
 
+#about,
+#resume {
+  display: none;
+}
+
+.floyce-case {
+  background: var(--bg);
+}
+
+.floyce-hero {
+  min-height: auto;
+  padding-bottom: clamp(28px, 4vw, 54px);
+}
+
+.floyce-hero .project-tag {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 420;
+  line-height: 1.2;
+}
+
+.floyce-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  max-width: 1180px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+}
+
+.floyce-poster {
+  margin: 0;
+  background: var(--bg);
+}
+
+.floyce-poster img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--bg);
+  image-rendering: auto;
+}
+
 .about-text {
   display: grid;
   gap: 10px;
@@ -1548,7 +1592,8 @@ h1 {
   .heytea-image-grid,
   .heytea-image-grid-two,
   .heytea-app-grid,
-  .heytea-poster-grid {
+  .heytea-poster-grid,
+  .floyce-gallery {
     grid-template-columns: 1fr;
   }
 
