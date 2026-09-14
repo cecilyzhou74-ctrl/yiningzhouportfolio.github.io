@@ -162,9 +162,167 @@ document.querySelectorAll("[data-carousel]").forEach((carousel) => {
     isAnimating = false;
   });
 
-  window.addEventListener("resize", () => {
+window.addEventListener("resize", () => {
     rebuildClones();
     measure();
     setPosition(false);
   });
 });
+
+const heroStage = document.querySelector("[data-hero-stage]");
+const heroButtons = [...document.querySelectorAll(".project-track .project-sticker")];
+const projectHint = document.querySelector("[data-project-hint]");
+const carouselButtons = [...document.querySelectorAll("[data-carousel-select]")];
+const projectPreview = document.querySelector("[data-project-preview]");
+const previewImage = projectPreview?.querySelector("[data-preview-image]");
+const previewTitle = projectPreview?.querySelector("[data-preview-title]");
+const previewTags = projectPreview?.querySelector("[data-preview-tags]");
+const previewOverview = projectPreview?.querySelector("[data-preview-overview]");
+const previewGo = projectPreview?.querySelector("[data-preview-go]");
+const previewClose = projectPreview?.querySelector("[data-preview-close]");
+const previewNavButtons = [...document.querySelectorAll("[data-preview-nav]")];
+
+const projectDetails = {
+  vitband: {
+    title: "VITBAND",
+    tags: "UI/UX Design · Product Design · B2C Mobile App",
+    image: "assets/hero/vitband-object.png",
+    page: "vitband.html",
+    overview:
+      "VITBAND is a fitness technology platform designed to help users better understand their physical condition during training. By connecting with a wearable fitness band, the app tracks muscle fatigue, workout activity, and recovery data, helping users make more informed decisions about training and recovery. As the UI/UX Designer, I worked on the end-to-end mobile experience, including user flows, information architecture, wireframes, interactive prototypes, and high-fidelity interface design. I also designed key features including real-time muscle monitoring, AI Coach, workout history, and data dashboards.",
+  },
+  heytea: {
+    title: "HEYTEA",
+    tags: "Brand Identity · Rebranding · Visual Design",
+    image: "assets/hero/heytea-object.png",
+    page: "heytea.html",
+    overview:
+      "HEYTEA is a rebranding project focused on refreshing the brand through a more contemporary and distinctive visual identity. I developed a new visual direction through typography, color, graphic elements, packaging, and brand applications. The project explores how a cohesive visual system can strengthen brand recognition while creating a more consistent and engaging experience across different brand touchpoints.",
+  },
+  nomoo: {
+    title: "NOMOO",
+    tags: "Editorial Design · Publication Design · Web Design",
+    image: "assets/hero/nomoo-object.png",
+    page: "nomoo.html",
+    overview:
+      "NOMOO is an editorial design project that extends a publication concept from print into a digital experience. I designed both the physical publication and its accompanying website, focusing on typography, editorial layout, visual hierarchy, imagery, and the relationship between print and screen. The project creates a consistent visual language while adapting the content and reading experience across different formats.",
+  },
+  floyce: {
+    title: "FLOYCE",
+    tags: "Art Direction · Campaign Design · Content Creation",
+    image: "assets/hero/floyce-object.png",
+    page: "floyce.html",
+    overview:
+      "FLOYCE is a women’s footwear brand project focused on creating visual content that communicates the personality and qualities of its products. I worked across creative concept development, art direction, photography, video production, editing, motion graphics, and campaign design. Through a series of product-focused visuals and social media content, I developed playful and experimental ways to present the shoes while maintaining a consistent brand identity.",
+  },
+};
+
+let selectedHeroIndex = heroButtons.findIndex((button) => button.classList.contains("is-selected"));
+if (selectedHeroIndex < 0) selectedHeroIndex = 0;
+
+function getSelectedProject() {
+  return projectDetails[heroButtons[selectedHeroIndex]?.dataset.projectKey] || projectDetails.vitband;
+}
+
+function updateHeroSelection(index) {
+  if (heroButtons.length === 0) return;
+  selectedHeroIndex = (index + heroButtons.length) % heroButtons.length;
+
+  heroButtons.forEach((button, buttonIndex) => {
+    const distance = Math.min(
+      Math.abs(buttonIndex - selectedHeroIndex),
+      heroButtons.length - Math.abs(buttonIndex - selectedHeroIndex),
+    );
+    button.classList.toggle("is-selected", buttonIndex === selectedHeroIndex);
+    button.classList.toggle("is-neighbor", distance === 1);
+    button.classList.toggle("is-dim", distance > 1);
+  });
+}
+
+function renderProjectPreview() {
+  const project = getSelectedProject();
+  if (!projectPreview || !project) return;
+
+  previewImage.src = project.image;
+  previewImage.alt = `${project.title} project preview`;
+  previewTitle.textContent = project.title;
+  previewTags.innerHTML = project.tags
+    .split(" · ")
+    .map((tag) => `<span>${tag}</span>`)
+    .join("");
+  previewOverview.textContent = project.overview;
+  previewGo.href = project.page;
+  projectPreview.hidden = false;
+  heroStage?.classList.add("is-previewing");
+  projectHint && (projectHint.hidden = true);
+}
+
+function closeProjectPreview() {
+  if (!projectPreview) return;
+  projectPreview.hidden = true;
+  heroStage?.classList.remove("is-previewing");
+}
+
+heroButtons.forEach((button, buttonIndex) => {
+  const showHoverHint = () => {
+    updateHeroSelection(buttonIndex);
+    if (projectHint) projectHint.hidden = true;
+  };
+
+  button.addEventListener("mouseenter", showHoverHint);
+  button.addEventListener("focus", showHoverHint);
+  button.addEventListener("click", () => {
+    updateHeroSelection(buttonIndex);
+    renderProjectPreview();
+  });
+});
+
+document.querySelector(".project-track")?.addEventListener("mouseleave", () => {
+  if (projectHint && !heroStage?.classList.contains("is-previewing")) projectHint.hidden = true;
+});
+
+carouselButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    updateHeroSelection(selectedHeroIndex + (button.dataset.carouselSelect === "next" ? 1 : -1));
+  });
+});
+
+previewNavButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    updateHeroSelection(selectedHeroIndex + (button.dataset.previewNav === "next" ? 1 : -1));
+    renderProjectPreview();
+  });
+});
+
+previewClose?.addEventListener("click", closeProjectPreview);
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeProjectPreview();
+});
+
+updateHeroSelection(selectedHeroIndex);
+
+const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+
+if (finePointer.matches) {
+  const cursorDot = document.createElement("div");
+  cursorDot.className = "custom-cursor";
+  cursorDot.setAttribute("aria-hidden", "true");
+  document.body.append(cursorDot);
+
+  window.addEventListener("pointermove", (event) => {
+    cursorDot.style.left = `${event.clientX}px`;
+    cursorDot.style.top = `${event.clientY}px`;
+    cursorDot.classList.add("is-visible");
+  });
+
+  document.addEventListener("pointerleave", () => {
+    cursorDot.classList.remove("is-visible");
+  });
+
+  document.addEventListener("pointerover", (event) => {
+    cursorDot.classList.toggle(
+      "is-hovering",
+      Boolean(event.target.closest("a, button, input, textarea, select, [role='button']")),
+    );
+  });
+}
