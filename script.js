@@ -178,9 +178,49 @@ const previewImage = projectPreview?.querySelector("[data-preview-image]");
 const previewTitle = projectPreview?.querySelector("[data-preview-title]");
 const previewTags = projectPreview?.querySelector("[data-preview-tags]");
 const previewOverview = projectPreview?.querySelector("[data-preview-overview]");
+const previewEditorial = projectPreview?.querySelector(".project-hero__editorial");
 const previewGo = projectPreview?.querySelector("[data-preview-go]");
+const previewCount = projectPreview?.querySelector("[data-preview-count]");
 const previewClose = projectPreview?.querySelector("[data-preview-close]");
 const previewNavButtons = [...document.querySelectorAll("[data-preview-nav]")];
+const catSpeech = document.querySelector("[data-cat-speech]");
+const catSpeechText = catSpeech?.querySelector("[data-cat-speech-text]");
+
+const catSpeechMessages = {
+  default: "Pick a project below and take a look around, meow.",
+  vitband:
+    "This is VITBAND — a fitness-tech product where I designed the end-to-end mobile experience, from user flows and interaction design to high-fidelity UI.",
+  heytea:
+    "This is HEYTEA — a rebranding and visual design project where I explored a refreshed identity system, graphic language, and brand applications.",
+  nomoo:
+    "This is NOMOO — a publication and web design project combining editorial layout, typography, visual storytelling, and a digital experience.",
+  floyce:
+    "This is FLOYCE — a creative content and advertising project spanning campaign concepts, poster design, art direction, photography, and social media visuals.",
+};
+
+let catSpeechTimer = null;
+
+function setCatSpeech(state = "default") {
+  if (!catSpeech || !catSpeechText || !catSpeechMessages[state]) return;
+  if (catSpeech.dataset.speechState === state && catSpeechText.textContent === catSpeechMessages[state]) return;
+
+  window.clearTimeout(catSpeechTimer);
+  catSpeech.dataset.speechState = state;
+  catSpeech.classList.add("is-changing");
+  catSpeechTimer = window.setTimeout(() => {
+    catSpeechText.textContent = catSpeechMessages[state];
+    catSpeech.classList.remove("is-changing");
+  }, 70);
+}
+
+function resetCatSpeechWhenIdle() {
+  window.requestAnimationFrame(() => {
+    const hasActiveProject = heroButtons.some(
+      (button) => button.matches(":hover") || button === document.activeElement,
+    );
+    if (!hasActiveProject) setCatSpeech("default");
+  });
+}
 
 const projectDetails = {
   vitband: {
@@ -224,6 +264,17 @@ function getSelectedProject() {
   return projectDetails[heroButtons[selectedHeroIndex]?.dataset.projectKey] || projectDetails.vitband;
 }
 
+function alignPreviewEditorial() {
+  if (!projectPreview || projectPreview.hidden || !previewTitle || !previewEditorial) return;
+
+  const titleRect = previewTitle.getBoundingClientRect();
+  const editorialRect = previewEditorial.getBoundingClientRect();
+  projectPreview.style.setProperty(
+    "--project-editorial-left",
+    `${titleRect.right - editorialRect.width}px`,
+  );
+}
+
 function updateHeroSelection(index) {
   if (heroButtons.length === 0) return;
   selectedHeroIndex = (index + heroButtons.length) % heroButtons.length;
@@ -243,6 +294,7 @@ function renderProjectPreview() {
   const project = getSelectedProject();
   if (!projectPreview || !project) return;
 
+  projectPreview.dataset.project = heroButtons[selectedHeroIndex]?.dataset.projectKey || "vitband";
   previewImage.src = project.image;
   previewImage.alt = `${project.title} project preview`;
   previewTitle.textContent = project.title;
@@ -252,25 +304,39 @@ function renderProjectPreview() {
     .join("");
   previewOverview.textContent = project.overview;
   previewGo.href = project.page;
+  if (previewCount) {
+    previewCount.textContent = `${String(selectedHeroIndex + 1).padStart(2, "0")}/${String(heroButtons.length).padStart(2, "0")}`;
+  }
   projectPreview.hidden = false;
+  alignPreviewEditorial();
+  projectPreview.classList.remove("is-leaving");
+  projectPreview.classList.remove("is-animating");
+  void projectPreview.offsetWidth;
+  projectPreview.classList.add("is-animating");
   heroStage?.classList.add("is-previewing");
+  document.body.classList.add("is-previewing-project");
   projectHint && (projectHint.hidden = true);
 }
 
 function closeProjectPreview() {
   if (!projectPreview) return;
   projectPreview.hidden = true;
+  projectPreview.classList.remove("is-animating");
   heroStage?.classList.remove("is-previewing");
+  document.body.classList.remove("is-previewing-project");
 }
 
 heroButtons.forEach((button, buttonIndex) => {
   const showHoverHint = () => {
     updateHeroSelection(buttonIndex);
+    setCatSpeech(button.dataset.projectKey);
     if (projectHint) projectHint.hidden = true;
   };
 
   button.addEventListener("mouseenter", showHoverHint);
   button.addEventListener("focus", showHoverHint);
+  button.addEventListener("mouseleave", resetCatSpeechWhenIdle);
+  button.addEventListener("blur", resetCatSpeechWhenIdle);
   button.addEventListener("click", () => {
     updateHeroSelection(buttonIndex);
     renderProjectPreview();
@@ -278,6 +344,7 @@ heroButtons.forEach((button, buttonIndex) => {
 });
 
 document.querySelector(".project-track")?.addEventListener("mouseleave", () => {
+  resetCatSpeechWhenIdle();
   if (projectHint && !heroStage?.classList.contains("is-previewing")) projectHint.hidden = true;
 });
 
@@ -289,17 +356,69 @@ carouselButtons.forEach((button) => {
 
 previewNavButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    updateHeroSelection(selectedHeroIndex + (button.dataset.previewNav === "next" ? 1 : -1));
-    renderProjectPreview();
+    const direction = button.dataset.previewNav === "next" ? 1 : -1;
+    if (!projectPreview || projectPreview.classList.contains("is-leaving")) return;
+
+    projectPreview.dataset.transitionDirection = direction > 0 ? "next" : "previous";
+    projectPreview.classList.remove("is-animating");
+    projectPreview.classList.add("is-leaving");
+
+    window.setTimeout(() => {
+      updateHeroSelection(selectedHeroIndex + direction);
+      renderProjectPreview();
+    }, 220);
   });
 });
 
 previewClose?.addEventListener("click", closeProjectPreview);
+window.addEventListener("resize", alignPreviewEditorial);
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeProjectPreview();
 });
 
 updateHeroSelection(selectedHeroIndex);
+
+const heroHome = document.querySelector(".hero-home");
+const catContainer = document.querySelector("[data-cat-container]");
+const catImages = [...document.querySelectorAll("[data-cat-angle]")];
+const catFrames = new Map(catImages.map((image) => [Number(image.dataset.catAngle), image]));
+let activeCatAngle = 0;
+let catPointerFrame = null;
+let lastCatPointer = null;
+
+catImages.forEach((image) => {
+  const preload = new Image();
+  preload.src = image.currentSrc || image.src;
+});
+
+function setCatAngle(angle) {
+  if (!catFrames.has(angle) || angle === activeCatAngle) return;
+  catFrames.get(activeCatAngle)?.classList.remove("is-active");
+  catFrames.get(angle)?.classList.add("is-active");
+  activeCatAngle = angle;
+}
+
+function updateCatDirection() {
+  catPointerFrame = null;
+  if (!catContainer || !lastCatPointer) return;
+
+  const rect = catContainer.getBoundingClientRect();
+  const centerX = rect.left + rect.width / 2;
+  const centerY = rect.top + rect.height / 2;
+  const dx = lastCatPointer.x - centerX;
+  const dy = lastCatPointer.y - centerY;
+  const angle = (Math.atan2(dx, -dy) * 180) / Math.PI;
+  const nearestAngle = (Math.round(((angle + 360) % 360) / 45) * 45) % 360;
+
+  setCatAngle(nearestAngle);
+}
+
+heroHome?.addEventListener("pointermove", (event) => {
+  lastCatPointer = { x: event.clientX, y: event.clientY };
+  if (catPointerFrame === null) {
+    catPointerFrame = window.requestAnimationFrame(updateCatDirection);
+  }
+});
 
 const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
 

@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css?v=20260914-sketch-preview" />
+    <link rel="stylesheet" href="styles.css?v=20260916-cat-speech-centered" />
+    <link rel="stylesheet" href="project-hero.css?v=20260916-centered-project-nav" />
   </head>
   <body class="home-page">
     <main class="portfolio-shell">
@@ -69,8 +70,10 @@
           <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
 
           <div class="hero-stage hero-selector" data-hero-stage>
-            <p class="hero-kicker">Portfolio</p>
-            <a class="hero-email" href="mailto:cecilyzhou74@gmail.com">cecilyzhou74@gmail.com</a>
+            <div class="hero-meta">
+              <p class="hero-kicker">Portfolio</p>
+              <a class="hero-email" href="mailto:cecilyzhou74@gmail.com">cecilyzhou74@gmail.com</a>
+            </div>
             <h2 class="hero-title">Yining Zhou</h2>
 
             <div class="project-carousel" aria-label="Project shortcuts">
@@ -96,29 +99,66 @@
               <button class="carousel-nav carousel-next" type="button" data-carousel-select="next" aria-label="Next project">›</button>
             </div>
 
-            <section class="project-preview" data-project-preview hidden aria-live="polite" aria-label="Selected project preview">
-              <div class="preview-object" aria-hidden="true">
-                <img data-preview-image src="assets/hero/vitband-object.png" alt="" />
-              </div>
-              <div class="preview-copy">
-                <p class="preview-label">Project Preview</p>
-                <h3 data-preview-title>VITBAND</h3>
-                <p class="preview-tags" data-preview-tags>UI/UX Design · Product Design · B2C Mobile App</p>
-                <p class="preview-overview" data-preview-overview></p>
-              </div>
-              <div class="preview-controls" aria-label="Project controls">
-                <button type="button" data-preview-nav="prev" aria-label="Previous project">←</button>
-                <a class="preview-go" data-preview-go href="vitband.html">GO</a>
-                <button type="button" data-preview-nav="next" aria-label="Next project">→</button>
-              </div>
-              <button class="preview-close" type="button" data-preview-close aria-label="Close project preview">×</button>
-            </section>
-
             <aside class="project-hint" data-project-hint aria-live="polite" hidden>
               <span>Project Preview</span>
               <strong></strong>
               <p></p>
             </aside>
+
+            <div class="cat-container" data-cat-container aria-hidden="true">
+              <img class="cat-image is-active" data-cat-angle="0" src="assets/hero/cat/0.png" alt="" />
+              <img class="cat-image" data-cat-angle="45" src="assets/hero/cat/45.png" alt="" />
+              <img class="cat-image" data-cat-angle="90" src="assets/hero/cat/90.png" alt="" />
+              <img class="cat-image" data-cat-angle="135" src="assets/hero/cat/135.png" alt="" />
+              <img class="cat-image" data-cat-angle="180" src="assets/hero/cat/180.png" alt="" />
+              <img class="cat-image" data-cat-angle="225" src="assets/hero/cat/225.png" alt="" />
+              <img class="cat-image" data-cat-angle="270" src="assets/hero/cat/270.png" alt="" />
+              <img class="cat-image" data-cat-angle="315" src="assets/hero/cat/315.png" alt="" />
+            </div>
+
+            <aside class="cat-speech" data-cat-speech data-speech-state="default" aria-live="polite">
+              <p data-cat-speech-text>Pick a project below and take a look around, meow.</p>
+            </aside>
+          </div>
+          <div class="hero-marquee" aria-label="Portfolio focus areas">
+            <div class="hero-marquee-track">
+              <span>Hi, I’m a designer who’s been drawing for as long as I can remember. I’ve always been drawn to art, interesting visuals, and the little details that make things feel special. I love turning ideas into something people can see, feel, and interact with, while keeping a sense of curiosity and play in everything I make. And the cat you see here? That’s Tibbers, my tiny creative director and the unofficial star of this website. ✦</span>
+              <span aria-hidden="true">Hi, I’m a designer who’s been drawing for as long as I can remember. I’ve always been drawn to art, interesting visuals, and the little details that make things feel special. I love turning ideas into something people can see, feel, and interact with, while keeping a sense of curiosity and play in everything I make. And the cat you see here? That’s Tibbers, my tiny creative director and the unofficial star of this website. ✦</span>
+              <span aria-hidden="true">Hi, I’m a designer who’s been drawing for as long as I can remember. I’ve always been drawn to art, interesting visuals, and the little details that make things feel special. I love turning ideas into something people can see, feel, and interact with, while keeping a sense of curiosity and play in everything I make. And the cat you see here? That’s Tibbers, my tiny creative director and the unofficial star of this website. ✦</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="project-hero" data-project-preview hidden aria-live="polite" aria-label="Selected project preview">
+          <div class="project-hero__visual-layer" aria-hidden="true">
+            <div class="project-hero__object">
+              <img data-preview-image src="assets/hero/vitband-object.png" alt="" />
+            </div>
+          </div>
+
+          <div class="project-hero__content-layer">
+            <header class="project-hero__header">
+              <p class="project-hero__kicker">Portfolio</p>
+              <a class="project-hero__email" href="mailto:cecilyzhou74@gmail.com">cecilyzhou74@gmail.com</a>
+            </header>
+
+            <div class="project-hero__title-wrap">
+              <h3 class="project-hero__title" data-preview-title>VITBAND</h3>
+              <button class="project-hero__close" type="button" data-preview-close aria-label="Close project preview">×</button>
+            </div>
+
+            <div class="project-hero__editorial">
+              <p class="project-hero__tags" data-preview-tags>UI/UX Design · Product Design · B2C Mobile App</p>
+              <p class="project-hero__overview" data-preview-overview></p>
+              <a class="project-hero__go" data-preview-go href="vitband.html">VIEW CASE</a>
+            </div>
+
+            <nav class="project-hero__navigation" aria-label="Project controls">
+              <button class="project-hero__arrow project-hero__arrow--previous" type="button" data-preview-nav="prev" aria-label="Previous project">&lt;</button>
+              <span class="project-hero__count" data-preview-count aria-live="polite">01/04</span>
+              <button class="project-hero__arrow project-hero__arrow--next" type="button" data-preview-nav="next" aria-label="Next project">&gt;</button>
+            </nav>
+
           </div>
         </section>
 
@@ -951,6 +991,6 @@
       </section>
     </main>
 
-    <script src="script.js?v=20260914-project-preview"></script>
+    <script src="script.js?v=20260916-cat-speech-final"></script>
   </body>
 </html>
