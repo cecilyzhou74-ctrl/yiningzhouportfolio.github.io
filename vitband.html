@@ -1,358 +1,597 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css?v=20260914-sketch-preview" />
+    <meta
+      name="description"
+      content="VITBAND product design case study by Yining Zhou."
+    />
+    <title>VITBAND — Yining Zhou</title>
+    <link rel="stylesheet" href="styles.css?v=20260916-cat-speech-centered" />
+    <link rel="stylesheet" href="vitband-case.css?v=20260916-refined-scale-2" />
   </head>
-  <body class="project-detail-page">
-    <main class="project-page-shell">
-      <nav class="project-page-nav" aria-label="Project navigation">
-        <a href="index.html">Back to Portfolio</a>
-        <span>VITBAND</span>
-      </nav>
-      <section class="content-panel" aria-label="Vitband project content">
-        <article class="section-block project-case" id="project-one">
-          <header class="case-hero">
-            <h2>VITBAND</h2>
-            <p class="project-tag">UI/UX Design · Product Design · B2C Mobile App</p>
-          </header>
+  <body class="project-detail-page vitband-page">
+    <header class="vb-site-header">
+      <a href="index.html" class="vb-back" aria-label="Back to portfolio">YINING ZHOU ↙</a>
+      <span>VITBAND / CASE STUDY</span>
+    </header>
 
-          <div class="case-grid">
-            <section class="case-block case-block-large case-overview" id="vitband-overview">
-              <img
-                class="case-device-cutout"
-                src="assets/vitband-hand-phone.png"
-                alt=""
-                aria-hidden="true"
-              />
-              <h3>Overview</h3>
-              <p>
-                VITBAND is a fitness technology platform designed to help users better
-                understand their physical condition during training. By connecting with
-                a wearable fitness band, the app tracks muscle fatigue, workout activity,
-                and recovery data, helping users make more informed decisions about
-                training and recovery. As the UI/UX Designer, I worked on the end-to-end
-                mobile experience, including user flows, information architecture,
-                wireframes, interactive prototypes, and high-fidelity interface design.
-                I also designed key features including real-time muscle monitoring, AI
-                Coach, workout history, and data dashboards.
-              </p>
-            </section>
+    <main class="vb-case">
+      <section class="vb-hero" aria-labelledby="vitband-title">
+        <div class="vb-container vb-grid">
+          <p class="vb-hero-kicker">PRODUCT DESIGN / UI UX<br />2025–2026</p>
+          <h1 id="vitband-title">VITBAND</h1>
 
-            <section class="case-block case-role">
-              <h3>My Role</h3>
-              <p>
-                As the UI/UX Designer, I led the end-to-end UI design of the mobile
-                application. I was responsible for creating the overall interface layout,
-                designing user flows, wireframes, high-fidelity UI screens, and
-                interactive prototypes. I translated product requirements into intuitive,
-                visually cohesive experiences while collaborating closely with the team
-                to refine and iterate the design throughout the project.
-              </p>
-            </section>
-
-            <section class="case-block case-award">
-              <h3>Award</h3>
-              <p>Red Dot Award: Brands &amp; Communication Design 2026</p>
-            </section>
-
-            <section class="case-block case-block-large">
-              <h3>Responsibilities</h3>
-              <ul>
-                <li>Designed user flows and mobile UI for key features including Dashboard, History, and AI Coach.</li>
-                <li>Created wireframes, high-fidelity interfaces, and interaction prototypes in Figma.</li>
-                <li>Developed visual assets and marketing materials to maintain a consistent brand identity.</li>
-                <li>Conducted competitor analysis across fitness wearables and health tracking applications, identifying opportunities to improve usability and information hierarchy.</li>
-                <li>Worked with the team to simplify complex performance metrics into more intuitive visualizations.</li>
-                <li>Redesigned the muscle energy system from a countdown model (100% -> 0%) to a progress-based model (0% -> 100%), creating a more rewarding and motivating user experience.</li>
-              </ul>
-            </section>
-
-            <section class="case-block case-block-large" id="vitband-research">
-              <h3>Research</h3>
-              <p>
-                Before designing the product, we explored the current fitness wearable
-                market and interviewed potential users to better understand their
-                training habits and expectations.
-              </p>
-              <div class="case-question-list">
-                <p>Our research focused on three key questions:</p>
-                <ul>
-                  <li>What information do athletes care about most during training?</li>
-                  <li>How can complex biometric data be translated into simple, actionable insights?</li>
-                  <li>How can AI coaching create a more engaging training experience instead of simply displaying numbers?</li>
-                </ul>
-              </div>
-              <p>
-                We also evaluated products such as Polar, WHOOP, and Aura Ring to
-                understand their interaction patterns, information architecture, and
-                wearable experience. Based on these findings, we explored opportunities
-                to create a more approachable and motivating experience.
-              </p>
-            </section>
-
-            <section class="case-block case-insights" id="vitband-insights">
-              <h3>Audience Insights</h3>
-              <div class="insight-chart" aria-label="Audience insight chart">
-                <p class="chart-question">
-                  Question: What would you expect from such a tool?
-                </p>
-                <div class="chart-row">
-                  <p>An indicator of muscle fatigue</p>
-                  <div class="chart-bar-track">
-                    <span class="chart-bar" style="--value: 75"><span>75</span></span>
-                  </div>
-                </div>
-                <div class="chart-row">
-                  <p>Developed strength</p>
-                  <div class="chart-bar-track">
-                    <span class="chart-bar" style="--value: 35"><span>35</span></span>
-                  </div>
-                </div>
-                <div class="chart-row">
-                  <p>Performance asymmetry</p>
-                  <div class="chart-bar-track">
-                    <span class="chart-bar" style="--value: 56"><span>56</span></span>
-                  </div>
-                </div>
-                <div class="chart-row">
-                  <p>Muscle activation level</p>
-                  <div class="chart-bar-track">
-                    <span class="chart-bar" style="--value: 48"><span>48</span></span>
-                  </div>
-                </div>
-                <div class="chart-row">
-                  <p>Alerts to avoid overtraining</p>
-                  <div class="chart-bar-track">
-                    <span class="chart-bar" style="--value: 54"><span>54</span></span>
-                  </div>
-                </div>
-                <div class="chart-row">
-                  <p>Advice for optimizing performance</p>
-                  <div class="chart-bar-track">
-                    <span class="chart-bar" style="--value: 63"><span>63</span></span>
-                  </div>
-                </div>
-                <div class="chart-row">
-                  <p>Recommendations for exercise or recovery adapted to your muscles</p>
-                  <div class="chart-bar-track">
-                    <span class="chart-bar" style="--value: 51"><span>51</span></span>
-                  </div>
-                </div>
-                <div class="chart-row">
-                  <p>Track my progress and performance</p>
-                  <div class="chart-bar-track">
-                    <span class="chart-bar" style="--value: 48"><span>48</span></span>
-                  </div>
-                </div>
-                <div class="chart-axis" aria-hidden="true">
-                  <div class="chart-axis-scale">
-                    <span>0</span>
-                    <span>20</span>
-                    <span>40</span>
-                    <span>60</span>
-                    <span>80</span>
-                  </div>
-                </div>
-              </div>
-              <div class="insight-list">
-                <article>
-                  <span>Insight 01</span>
-                  <p>
-                    Users wanted more than raw performance data. They expected clear
-                    explanations and practical recommendations that could help improve
-                    future workouts.
-                  </p>
-                </article>
-                <article>
-                  <span>Insight 02</span>
-                  <p>
-                    Traditional dashboards often felt overly technical. Participants
-                    preferred a cleaner interface with stronger visual hierarchy and
-                    easier navigation between key features.
-                  </p>
-                </article>
-                <article>
-                  <span>Insight 03</span>
-                  <p>
-                    Muscle fatigue was consistently ranked as one of the most valuable
-                    metrics. Users wanted to understand when to push harder and when to
-                    prioritize recovery.
-                  </p>
-                </article>
-                <article>
-                  <span>Insight 04</span>
-                  <p>
-                    Displaying muscle energy as something that grows over time felt
-                    significantly more motivating than watching it decrease throughout a
-                    workout.
-                  </p>
-                </article>
-              </div>
-            </section>
-
-            <section class="case-block case-concept">
-              <h3>Creative Concept</h3>
-              <div>
-                <h4>Design Goal</h4>
-                <p>
-                  Transform complex physiological data into an experience that feels
-                  intuitive, motivating, and actionable.
-                </p>
-              </div>
-              <div>
-                <h4>Design Principles</h4>
-                <ul>
-                  <li>Make performance data easy to understand at a glance.</li>
-                  <li>Prioritize the most important metrics through stronger visual hierarchy.</li>
-                  <li>Replace technical language with conversational AI coaching.</li>
-                  <li>Encourage long-term engagement through positive feedback and progress visualization.</li>
-                  <li>Build a clean, modern visual language inspired by premium fitness technology while remaining approachable for everyday users.</li>
-                </ul>
-              </div>
-            </section>
-
-            <section class="case-block case-block-large case-lowfi">
-              <h3>Low-Fi</h3>
-              <figure class="lowfi-frame">
-                <img src="assets/vitband/low-fidelity.png" alt="Vitband low-fidelity wireframes" />
-              </figure>
-            </section>
-
-            <section class="case-block case-block-large case-highfi" id="vitband-highfi">
-              <h3>High-Fi</h3>
-              <div class="screen-carousel" data-carousel>
-                <button class="carousel-button carousel-button-prev" type="button" data-carousel-prev aria-label="Previous screens">
-                  <span aria-hidden="true">‹</span>
-                </button>
-                <div class="carousel-viewport">
-                  <div class="carousel-track">
-                    <figure class="screen-slide">
-                      <img src="assets/vitband/dashboard-performance.png" alt="Dashboard performance overview screen" />
-                    </figure>
-                    <figure class="screen-slide">
-                      <img src="assets/vitband/dashboard-activation.png" alt="Dashboard activation detail screen" />
-                    </figure>
-                    <figure class="screen-slide">
-                      <img src="assets/vitband/dashboard-load.png" alt="Dashboard internal and external load screen" />
-                    </figure>
-                    <figure class="screen-slide">
-                      <img src="assets/vitband/dashboard-force.png" alt="Dashboard force and velocity screen" />
-                    </figure>
-                    <figure class="screen-slide">
-                      <img src="assets/vitband/dashboard-fatigue.png" alt="Dashboard fatigue detail screen" />
-                    </figure>
-                    <figure class="screen-slide">
-                      <img src="assets/vitband/coach-start.png" alt="AI coach start screen" />
-                    </figure>
-                    <figure class="screen-slide">
-                      <img src="assets/vitband/coach-chat-2.png" alt="AI coach quick actions screen" />
-                    </figure>
-                    <figure class="screen-slide">
-                      <img src="assets/vitband/coach-chat-1.png" alt="AI coach response screen" />
-                    </figure>
-                    <figure class="screen-slide">
-                      <img src="assets/vitband/coach-past-chat.png" alt="AI coach past chat history screen" />
-                    </figure>
-                  </div>
-                </div>
-                <button class="carousel-button carousel-button-next" type="button" data-carousel-next aria-label="Next screens">
-                  <span aria-hidden="true">›</span>
-                </button>
-              </div>
-
-              <div class="feature-copy">
-                <section class="feature-text">
-                  <h4>Dashboard</h4>
-                  <p>
-                    The dashboard was designed to transform complex biomechanical data
-                    into an experience that users could understand within seconds.
-                  </p>
-                  <p>
-                    Instead of overwhelming athletes with technical metrics, we
-                    prioritized the most actionable information through a clear visual
-                    hierarchy, progressive disclosure, and simple data visualization.
-                    The goal was to help users quickly assess their physical condition
-                    before deciding whether to push harder, recover, or adjust their
-                    training intensity.
-                  </p>
-                  <p>
-                    Each metric was intentionally grouped around a single question:
-                    <strong>How is my body performing today?</strong>
-                  </p>
-                </section>
-                <section class="feature-text">
-                  <h4>AI Coach</h4>
-                  <p>
-                    The AI Coach was designed to bridge the gap between performance data
-                    and meaningful action.
-                  </p>
-                  <p>
-                    Rather than acting as a traditional chatbot, the experience
-                    functions as a personalized training companion that interprets
-                    physiological data and delivers context-aware recommendations in
-                    natural language. The objective was to reduce the effort required
-                    for users to understand their performance while increasing
-                    confidence in training decisions.
-                  </p>
-                  <p>
-                    Instead of asking users to interpret charts themselves, the AI
-                    transforms data into personalized guidance.
-                  </p>
-                </section>
-                <section class="feature-decisions">
-                  <h4>Key Design Decisions</h4>
-                  <ul>
-                    <li>Prioritized high-value metrics such as fatigue, muscle activation, and load balance.</li>
-                    <li>Used expandable cards to progressively reveal detailed analytics without increasing cognitive load.</li>
-                    <li>Simplified scientific terminology into language that everyday athletes could understand.</li>
-                    <li>Created a soft visual system using gradients and generous spacing to make health data feel approachable rather than clinical.</li>
-                    <li>Highlighted trends instead of isolated numbers, encouraging users to focus on long-term performance rather than daily fluctuations.</li>
-                  </ul>
-                </section>
-
-                <section class="feature-decisions">
-                  <h4>Key Design Decisions</h4>
-                  <ul>
-                    <li>Introduced suggested prompts to reduce decision fatigue and help users start conversations naturally.</li>
-                    <li>Added conversation history, allowing users to revisit previous recommendations and monitor long-term progress.</li>
-                    <li>Designed quick actions such as Workout Suggestion, Soreness Prediction, Tips, and Make a Plan to support common user goals with a single tap.</li>
-                    <li>Focused on conversational language instead of technical terminology to improve accessibility.</li>
-                    <li>Built a flexible interaction model where AI recommendations adapt to users' latest performance metrics, creating a more personalized coaching experience.</li>
-                  </ul>
-                </section>
-              </div>
-            </section>
-
-            <section class="case-block case-block-large case-mockup">
-              <h3>Mockup</h3>
-              <div class="mockup-grid">
-                <figure class="mockup-cell mockup-cell-01">
-                  <img src="assets/vitband/mockups/mockup-01.jpg" alt="Vitband dashboard phone mockup in hand" />
-                </figure>
-                <figure class="mockup-cell mockup-cell-02">
-                  <img src="assets/vitband/mockups/mockup-02.jpg" alt="Vitband analytics phone mockup in hand" />
-                </figure>
-                <figure class="mockup-cell mockup-cell-03">
-                  <img src="assets/vitband/mockups/mockup-03.jpg" alt="Vitband AI coach phone mockup outdoors" />
-                </figure>
-                <figure class="mockup-cell mockup-cell-04">
-                  <img src="assets/vitband/mockups/mockup-04.jpg" alt="Vitband dashboard athletic phone mockup" />
-                </figure>
-                <figure class="mockup-cell mockup-cell-05">
-                  <img src="assets/vitband/mockups/mockup-05.jpg" alt="Vitband chat history phone mockup" />
-                </figure>
-                <figure class="mockup-cell mockup-cell-06">
-                  <img src="assets/vitband/mockups/mockup-06.jpg" alt="Vitband coach close-up phone mockup" />
-                </figure>
-              </div>
-            </section>
+          <div class="vb-hero-statement">
+            <p>UNDERSTAND YOUR MUSCLES.<br />TRAIN WITH MORE CLARITY.</p>
           </div>
-        </article>
+          <p class="vb-hero-intro">
+            A fitness technology experience that translates real-time muscle performance
+            data into clear, actionable training guidance.
+          </p>
+
+          <figure class="vb-hero-visual">
+            <img
+              src="assets/vitband-hand-phone.png"
+              alt="VITBAND mobile dashboard shown in hand"
+            />
+          </figure>
+
+          <dl class="vb-hero-meta">
+            <div><dt>ROLE</dt><dd>UI/UX Designer</dd></div>
+            <div><dt>SCOPE</dt><dd>End-to-End Product Redesign</dd></div>
+            <div><dt>PLATFORM</dt><dd>Mobile + Wearable</dd></div>
+            <div><dt>RECOGNITION</dt><dd>Red Dot Award 2026</dd></div>
+          </dl>
+        </div>
       </section>
+
+      <section class="vb-section vb-context" aria-labelledby="context-title">
+        <div class="vb-container">
+          <p class="vb-index">01 / CONTEXT</p>
+          <div class="vb-grid vb-context-grid">
+            <h2 id="context-title">FROM A TECHNICAL<br />PROTOTYPE TO A<br />CONSUMER EXPERIENCE.</h2>
+            <div class="vb-copy">
+              <p>
+                VITBAND already had its core wearable technology and an early mobile
+                prototype when I joined the project. While the prototype demonstrated the
+                product’s technical capabilities, the experience was largely
+                technology-driven: information was dense, the visual language felt
+                academic, and key training insights required too much interpretation.
+              </p>
+              <p>
+                As the primary UI/UX designer, I was responsible for rethinking the mobile
+                experience and translating complex muscle-performance data into a clearer,
+                more intuitive product for everyday training.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="vb-section vb-challenge" aria-labelledby="challenge-title">
+        <div class="vb-container">
+          <p class="vb-index">02 / THE CHALLENGE</p>
+          <h2 id="challenge-title" class="vb-display-heading">
+            HOW MIGHT WE TURN<br />COMPLEX MUSCLE DATA<br />INTO TRAINING DECISIONS<br />USERS CAN MAKE<br />IN SECONDS?
+          </h2>
+
+          <div class="vb-action-flow" aria-label="Understand, decide, act">
+            <strong>UNDERSTAND</strong><span>→</span><strong>DECIDE</strong><span>→</span><strong>ACT</strong>
+          </div>
+
+          <div class="vb-three-column">
+            <article>
+              <span>01</span>
+              <h3>INFORMATION OVERLOAD</h3>
+              <p>
+                The original experience surfaced technical performance data without enough
+                hierarchy, making it difficult to quickly identify what required attention.
+              </p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>HIGH COGNITIVE LOAD</h3>
+              <p>
+                Key information was distributed across multiple layers, creating
+                unnecessary effort in a context where users need answers quickly.
+              </p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>DATA WITHOUT DIRECTION</h3>
+              <p>
+                Performance metrics communicated physical condition, but did not always
+                make the next action obvious.
+              </p>
+            </article>
+          </div>
+
+          <div class="vb-problem-statement">
+            <p>THE PROBLEM WASN’T<br />A LACK OF DATA.</p>
+            <p>IT WAS THE DISTANCE<br />BETWEEN DATA AND ACTION.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="vb-section vb-research" aria-labelledby="research-title">
+        <div class="vb-container">
+          <p class="vb-index">03 / RESEARCH</p>
+          <div class="vb-grid vb-section-intro">
+            <h2 id="research-title">UNDERSTANDING THE<br />PRODUCT BEFORE<br />REDESIGNING IT.</h2>
+            <p>
+              Rather than starting with visual styling, I first looked at how the existing
+              product communicated information, how comparable fitness platforms structured
+              complex data, and where VITBAND could simplify the training experience.
+            </p>
+          </div>
+
+          <div class="vb-research-framework">
+            <article>
+              <span>01 ↘</span>
+              <h3>PROTOTYPE AUDIT</h3>
+              <p>
+                Reviewed the existing prototype to identify friction in navigation,
+                information hierarchy, terminology, and visual communication.
+              </p>
+            </article>
+            <article>
+              <span>02 ↘</span>
+              <h3>COMPETITIVE ANALYSIS</h3>
+              <p>
+                Studied how established fitness platforms translate physiological data into
+                recognizable performance signals and training guidance.
+              </p>
+            </article>
+            <article>
+              <span>03 ↘</span>
+              <h3>PRODUCT + TECH REVIEW</h3>
+              <p>
+                Worked with the team to understand the underlying muscle data, technical
+                capabilities, and the information users needed during training.
+              </p>
+            </article>
+            <article>
+              <span>04 ↘</span>
+              <h3>DESIGN EXPLORATION</h3>
+              <p>
+                Translated these findings into alternative information structures,
+                interaction patterns, and visual models.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="vb-section vb-competitive" aria-labelledby="competitive-title">
+        <div class="vb-container">
+          <p class="vb-index">04 / COMPETITIVE LANDSCAPE</p>
+          <div class="vb-grid vb-section-intro">
+            <h2 id="competitive-title">LEARNING FROM<br />FITNESS DATA PRODUCTS.</h2>
+            <p>
+              I looked at established fitness platforms including WHOOP, Polar, and Oura to
+              understand how complex physiological information is translated into everyday
+              training and recovery experiences.
+            </p>
+          </div>
+
+          <div class="vb-competitor-grid">
+            <article>
+              <h3>WHOOP</h3>
+              <h4>STRENGTH ↘</h4>
+              <p>Turns complex physiological data into recognizable performance signals.</p>
+              <h4>OPPORTUNITY ↘</h4>
+              <p>
+                Preserve data depth while making the meaning of each signal immediately
+                understandable.
+              </p>
+            </article>
+            <article>
+              <h3>POLAR</h3>
+              <h4>STRENGTH ↘</h4>
+              <p>Provides detailed training and performance analysis.</p>
+              <h4>OPPORTUNITY ↘</h4>
+              <p>
+                Reduce navigation and information density when users need answers during an
+                active workout.
+              </p>
+            </article>
+            <article>
+              <h3>OURA</h3>
+              <h4>STRENGTH ↘</h4>
+              <p>Uses clear visual signals to make recovery and readiness easier to understand.</p>
+              <h4>OPPORTUNITY ↘</h4>
+              <p>
+                Differentiate VITBAND through active training and muscle-specific feedback
+                rather than general wellness.
+              </p>
+            </article>
+          </div>
+
+          <div class="vb-opportunity">
+            <span>OPPORTUNITY ↘</span>
+            <p>THE GOAL WASN’T<br />TO SHOW MORE DATA.</p>
+            <p>IT WAS TO MAKE<br />THE DATA MORE USEFUL.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="vb-section vb-audience" aria-labelledby="audience-title">
+        <div class="vb-container">
+          <p class="vb-index">05 / AUDIENCE SIGNALS</p>
+          <div class="vb-grid vb-section-intro">
+            <h2 id="audience-title">WHAT INFORMATION<br />MATTERS MOST?</h2>
+            <p>
+              Existing audience research helped highlight which types of training
+              information were perceived as most valuable.
+            </p>
+          </div>
+
+          <div class="vb-chart" aria-label="Audience research chart">
+            <div class="vb-chart-primary">
+              <strong>75</strong>
+              <span>MUSCLE FATIGUE</span>
+            </div>
+            <div class="vb-chart-bars">
+              <div class="vb-bar vb-bar-featured" style="--value: 75">
+                <span>An indicator of muscle fatigue</span><i></i><b>75</b>
+              </div>
+              <div class="vb-bar" style="--value: 35"><span>Developed strength</span><i></i><b>35</b></div>
+              <div class="vb-bar" style="--value: 56"><span>Performance asymmetry</span><i></i><b>56</b></div>
+              <div class="vb-bar" style="--value: 48"><span>Muscle activation level</span><i></i><b>48</b></div>
+              <div class="vb-bar" style="--value: 54"><span>Alerts to avoid overtraining</span><i></i><b>54</b></div>
+              <div class="vb-bar" style="--value: 63"><span>Advice for optimizing performance</span><i></i><b>63</b></div>
+              <div class="vb-bar" style="--value: 51">
+                <span>Recommendations for exercise or recovery adapted to your muscles</span><i></i><b>51</b>
+              </div>
+              <div class="vb-bar" style="--value: 48"><span>Track my progress and performance</span><i></i><b>48</b></div>
+            </div>
+          </div>
+
+          <p class="vb-transition-label">WHAT THIS MEANT FOR THE DESIGN ↘</p>
+        </div>
+      </section>
+
+      <section class="vb-section vb-insights" aria-labelledby="insights-title">
+        <div class="vb-container">
+          <p class="vb-index">06 / KEY INSIGHTS</p>
+          <h2 id="insights-title">FROM SIGNALS<br />TO DESIGN DIRECTION.</h2>
+          <div class="vb-insight-grid">
+            <article>
+              <span>01</span>
+              <h3>DATA NEEDS<br />CONTEXT</h3>
+              <p>
+                Performance data becomes more useful when users can understand what it
+                means and what they should do next.
+              </p>
+              <h4>DESIGN RESPONSE ↘</h4>
+              <p>Pair important metrics with clear explanations and recommendations.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>CLARITY OVER<br />COMPLEXITY</h3>
+              <p>
+                During training, users need to recognize their current condition without
+                navigating through dense layers of information.
+              </p>
+              <h4>DESIGN RESPONSE ↘</h4>
+              <p>Create stronger hierarchy and surface the most important signals first.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>PROGRESS SHOULD<br />FEEL POSITIVE</h3>
+              <p>
+                Training feedback should reinforce effort and accomplishment rather than
+                making progress feel like continuous depletion.
+              </p>
+              <h4>DESIGN RESPONSE ↘</h4>
+              <p>Use progress-oriented visual models wherever the underlying data allows it.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="vb-section vb-strategy" aria-labelledby="strategy-title">
+        <div class="vb-container">
+          <p class="vb-index">07 / DESIGN STRATEGY</p>
+          <h2 id="strategy-title" class="vb-strategy-words">
+            <span>CLEAR.</span><span>ACTIONABLE.</span><span>MOTIVATING.</span><span>CONSISTENT.</span>
+          </h2>
+          <div class="vb-strategy-grid">
+            <p><b>01 / CLEAR</b><br />Surface the most important information first.</p>
+            <p><b>02 / ACTIONABLE</b><br />Connect performance signals to meaningful next steps.</p>
+            <p><b>03 / MOTIVATING</b><br />Frame feedback around progress and accomplishment.</p>
+            <p><b>04 / CONSISTENT</b><br />Build a visual language that works across monitoring, coaching, and history.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="vb-section vb-lowfi" aria-labelledby="lowfi-title">
+        <div class="vb-container">
+          <p class="vb-index">08 / EARLY EXPLORATION</p>
+          <div class="vb-grid vb-section-intro">
+            <h2 id="lowfi-title">STRUCTURE FIRST.<br />VISUALS SECOND.</h2>
+            <p>
+              Before refining the visual language, I explored how key information should
+              be organized across the core product experience.
+            </p>
+          </div>
+
+          <div class="vb-lowfi-composition">
+            <p class="vb-annotation vb-annotation-dashboard"><span>01</span> ─────────→ DASHBOARD<br /><small>Current condition and immediate feedback.</small></p>
+            <figure>
+              <img src="assets/vitband/low-fidelity.png" alt="VITBAND low-fidelity wireframes" />
+            </figure>
+            <p class="vb-annotation vb-annotation-coach"><span>02</span> ─────────→ AI COACH<br /><small>Guidance within the training experience.</small></p>
+            <p class="vb-annotation vb-annotation-history"><span>03</span> ─────────→ HISTORY<br /><small>Progress patterns over time.</small></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="vb-section vb-ai-decision" aria-labelledby="ai-title">
+        <div class="vb-container">
+          <p class="vb-index">09 / KEY DESIGN DECISION</p>
+          <p class="vb-subindex">AI COACH / ITERATION 01</p>
+          <h2 id="ai-title">MAKING AI USEFUL,<br />NOT DISTRACTING.</h2>
+
+          <div class="vb-ai-flow">
+            <article class="vb-ai-before">
+              <span>BEFORE</span>
+              <h3>CHARACTER-DRIVEN<br />AI ASSISTANT</h3>
+              <p>
+                The early concept gave AI Coach a stronger character presence to make the
+                product feel more conversational.
+              </p>
+              <img src="assets/vitband/coach-start.png" alt="Early VITBAND AI Coach interface" />
+            </article>
+            <article class="vb-ai-review">
+              <span>↓</span>
+              <h3>INTERNAL REVIEW</h3>
+              <p>
+                During internal design reviews, we found that the assistant competed with
+                the dashboard for attention and introduced another visual focal point into
+                an already data-heavy experience.
+              </p>
+              <b>→</b>
+            </article>
+            <article class="vb-ai-after">
+              <span>AFTER</span>
+              <h3>GUIDANCE-DRIVEN<br />AI COACH</h3>
+              <p>
+                We reduced the character-driven elements and repositioned AI as a layer of
+                guidance within the training experience.
+              </p>
+              <img src="assets/vitband/coach-chat-2.png" alt="Refined VITBAND AI Coach interface" />
+            </article>
+          </div>
+
+          <div class="vb-ai-conclusion">
+            <p>LESS ABOUT<br />“TALKING TO AI.”</p><span>→</span><p>MORE ABOUT<br />“WHAT SHOULD I DO NEXT?”</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="vb-section vb-energy" aria-labelledby="energy-title">
+        <div class="vb-container">
+          <p class="vb-index">10 / KEY DESIGN DECISION</p>
+          <p class="vb-subindex">MUSCLE ENERGY / ITERATION 02</p>
+          <h2 id="energy-title">TURNING DEPLETION<br />INTO PROGRESS.</h2>
+
+          <div class="vb-energy-comparison">
+            <article>
+              <span>BEFORE</span>
+              <div class="vb-number-line"><strong>100</strong><i></i><b>→</b><strong>0</strong></div>
+              <h3>DEPLETION MODEL</h3>
+              <p>
+                The original model represented muscle energy as a resource being depleted
+                throughout a workout.
+              </p>
+            </article>
+            <div class="vb-energy-proposal"><span>MY DESIGN PROPOSAL</span><b>↓</b></div>
+            <article>
+              <span>AFTER</span>
+              <div class="vb-number-line"><strong>0</strong><i></i><b>→</b><strong>100</strong></div>
+              <h3>PROGRESS MODEL</h3>
+              <p>
+                I proposed reversing the visual model so users could see their effort build
+                throughout a training session rather than watching a number move toward zero.
+              </p>
+            </article>
+          </div>
+
+          <div class="vb-energy-copy vb-grid">
+            <p>
+              The original logic was technically understandable, but experientially it
+              created a negative signal: the harder users trained, the closer the interface
+              moved toward zero.
+            </p>
+            <p>
+              By reframing the visualization around accumulated effort, the same training
+              process could communicate progress and accomplishment more clearly.
+            </p>
+          </div>
+          <p class="vb-energy-ending">THE DATA<br />DIDN’T CHANGE.<br /><br />THE WAY USERS<br />EXPERIENCED IT DID.</p>
+        </div>
+      </section>
+
+      <section class="vb-section vb-highfi" id="vitband-highfi" aria-labelledby="highfi-title">
+        <div class="vb-container">
+          <p class="vb-index">11 / HIGH-FIDELITY DESIGN</p>
+          <div class="vb-grid vb-section-intro">
+            <h2 id="highfi-title">FROM STRUCTURE<br />TO EXPERIENCE.</h2>
+            <p>
+              The final visual direction brings together clearer information hierarchy,
+              simplified navigation, and a more focused system for communicating training data.
+            </p>
+          </div>
+
+          <div class="vb-showcase-meta" aria-live="polite">
+            <span>CURRENT SCREEN</span>
+            <strong data-vb-screen-count>01 / 09</strong>
+          </div>
+
+          <div class="screen-carousel vb-screen-carousel" data-carousel>
+            <button class="carousel-button carousel-button-prev" type="button" data-carousel-prev aria-label="Previous screen">
+              <span aria-hidden="true">←</span>
+            </button>
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                <figure class="screen-slide" data-screen-name="Dashboard">
+                  <img src="assets/vitband/dashboard-performance.png" alt="Dashboard performance overview screen" />
+                </figure>
+                <figure class="screen-slide" data-screen-name="Activation">
+                  <img src="assets/vitband/dashboard-activation.png" alt="Dashboard activation detail screen" />
+                </figure>
+                <figure class="screen-slide" data-screen-name="Load Balance">
+                  <img src="assets/vitband/dashboard-load.png" alt="Dashboard internal and external load screen" />
+                </figure>
+                <figure class="screen-slide" data-screen-name="Force + Velocity">
+                  <img src="assets/vitband/dashboard-force.png" alt="Dashboard force and velocity screen" />
+                </figure>
+                <figure class="screen-slide" data-screen-name="Muscle Fatigue">
+                  <img src="assets/vitband/dashboard-fatigue.png" alt="Dashboard fatigue detail screen" />
+                </figure>
+                <figure class="screen-slide" data-screen-name="AI Coach">
+                  <img src="assets/vitband/coach-start.png" alt="AI coach start screen" />
+                </figure>
+                <figure class="screen-slide" data-screen-name="Quick Actions">
+                  <img src="assets/vitband/coach-chat-2.png" alt="AI coach quick actions screen" />
+                </figure>
+                <figure class="screen-slide" data-screen-name="Coach Response">
+                  <img src="assets/vitband/coach-chat-1.png" alt="AI coach response screen" />
+                </figure>
+                <figure class="screen-slide" data-screen-name="Chat History">
+                  <img src="assets/vitband/coach-past-chat.png" alt="AI coach past chat history screen" />
+                </figure>
+              </div>
+            </div>
+            <button class="carousel-button carousel-button-next" type="button" data-carousel-next aria-label="Next screen">
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+
+          <div class="vb-showcase-caption">
+            <h3 data-vb-screen-name>DASHBOARD</h3>
+            <p data-vb-screen-description>Performance overview and immediate training status.</p>
+          </div>
+
+          <ol class="vb-screen-progress" aria-label="High-fidelity screen progress">
+            <li class="is-active" data-vb-screen-step>01</li><li data-vb-screen-step>02</li><li data-vb-screen-step>03</li>
+            <li data-vb-screen-step>04</li><li data-vb-screen-step>05</li><li data-vb-screen-step>06</li>
+            <li data-vb-screen-step>07</li><li data-vb-screen-step>08</li><li data-vb-screen-step>09</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="vb-section vb-hierarchy" aria-labelledby="hierarchy-title">
+        <div class="vb-container">
+          <p class="vb-index">12 / INFORMATION HIERARCHY</p>
+          <div class="vb-grid vb-section-intro">
+            <h2 id="hierarchy-title">DESIGNED TO BE<br />UNDERSTOOD<br />IN SECONDS.</h2>
+            <p>
+              During training, users should not need to study a dashboard. The interface
+              prioritizes immediate muscle condition and training guidance before secondary
+              historical information.
+            </p>
+          </div>
+
+          <div class="vb-hierarchy-visual">
+            <p class="vb-callout vb-callout-01">01 ─────────→ CURRENT STATUS</p>
+            <p class="vb-callout vb-callout-02">02 ─────────→ MUSCLE FATIGUE</p>
+            <figure>
+              <img src="assets/vitband/dashboard-performance.png" alt="VITBAND dashboard information hierarchy" />
+            </figure>
+            <p class="vb-callout vb-callout-03">03 ─────────→ TRAINING GUIDANCE</p>
+            <p class="vb-callout vb-callout-04">04 ─────────→ WORKOUT PROGRESS</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="vb-section vb-outcome" aria-labelledby="outcome-title">
+        <div class="vb-container">
+          <p class="vb-index">13 / OUTCOME</p>
+          <div class="vb-grid vb-section-intro">
+            <h2 id="outcome-title">THE EXPERIENCE,<br />BROUGHT TOGETHER.</h2>
+            <p>
+              The final experience brings monitoring, coaching, workout history, and
+              performance feedback into one cohesive visual system.
+            </p>
+          </div>
+
+          <div class="vb-outcome-grid">
+            <figure class="vb-mockup vb-mockup-01">
+              <figcaption>REAL-TIME MONITORING ↘</figcaption>
+              <img src="assets/vitband/mockups/mockup-01.jpg" alt="VITBAND dashboard phone mockup in hand" />
+            </figure>
+            <figure class="vb-mockup vb-mockup-02">
+              <img src="assets/vitband/mockups/mockup-02.jpg" alt="VITBAND analytics phone mockup in hand" />
+            </figure>
+            <figure class="vb-mockup vb-mockup-03">
+              <figcaption>TRAINING GUIDANCE ↘</figcaption>
+              <img src="assets/vitband/mockups/mockup-03.jpg" alt="VITBAND AI coach phone mockup outdoors" />
+            </figure>
+            <figure class="vb-mockup vb-mockup-04">
+              <figcaption>PROGRESS TRACKING ↘</figcaption>
+              <img src="assets/vitband/mockups/mockup-04.jpg" alt="VITBAND dashboard athletic phone mockup" />
+            </figure>
+            <figure class="vb-mockup vb-mockup-05">
+              <figcaption>WORKOUT HISTORY ↘</figcaption>
+              <img src="assets/vitband/mockups/mockup-05.jpg" alt="VITBAND chat history phone mockup" />
+            </figure>
+            <figure class="vb-mockup vb-mockup-06">
+              <img src="assets/vitband/mockups/mockup-06.jpg" alt="VITBAND coach close-up phone mockup" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="vb-section vb-recognition" aria-labelledby="recognition-title">
+        <div class="vb-container">
+          <p class="vb-index">14 / RECOGNITION</p>
+          <div class="vb-grid">
+            <h2 id="recognition-title">RED DOT<br />AWARD<br />2026</h2>
+            <div>
+              <h3>Brands &amp; Communication Design</h3>
+              <p>
+                VITBAND was recognized with a 2026 Red Dot Award in Brands &amp;
+                Communication Design.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="vb-section vb-reflection" aria-labelledby="reflection-title">
+        <div class="vb-container">
+          <p class="vb-index">15 / REFLECTION</p>
+          <div class="vb-grid vb-section-intro">
+            <h2 id="reflection-title">GOOD DATA ISN’T<br />ENOUGH ON ITS OWN.</h2>
+            <div>
+              <p>
+                This project reinforced that simplifying data is not about removing
+                information. It is about deciding what matters, when it matters, and how it
+                should shape the user’s next decision.
+              </p>
+              <p>
+                The redesign pushed me to think beyond individual screens and consider how
+                information hierarchy, interaction patterns, and visual feedback work
+                together to turn technical capability into a usable product experience.
+              </p>
+            </div>
+          </div>
+          <p class="vb-reflection-ending">DESIGN THE DATA.<br /><span>→</span><br />SHAPE THE DECISION.</p>
+        </div>
+      </section>
+
+      <a class="vb-next-project" href="heytea.html">
+        <span>NEXT PROJECT ↗</span>
+        <strong>HEYTEA</strong>
+        <small>Rebrand / Visual Design</small>
+      </a>
     </main>
-    <script src="script.js?v=20260914-project-preview"></script>
+
+    <script src="script.js?v=20260916-vitband-editorial"></script>
+    <script src="vitband-case.js?v=20260916-density-motion"></script>
   </body>
 </html>
