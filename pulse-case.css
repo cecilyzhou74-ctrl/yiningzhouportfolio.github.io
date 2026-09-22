@@ -1,5 +1,5 @@
 :root {
-  --pulse-bg: #eeeaff;
+  --pulse-bg: #f2effa;
   --pulse-ink: #060608;
   --pulse-orange: #ff5a1f;
   --pulse-rule: rgba(6, 6, 8, 0.72);
@@ -27,7 +27,7 @@ body.pulse-page {
 
 .pulse-page .project-page-nav {
   border-bottom: 1px solid var(--pulse-ink);
-  background: rgba(238, 234, 255, 0.91);
+  background: rgba(242, 239, 250, 0.91);
   color: var(--pulse-ink);
 }
 
