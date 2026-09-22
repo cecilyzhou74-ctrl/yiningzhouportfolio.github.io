@@ -10,12 +10,22 @@
     <title>HEYTEA — Yining Zhou</title>
     <link rel="stylesheet" href="styles.css?v=20260916-cat-speech-centered" />
     <link rel="stylesheet" href="heytea-case.css?v=20260916-cleanup" />
+    <link rel="stylesheet" href="project-nav.css?v=20260922-font-sync-2" />
   </head>
   <body class="project-detail-page heytea-page">
     <main class="project-page-shell">
       <nav class="project-page-nav" aria-label="Project navigation">
         <a href="index.html">Back to Portfolio</a>
-        <span>HEYTEA / Campaign</span>
+        <div class="project-switcher" data-project-switcher>
+          <button class="project-switcher__toggle" type="button" aria-expanded="false" aria-controls="project-menu-heytea" aria-haspopup="true" data-project-switcher-toggle>
+            <span>HEYTEA / Campaign</span><span class="project-switcher__arrow" aria-hidden="true">↓</span>
+          </button>
+          <div class="project-switcher__panel" id="project-menu-heytea">
+            <div class="project-switcher__panel-inner"><div class="project-switcher__links">
+              <a href="pulse.html">PULSE</a><a href="vitband.html">VITBAND</a><a href="heytea.html" aria-current="page">HEYTEA</a><a href="nomoo.html">NOMOO</a><a href="floyce.html">FLOYCE</a>
+            </div></div>
+          </div>
+        </div>
       </nav>
 
       <article class="ht-case">
@@ -341,5 +351,6 @@
     </main>
     <script src="script.js?v=20260914-project-preview"></script>
     <script src="heytea-case.js?v=20260916-cleanup"></script>
+    <script src="project-nav.js?v=20260922-dropdown"></script>
   </body>
 </html>

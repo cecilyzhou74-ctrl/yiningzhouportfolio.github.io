@@ -175,6 +175,7 @@ const projectHint = document.querySelector("[data-project-hint]");
 const carouselButtons = [...document.querySelectorAll("[data-carousel-select]")];
 const projectPreview = document.querySelector("[data-project-preview]");
 const previewImage = projectPreview?.querySelector("[data-preview-image]");
+const previewEmoji = projectPreview?.querySelector("[data-preview-emoji]");
 const previewTitle = projectPreview?.querySelector("[data-preview-title]");
 const previewTags = projectPreview?.querySelector("[data-preview-tags]");
 const previewOverview = projectPreview?.querySelector("[data-preview-overview]");
@@ -196,6 +197,8 @@ const catSpeechMessages = {
     "This is NOMOO — a publication and web design project combining editorial layout, typography, visual storytelling, and a digital experience.",
   floyce:
     "This is FLOYCE — a creative content and advertising project spanning campaign concepts, poster design, art direction, photography, and social media visuals.",
+  pulse:
+    "This is PULSE — a nightlife discovery product that helps ravers understand unfamiliar DJs, match events to their taste, and see where their friends are going.",
 };
 
 let catSpeechTimer = null;
@@ -255,13 +258,21 @@ const projectDetails = {
     overview:
       "FLOYCE is a women’s footwear brand project focused on creating visual content that communicates the personality and qualities of its products. I worked across creative concept development, art direction, photography, video production, editing, motion graphics, and campaign design. Through a series of product-focused visuals and social media content, I developed playful and experimental ways to present the shoes while maintaining a consistent brand identity.",
   },
+  pulse: {
+    title: "PULSE",
+    tags: "UI Design · UX Design · End-to-End Product",
+    image: "assets/hero/pulse-object.png",
+    page: "pulse.html",
+    overview:
+      "PULSE is a nightlife discovery app designed to help ravers understand unfamiliar DJs, find events that match their music taste, and see where their friends are going before committing to a night out. As an independent Product Designer, I developed the product strategy, user flow, interaction model, low-fidelity structure, and final mobile interface.",
+  },
 };
 
 let selectedHeroIndex = heroButtons.findIndex((button) => button.classList.contains("is-selected"));
 if (selectedHeroIndex < 0) selectedHeroIndex = 0;
 
 function getSelectedProject() {
-  return projectDetails[heroButtons[selectedHeroIndex]?.dataset.projectKey] || projectDetails.vitband;
+  return projectDetails[heroButtons[selectedHeroIndex]?.dataset.projectKey] || projectDetails.pulse;
 }
 
 function alignPreviewEditorial() {
@@ -295,8 +306,17 @@ function renderProjectPreview() {
   if (!projectPreview || !project) return;
 
   projectPreview.dataset.project = heroButtons[selectedHeroIndex]?.dataset.projectKey || "vitband";
-  previewImage.src = project.image;
-  previewImage.alt = `${project.title} project preview`;
+  if (previewImage) {
+    previewImage.hidden = Boolean(project.emoji);
+    if (project.image) {
+      previewImage.src = project.image;
+      previewImage.alt = `${project.title} project preview`;
+    }
+  }
+  if (previewEmoji) {
+    previewEmoji.hidden = !project.emoji;
+    previewEmoji.textContent = project.emoji || "";
+  }
   previewTitle.textContent = project.title;
   previewTags.innerHTML = project.tags
     .split(" · ")

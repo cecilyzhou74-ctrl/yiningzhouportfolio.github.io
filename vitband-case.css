@@ -291,23 +291,6 @@ body.vitband-page .vb-display-heading {
   font-size: clamp(3.25rem, 4.45vw, 4rem);
 }
 
-.vb-action-flow {
-  display: grid;
-  grid-template-columns: auto minmax(60px, 1fr) auto minmax(60px, 1fr) auto;
-  align-items: center;
-  gap: 22px;
-  margin: clamp(48px, 5vw, 72px) 0;
-  padding: 24px 0;
-  border-top: 1px solid var(--vb-black);
-  border-bottom: 1px solid var(--vb-black);
-  font-size: clamp(1.25rem, 2.9vw, 3rem);
-  line-height: 1;
-}
-
-.vb-action-flow span {
-  text-align: center;
-}
-
 .vb-three-column,
 .vb-insight-grid,
 .vb-competitor-grid {
@@ -1025,14 +1008,6 @@ body.vb-motion-ready .vb-outcome-grid[data-vb-reveal-group].is-visible > .vb-moc
   transform: translateY(0) scale(1);
 }
 
-body.vb-motion-ready .vb-action-flow[data-vb-reveal-group] > span {
-  transform: scaleX(0);
-}
-
-body.vb-motion-ready .vb-action-flow[data-vb-reveal-group].is-visible > span {
-  transform: scaleX(1);
-}
-
 body.vb-motion-ready .vb-energy-comparison[data-vb-reveal-group] .vb-number-line i {
   transform: scaleX(0);
   transform-origin: left center;
@@ -1265,15 +1240,6 @@ body.vb-motion-ready .vb-energy-comparison[data-vb-reveal-group].is-visible .vb-
   .vb-hero-meta {
     grid-template-columns: repeat(2, 1fr);
     gap: 28px 14px;
-  }
-
-  .vb-action-flow {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .vb-action-flow span {
-    transform: rotate(90deg);
   }
 
   .vb-three-column,

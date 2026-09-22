@@ -9,12 +9,22 @@
     />
     <title>VITBAND — Yining Zhou</title>
     <link rel="stylesheet" href="styles.css?v=20260916-cat-speech-centered" />
-    <link rel="stylesheet" href="vitband-case.css?v=20260916-refined-scale-2" />
+    <link rel="stylesheet" href="vitband-case.css?v=20260922-challenge-clean" />
+    <link rel="stylesheet" href="project-nav.css?v=20260922-font-sync-2" />
   </head>
   <body class="project-detail-page vitband-page">
     <header class="vb-site-header">
       <a href="index.html" class="vb-back" aria-label="Back to portfolio">YINING ZHOU ↙</a>
-      <span>VITBAND / CASE STUDY</span>
+      <div class="project-switcher" data-project-switcher>
+        <button class="project-switcher__toggle" type="button" aria-expanded="false" aria-controls="project-menu-vitband" aria-haspopup="true" data-project-switcher-toggle>
+          <span>VITBAND / CASE STUDY</span><span class="project-switcher__arrow" aria-hidden="true">↓</span>
+        </button>
+        <div class="project-switcher__panel" id="project-menu-vitband">
+          <div class="project-switcher__panel-inner"><div class="project-switcher__links">
+            <a href="pulse.html">PULSE</a><a href="vitband.html" aria-current="page">VITBAND</a><a href="heytea.html">HEYTEA</a><a href="nomoo.html">NOMOO</a><a href="floyce.html">FLOYCE</a>
+          </div></div>
+        </div>
+      </div>
     </header>
 
     <main class="vb-case">
@@ -76,10 +86,6 @@
           <h2 id="challenge-title" class="vb-display-heading">
             HOW MIGHT WE TURN<br />COMPLEX MUSCLE DATA<br />INTO TRAINING DECISIONS<br />USERS CAN MAKE<br />IN SECONDS?
           </h2>
-
-          <div class="vb-action-flow" aria-label="Understand, decide, act">
-            <strong>UNDERSTAND</strong><span>→</span><strong>DECIDE</strong><span>→</span><strong>ACT</strong>
-          </div>
 
           <div class="vb-three-column">
             <article>
@@ -593,5 +599,6 @@
 
     <script src="script.js?v=20260916-vitband-editorial"></script>
     <script src="vitband-case.js?v=20260916-density-motion"></script>
+    <script src="project-nav.js?v=20260922-dropdown"></script>
   </body>
 </html>

@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css?v=20260916-cat-speech-centered" />
-    <link rel="stylesheet" href="project-hero.css?v=20260916-centered-project-nav" />
+    <link rel="stylesheet" href="styles.css?v=20260922-cover-details" />
+    <link rel="stylesheet" href="project-hero.css?v=20260922-pulse-object" />
   </head>
   <body class="home-page">
     <main class="portfolio-shell">
@@ -71,29 +71,43 @@
 
           <div class="hero-stage hero-selector" data-hero-stage>
             <div class="hero-meta">
-              <p class="hero-kicker">Portfolio</p>
               <a class="hero-email" href="mailto:cecilyzhou74@gmail.com">cecilyzhou74@gmail.com</a>
             </div>
-            <h2 class="hero-title">Yining Zhou</h2>
+            <div class="hero-heading">
+              <h2 class="hero-title">Yining Zhou</h2>
+              <p class="hero-kicker">(Portfolio)</p>
+            </div>
+
+            <div class="hero-roles" aria-label="Design disciplines">
+              <p class="hero-roles__lead">I’M</p>
+              <p>UI/UX Designer</p>
+              <p>Product Designer</p>
+              <p>Graphic Designer</p>
+              <p class="hero-roles__more">and more...</p>
+            </div>
 
             <div class="project-carousel" aria-label="Project shortcuts">
               <button class="carousel-nav carousel-prev" type="button" data-carousel-select="prev" aria-label="Previous project">‹</button>
               <div class="project-stickers project-track">
-                <button class="project-sticker sticker-vitband is-selected" type="button" data-project-key="vitband" data-title="VITBAND" data-description="UI/UX Design · Product Design · B2C Mobile App">
+                <button class="project-sticker sticker-pulse is-selected" type="button" data-project-key="pulse" data-title="PULSE" data-description="UI Design · UX Design · End-to-End Product" aria-label="Open PULSE project preview">
+                  <img src="assets/hero/pulse-object.png" alt="PULSE nightlife app project" />
+                  <span>01 PULSE</span>
+                </button>
+                <button class="project-sticker sticker-vitband" type="button" data-project-key="vitband" data-title="VITBAND" data-description="UI/UX Design · Product Design · B2C Mobile App">
                   <img src="assets/hero/vitband-object.png" alt="VITBAND mobile app project" />
-                  <span>01 VITBAND</span>
+                  <span>02 VITBAND</span>
                 </button>
                 <button class="project-sticker sticker-heytea" type="button" data-project-key="heytea" data-title="HEYTEA" data-description="Brand Identity · Rebranding · Visual Design">
                   <img src="assets/hero/heytea-object.png" alt="HEYTEA brand identity project" />
-                  <span>02 HEYTEA</span>
+                  <span>03 HEYTEA</span>
                 </button>
                 <button class="project-sticker sticker-nomoo" type="button" data-project-key="nomoo" data-title="NOMOO" data-description="Editorial Design · Publication Design · Web Design">
                   <img src="assets/hero/nomoo-object.png" alt="NOMOO editorial design project" />
-                  <span>03 NOMOO</span>
+                  <span>04 NOMOO</span>
                 </button>
                 <button class="project-sticker sticker-floyce" type="button" data-project-key="floyce" data-title="FLOYCE" data-description="Art Direction · Campaign Design · Content Creation">
                   <img src="assets/hero/floyce-object.png" alt="FLOYCE campaign design project" />
-                  <span>04 FLOYCE</span>
+                  <span>05 FLOYCE</span>
                 </button>
               </div>
               <button class="carousel-nav carousel-next" type="button" data-carousel-select="next" aria-label="Next project">›</button>
@@ -132,7 +146,7 @@
         <section class="project-hero" data-project-preview hidden aria-live="polite" aria-label="Selected project preview">
           <div class="project-hero__visual-layer" aria-hidden="true">
             <div class="project-hero__object">
-              <img data-preview-image src="assets/hero/vitband-object.png" alt="" />
+              <img data-preview-image src="assets/hero/pulse-object.png" alt="" />
             </div>
           </div>
 
@@ -155,7 +169,7 @@
 
             <nav class="project-hero__navigation" aria-label="Project controls">
               <button class="project-hero__arrow project-hero__arrow--previous" type="button" data-preview-nav="prev" aria-label="Previous project">&lt;</button>
-              <span class="project-hero__count" data-preview-count aria-live="polite">01/04</span>
+              <span class="project-hero__count" data-preview-count aria-live="polite">01/05</span>
               <button class="project-hero__arrow project-hero__arrow--next" type="button" data-preview-nav="next" aria-label="Next project">&gt;</button>
             </nav>
 
@@ -991,6 +1005,6 @@
       </section>
     </main>
 
-    <script src="script.js?v=20260916-cat-speech-final"></script>
+    <script src="script.js?v=20260922-pulse-object"></script>
   </body>
 </html>

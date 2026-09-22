@@ -6034,6 +6034,123 @@ body.home-page.is-previewing-project .hero-marquee {
   }
 }
 
+/* Fifth project: PULSE */
+body.home-page .project-track .project-sticker span.pulse-project-emoji {
+  display: grid !important;
+  place-items: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  color: inherit !important;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", sans-serif !important;
+  font-size: clamp(5.4rem, 8.4vw, 8.6rem) !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  text-indent: 0 !important;
+  filter:
+    drop-shadow(0 0 10px rgba(215, 255, 66, 0.5))
+    drop-shadow(0 20px 18px rgba(31, 5, 55, 0.22)) !important;
+  transform: scale(1) !important;
+  transition: transform 360ms cubic-bezier(.2, .8, .2, 1), filter 360ms ease !important;
+}
+
+body.home-page .project-track .project-sticker:hover span.pulse-project-emoji,
+body.home-page .project-track .project-sticker:focus-visible span.pulse-project-emoji {
+  filter:
+    drop-shadow(0 0 18px rgba(215, 255, 66, 0.68))
+    drop-shadow(0 26px 22px rgba(31, 5, 55, 0.26)) !important;
+}
+
+body.home-page .sticker-vitband { left: 29.5% !important; }
+body.home-page .sticker-heytea { left: 50% !important; }
+body.home-page .sticker-nomoo { left: 70.5% !important; }
+body.home-page .sticker-floyce { left: 90% !important; }
+
+body.home-page .sticker-pulse {
+  --object-width: clamp(108px, 13vw, 168px);
+  --object-height: clamp(148px, 18vw, 232px);
+  --sticker-rotate: 7deg;
+  --float-delay: -6.7s;
+  --float-duration: 7.6s;
+  left: 9.5% !important;
+  top: 74% !important;
+}
+
+body.home-page .cat-speech[data-speech-state="pulse"] {
+  --speech-width: clamp(410px, 35vw, 492px);
+  --speech-min-height: 88px;
+  --speech-pad-y: 18px;
+  --speech-pad-x: 28px;
+  --speech-x: 22px;
+  --speech-y: 10px;
+  --speech-rotate: 4deg;
+  --tail-top: 38%;
+  --tail-rotate: 7deg;
+  border-radius: 22px 7px 31px 12px / 13px 27px 10px 23px !important;
+}
+
+@media (max-width: 900px) {
+  body.home-page .sticker-vitband { left: 29% !important; }
+  body.home-page .sticker-heytea { left: 50% !important; }
+  body.home-page .sticker-nomoo { left: 71% !important; }
+  body.home-page .sticker-floyce { left: 91% !important; }
+  body.home-page .sticker-pulse {
+    --object-width: clamp(84px, 11vw, 112px);
+    --object-height: clamp(116px, 15vw, 154px);
+    left: 9% !important;
+    top: 75% !important;
+  }
+
+  body.home-page .cat-speech[data-speech-state="pulse"] {
+    --speech-width: min(50vw, 398px);
+  }
+}
+
+@media (max-width: 760px) {
+  body.home-page .sticker-vitband {
+    --object-width: 16vw;
+    --object-height: 30vw;
+    left: 29% !important;
+    top: 63% !important;
+  }
+
+  body.home-page .sticker-heytea {
+    --object-width: 15vw;
+    --object-height: 28vw;
+    left: 50% !important;
+    top: 72% !important;
+  }
+
+  body.home-page .sticker-nomoo {
+    --object-width: 24vw;
+    --object-height: 18vw;
+    left: 70% !important;
+    top: 64% !important;
+  }
+
+  body.home-page .sticker-floyce {
+    --object-width: 23vw;
+    --object-height: 26vw;
+    left: 89% !important;
+    top: 74% !important;
+  }
+
+  body.home-page .sticker-pulse {
+    --object-width: 18vw;
+    --object-height: 25vw;
+    left: 10% !important;
+    top: 60% !important;
+  }
+
+  body.home-page .project-track .project-sticker span.pulse-project-emoji {
+    font-size: clamp(3.1rem, 14vw, 4.8rem) !important;
+  }
+
+  body.home-page .cat-speech[data-speech-state="pulse"] {
+    --speech-width: min(72vw, 330px);
+    --speech-x: 0px;
+  }
+}
+
 @media (max-width: 760px) {
   :root {
     --portfolio-meta-top: 6px;
@@ -6107,28 +6224,251 @@ body.home-page.is-previewing-project .hero-marquee {
   body.home-page .sticker-vitband {
     --object-width: 18vw;
     --object-height: 34vw;
-    left: 16% !important;
+    left: 29% !important;
     top: 64% !important;
   }
 
   body.home-page .sticker-heytea {
     --object-width: 17vw;
     --object-height: 31vw;
-    left: 39% !important;
+    left: 49% !important;
     top: 70% !important;
   }
 
   body.home-page .sticker-nomoo {
     --object-width: 29vw;
     --object-height: 21vw;
-    left: 64% !important;
+    left: 69% !important;
     top: 72% !important;
   }
 
   body.home-page .sticker-floyce {
     --object-width: 27vw;
     --object-height: 30vw;
-    left: 82% !important;
+    left: 89% !important;
     top: 75% !important;
+  }
+
+  body.home-page .sticker-pulse {
+    left: 9% !important;
+  }
+}
+
+/* Editorial cover layout. Project objects and cat positioning stay untouched. */
+body.home-page .hero-home {
+  background: #f2effa !important;
+}
+
+body.home-page .hero-glow {
+  display: none !important;
+}
+
+body.home-page .hero-heading {
+  position: absolute !important;
+  top: clamp(22px, 3.4vh, 38px) !important;
+  left: clamp(24px, 4.2vw, 68px) !important;
+  z-index: 16 !important;
+  display: grid !important;
+  justify-items: start !important;
+  gap: clamp(3px, 0.45vw, 8px) !important;
+  width: min(68vw, 980px) !important;
+  margin: 0 !important;
+  pointer-events: none !important;
+}
+
+body.home-page .hero-heading .hero-title {
+  position: static !important;
+  inset: auto !important;
+  width: auto !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  color: #09080b !important;
+  font-family: "Arial Black", Arial, Helvetica, sans-serif !important;
+  font-size: clamp(4.8rem, 8.4vw, 9.5rem) !important;
+  font-weight: 950 !important;
+  line-height: 0.78 !important;
+  letter-spacing: 0 !important;
+  text-align: left !important;
+  text-transform: none !important;
+  white-space: nowrap !important;
+  transform: none !important;
+}
+
+body.home-page .hero-heading .hero-kicker {
+  position: static !important;
+  inset: auto !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #09080b !important;
+  font-family: "Arial Black", Arial, Helvetica, sans-serif !important;
+  font-size: clamp(2.6rem, 5.2vw, 5.8rem) !important;
+  font-weight: 950 !important;
+  line-height: 0.9 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  white-space: nowrap !important;
+  filter: none !important;
+  text-shadow: none !important;
+  transform: none !important;
+}
+
+body.home-page .hero-selector .hero-meta {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 17 !important;
+  display: block !important;
+  min-height: 0 !important;
+  pointer-events: none !important;
+}
+
+body.home-page .hero-selector .hero-meta > .hero-email {
+  position: absolute !important;
+  top: clamp(20px, 3vh, 32px) !important;
+  right: clamp(24px, 4.2vw, 68px) !important;
+  left: auto !important;
+  display: block !important;
+  max-width: 42vw !important;
+  color: #09080b !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: clamp(0.66rem, 0.85vw, 0.82rem) !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  letter-spacing: 0 !important;
+  text-align: right !important;
+  text-transform: none !important;
+  pointer-events: auto !important;
+}
+
+body.home-page .hero-roles {
+  position: absolute !important;
+  top: clamp(94px, 14vh, 154px) !important;
+  right: clamp(24px, 4.2vw, 68px) !important;
+  z-index: 17 !important;
+  display: grid !important;
+  justify-items: end !important;
+  gap: 2px !important;
+  margin: 0 !important;
+  color: #09080b !important;
+  text-align: right !important;
+  pointer-events: none !important;
+}
+
+body.home-page .hero-roles p {
+  margin: 0 !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: clamp(0.72rem, 1vw, 0.98rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+}
+
+body.home-page .hero-roles .hero-roles__lead {
+  margin-bottom: 5px !important;
+  font-size: clamp(0.9rem, 1.25vw, 1.22rem) !important;
+}
+
+body.home-page .hero-roles .hero-roles__more {
+  margin-top: 2.4em !important;
+  font-size: clamp(0.68rem, 0.88vw, 0.86rem) !important;
+  font-weight: 700 !important;
+  text-transform: none !important;
+}
+
+body.home-page .project-track .project-sticker img {
+  filter: drop-shadow(0 18px 16px rgba(28, 27, 31, 0.24)) !important;
+}
+
+body.home-page .project-track .project-sticker:hover,
+body.home-page .project-track .project-sticker:focus-visible {
+  filter: drop-shadow(0 16px 15px rgba(28, 27, 31, 0.24)) !important;
+}
+
+body.home-page .project-track .project-sticker:hover img,
+body.home-page .project-track .project-sticker:focus-visible img {
+  filter: drop-shadow(0 24px 20px rgba(28, 27, 31, 0.34)) !important;
+}
+
+body.home-page .hero-marquee {
+  top: auto !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 45 !important;
+  height: clamp(32px, 4.2vh, 44px) !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #09080b !important;
+}
+
+body.home-page .hero-marquee-track span {
+  padding-right: 2rem !important;
+  color: #09080b !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: clamp(0.68rem, 0.9vw, 0.82rem) !important;
+  font-weight: 750 !important;
+  line-height: 1 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+body.home-page.is-previewing-project .hero-heading,
+body.home-page.is-previewing-project .hero-roles {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+@media (max-width: 760px) {
+  body.home-page .hero-heading {
+    top: 42px !important;
+    left: 18px !important;
+    gap: 4px !important;
+    width: 72vw !important;
+  }
+
+  body.home-page .hero-heading .hero-title {
+    font-size: clamp(2.8rem, 11.8vw, 4.2rem) !important;
+  }
+
+  body.home-page .hero-heading .hero-kicker {
+    font-size: clamp(1.8rem, 8vw, 2.8rem) !important;
+  }
+
+  body.home-page .hero-selector .hero-meta > .hero-email {
+    top: 12px !important;
+    right: 18px !important;
+    max-width: 58vw !important;
+    font-size: 0.58rem !important;
+  }
+
+  body.home-page .hero-roles {
+    top: 126px !important;
+    right: 18px !important;
+  }
+
+  body.home-page .hero-roles p {
+    font-size: 0.62rem !important;
+  }
+
+  body.home-page .hero-roles .hero-roles__lead {
+    margin-bottom: 3px !important;
+    font-size: 0.76rem !important;
+  }
+
+  body.home-page .hero-roles .hero-roles__more {
+    margin-top: 1.9em !important;
+    font-size: 0.58rem !important;
+  }
+
+  body.home-page .hero-marquee {
+    top: auto !important;
+    bottom: 0 !important;
+    height: 34px !important;
+  }
+
+  body.home-page .hero-marquee-track span {
+    font-size: 0.64rem !important;
   }
 }

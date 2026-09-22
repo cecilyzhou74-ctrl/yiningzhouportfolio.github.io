@@ -5,12 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css?v=20260914-sketch-preview" />
+    <link rel="stylesheet" href="project-nav.css?v=20260922-font-sync-2" />
   </head>
   <body class="project-detail-page">
     <main class="project-page-shell">
       <nav class="project-page-nav" aria-label="Project navigation">
         <a href="index.html">Back to Portfolio</a>
-        <span>FLOYCE</span>
+        <div class="project-switcher" data-project-switcher>
+          <button class="project-switcher__toggle" type="button" aria-expanded="false" aria-controls="project-menu-floyce" aria-haspopup="true" data-project-switcher-toggle>
+            <span>FLOYCE</span><span class="project-switcher__arrow" aria-hidden="true">↓</span>
+          </button>
+          <div class="project-switcher__panel" id="project-menu-floyce">
+            <div class="project-switcher__panel-inner"><div class="project-switcher__links">
+              <a href="pulse.html">PULSE</a><a href="vitband.html">VITBAND</a><a href="heytea.html">HEYTEA</a><a href="nomoo.html">NOMOO</a><a href="floyce.html" aria-current="page">FLOYCE</a>
+            </div></div>
+          </div>
+        </div>
       </nav>
       <section class="content-panel" aria-label="Floyce project content">
         <article class="section-block project-case floyce-case" id="project-four">
@@ -50,5 +60,6 @@
       </section>
     </main>
     <script src="script.js?v=20260914-project-preview"></script>
+    <script src="project-nav.js?v=20260922-dropdown"></script>
   </body>
 </html>

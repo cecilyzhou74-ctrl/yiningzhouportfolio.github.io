@@ -171,6 +171,29 @@ body.home-page.is-previewing-project .project-hint {
   animation: project-object-drift 6.4s ease-in-out infinite;
 }
 
+.project-hero__object [hidden] {
+  display: none !important;
+}
+
+.project-hero__emoji {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+  font-size: clamp(15rem, 32vw, 31rem);
+  font-weight: 400;
+  line-height: 1;
+  filter:
+    drop-shadow(0 0 22px rgba(215, 255, 66, 0.52))
+    drop-shadow(0 34px 30px rgba(31, 5, 55, 0.24));
+  animation: project-object-drift 6.4s ease-in-out infinite;
+}
+
+.project-hero[data-project="pulse"] .project-hero__object {
+  left: clamp(-140px, -7vw, -70px);
+}
+
 .project-hero__editorial {
   position: relative;
   top: 0;
@@ -464,6 +487,10 @@ body.home-page.is-previewing-project .project-hint {
     font-size: 0.75rem;
     line-height: 1.42;
   }
+
+  .project-hero__emoji {
+    font-size: clamp(13rem, 36vw, 23rem);
+  }
 }
 
 @media (max-width: 700px) {
@@ -542,6 +569,14 @@ body.home-page.is-previewing-project .project-hint {
     min-width: 48px;
     height: 38px;
     font-size: 0.8rem;
+  }
+
+  .project-hero[data-project="pulse"] .project-hero__object {
+    left: 50%;
+  }
+
+  .project-hero__emoji {
+    font-size: clamp(10rem, 52vw, 18rem);
   }
 
   .project-hero.is-animating .project-hero__object {
