@@ -189,6 +189,8 @@ const catSpeechText = catSpeech?.querySelector("[data-cat-speech-text]");
 
 const catSpeechMessages = {
   default: "Pick a project below and take a look around, meow.",
+  flex:
+    "This is Flex Academy — a UX strategy and web design project with focused conversion flows and an interactive prototype.",
   vitband:
     "This is VITBAND — a fitness-tech product where I designed the end-to-end mobile experience, from user flows and interaction design to high-fidelity UI.",
   heytea:
@@ -226,6 +228,15 @@ function resetCatSpeechWhenIdle() {
 }
 
 const projectDetails = {
+  flex: {
+    title: "FLEX ACADEMY",
+    titleLines: ["FLEX", "ACADEMY"],
+    tags: "UX strategy / Web design / Conversion flows / Interactive prototype",
+    image: "assets/flex/flex-laptop.png",
+    page: "flex.html",
+    overview:
+      "Flex Academy is a landing page design assignment for an education venture from the founders of The Flex and Base360. I structured the content around two audiences, connected the offer to traceable operating experience, and designed conversion paths for a webinar, strategy call, checklist, and waitlist.",
+  },
   vitband: {
     title: "VITBAND",
     tags: "UI/UX Design · Product Design · B2C Mobile App",
@@ -317,9 +328,18 @@ function renderProjectPreview() {
     previewEmoji.hidden = !project.emoji;
     previewEmoji.textContent = project.emoji || "";
   }
-  previewTitle.textContent = project.title;
+  previewTitle.replaceChildren();
+  if (project.titleLines) {
+    project.titleLines.forEach((line) => {
+      const titleLine = document.createElement("span");
+      titleLine.textContent = line;
+      previewTitle.append(titleLine);
+    });
+  } else {
+    previewTitle.textContent = project.title;
+  }
   previewTags.innerHTML = project.tags
-    .split(" · ")
+    .split(/\s*[·/]\s*/)
     .map((tag) => `<span>${tag}</span>`)
     .join("");
   previewOverview.textContent = project.overview;

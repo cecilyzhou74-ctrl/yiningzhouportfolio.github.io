@@ -6507,6 +6507,7 @@ body.project-detail-page .project-page-nav {
 
 body.home-page .cat-speech,
 body.home-page .cat-speech[data-speech-state="default"],
+body.home-page .cat-speech[data-speech-state="flex"],
 body.home-page .cat-speech[data-speech-state="pulse"],
 body.home-page .cat-speech[data-speech-state="vitband"],
 body.home-page .cat-speech[data-speech-state="heytea"],
@@ -6598,6 +6599,7 @@ body.home-page .cat-speech:not([data-speech-state="default"]) p::after {
 @media (max-width: 900px) {
   body.home-page .cat-speech,
   body.home-page .cat-speech[data-speech-state="default"],
+  body.home-page .cat-speech[data-speech-state="flex"],
   body.home-page .cat-speech[data-speech-state="pulse"],
   body.home-page .cat-speech[data-speech-state="vitband"],
   body.home-page .cat-speech[data-speech-state="heytea"],
@@ -6619,6 +6621,7 @@ body.home-page .cat-speech:not([data-speech-state="default"]) p::after {
 @media (max-width: 760px) {
   body.home-page .cat-speech,
   body.home-page .cat-speech[data-speech-state="default"],
+  body.home-page .cat-speech[data-speech-state="flex"],
   body.home-page .cat-speech[data-speech-state="pulse"],
   body.home-page .cat-speech[data-speech-state="vitband"],
   body.home-page .cat-speech[data-speech-state="heytea"],
@@ -6645,4 +6648,65 @@ body.home-page .cat-speech:not([data-speech-state="default"]) p::after {
       linear-gradient(#050407, #050407) 0 0 / 38px 1px no-repeat,
       linear-gradient(#050407, #050407) 11px 6px / 27px 1px no-repeat !important;
   }
+}
+
+/* Sixth homepage project: Flex Academy. */
+body.home-page .project-track .project-sticker span.flex-project-icon {
+  display: grid !important;
+  place-items: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  color: #08080a !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: clamp(7rem, 10vw, 10rem) !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  text-indent: 0 !important;
+  filter: drop-shadow(0 18px 16px rgba(28, 27, 31, 0.24)) !important;
+  transition: transform 360ms cubic-bezier(.2, .8, .2, 1), filter 360ms ease !important;
+}
+
+body.home-page .project-track .project-sticker:hover span.flex-project-icon,
+body.home-page .project-track .project-sticker:focus-visible span.flex-project-icon {
+  filter: drop-shadow(0 24px 20px rgba(28, 27, 31, 0.34)) !important;
+}
+
+body.home-page .sticker-flex {
+  --object-width: clamp(132px, 14vw, 200px);
+  --object-height: clamp(82px, 9vw, 132px);
+  --sticker-rotate: -5deg;
+  --float-delay: -1.2s;
+  --float-duration: 7.4s;
+  left: 8% !important;
+  top: 73% !important;
+}
+
+body.home-page .sticker-pulse { left: 22.5% !important; top: 77% !important; }
+body.home-page .sticker-vitband { left: 38.5% !important; top: 75% !important; }
+body.home-page .sticker-heytea { left: 55% !important; top: 78% !important; }
+body.home-page .sticker-nomoo { left: 72.5% !important; top: 74% !important; }
+body.home-page .sticker-floyce { left: 90% !important; top: 77% !important; }
+
+@media (max-width: 900px) {
+  body.home-page .sticker-flex { left: 8% !important; top: 73% !important; }
+  body.home-page .sticker-pulse { left: 22% !important; top: 76% !important; }
+  body.home-page .sticker-vitband { left: 38% !important; top: 74% !important; }
+  body.home-page .sticker-heytea { left: 55% !important; top: 78% !important; }
+  body.home-page .sticker-nomoo { left: 72% !important; top: 74% !important; }
+  body.home-page .sticker-floyce { left: 90% !important; top: 77% !important; }
+}
+
+@media (max-width: 760px) {
+  body.home-page .sticker-flex {
+    --object-width: 21vw;
+    --object-height: 13vw;
+    left: 11% !important;
+    top: 60% !important;
+  }
+  body.home-page .sticker-pulse { left: 22% !important; top: 70% !important; }
+  body.home-page .sticker-vitband { left: 38% !important; top: 63% !important; }
+  body.home-page .sticker-heytea { left: 55% !important; top: 72% !important; }
+  body.home-page .sticker-nomoo { left: 72% !important; top: 64% !important; }
+  body.home-page .sticker-floyce { left: 84% !important; top: 73% !important; }
+  body.home-page .project-track .project-sticker span.flex-project-icon { font-size: clamp(3.5rem, 16vw, 5rem) !important; }
 }
