@@ -1,0 +1,203 @@
+:root {
+  --nomoo-bg: #f2effa;
+  --nomoo-ink: #413c47;
+  --nomoo-muted: #77717c;
+  --nomoo-accent: #80699d;
+  --nomoo-wide: 1160px;
+}
+
+body.nomoo-page {
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--nomoo-bg);
+  color: var(--nomoo-ink);
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0;
+}
+
+.nomoo-page *,
+.nomoo-page *::before,
+.nomoo-page *::after {
+  box-sizing: border-box;
+}
+
+.nomoo-page .project-page-nav > a,
+.nomoo-page .project-switcher__toggle,
+.nomoo-page .project-switcher__links a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+.nomoo-page .case-section-nav {
+  position: fixed;
+  z-index: 45;
+  top: 50%;
+  left: clamp(18px, 2.3vw, 38px);
+  display: grid;
+  width: 174px;
+  gap: 2px;
+  transform: translateY(-45%);
+}
+
+.nomoo-page .case-section-nav > p {
+  margin: 0 0 11px;
+  color: var(--nomoo-muted);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.nomoo-page .case-section-nav a {
+  display: grid;
+  grid-template-columns: 25px minmax(0, 1fr);
+  gap: 5px;
+  padding: 7px 0;
+  color: #8a8490;
+  font-size: 11px;
+  line-height: 1.35;
+  text-decoration: none;
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.nomoo-page .case-section-nav a span:first-child {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 9px;
+}
+
+.nomoo-page .case-section-nav a:hover,
+.nomoo-page .case-section-nav a:focus-visible,
+.nomoo-page .case-section-nav a.is-active {
+  color: var(--nomoo-accent);
+  font-weight: 500;
+}
+
+.nomoo-page .content-panel {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+  background: transparent;
+}
+
+.nomoo-page .nomoo-case {
+  width: min(calc(100% - 64px), var(--nomoo-wide));
+  margin-inline: auto;
+  padding: 0 0 96px;
+}
+
+.nomoo-page .case-hero {
+  padding: clamp(72px, 7vw, 96px) 0 48px;
+}
+
+.nomoo-page .case-hero h2 {
+  margin: 0;
+  font-size: clamp(3rem, 5vw, 4rem);
+  font-weight: 600;
+  line-height: 0.96;
+}
+
+.nomoo-page .project-tag {
+  margin: 18px 0 0;
+  color: var(--nomoo-muted);
+  font-size: 0.82rem;
+}
+
+.nomoo-page .nomoo-overview,
+.nomoo-page .visual-project-heading {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.35fr) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 64px);
+  align-items: start;
+}
+
+.nomoo-page .nomoo-overview {
+  padding: clamp(72px, 7vw, 96px) 0 48px;
+}
+
+.nomoo-page .visual-project-heading {
+  padding: 48px 0 40px;
+}
+
+.nomoo-page .nomoo-overview h3,
+.nomoo-page .visual-project-heading h3 {
+  margin: 0;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.nomoo-page .nomoo-overview p {
+  max-width: 700px;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.68;
+}
+
+.nomoo-page .visual-project-heading p {
+  margin: 4px 0 0;
+  color: var(--nomoo-muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+.nomoo-page .nomoo-gallery {
+  display: grid;
+  gap: 24px;
+}
+
+.nomoo-page .nomoo-gallery figure {
+  margin: 0;
+}
+
+.nomoo-page .nomoo-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+@media (min-width: 1100px) {
+  .nomoo-page .case-study-content {
+    padding-left: clamp(220px, 16vw, 250px);
+  }
+}
+
+@media (max-width: 1099px) {
+  .nomoo-page .case-section-nav {
+    position: sticky;
+    top: 68px;
+    left: auto;
+    display: flex;
+    width: 100%;
+    gap: 4px;
+    overflow-x: auto;
+    padding: 9px 20px;
+    transform: none;
+    background: rgba(242, 239, 250, 0.94);
+  }
+
+  .nomoo-page .case-section-nav > p {
+    display: none;
+  }
+
+  .nomoo-page .case-section-nav a {
+    flex: 0 0 auto;
+    grid-template-columns: auto auto;
+    padding: 7px 10px;
+  }
+}
+
+@media (max-width: 760px) {
+  .nomoo-page .nomoo-case {
+    width: min(calc(100% - 36px), var(--nomoo-wide));
+  }
+
+  .nomoo-page .nomoo-overview,
+  .nomoo-page .visual-project-heading {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

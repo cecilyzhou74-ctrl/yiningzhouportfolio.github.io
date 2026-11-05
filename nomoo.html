@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css?v=20260922-violet-accent" />
-    <link rel="stylesheet" href="project-nav.css?v=20260922-font-sync-2" />
+    <link rel="stylesheet" href="project-nav.css?v=20261105-behavior-only" />
+    <link rel="stylesheet" href="nomoo-case.css?v=20261105-isolated" />
   </head>
-  <body class="project-detail-page">
+  <body class="project-detail-page nomoo-page has-case-section-nav">
     <main class="project-page-shell">
       <nav class="project-page-nav" aria-label="Project navigation">
         <a href="index.html">Back to Portfolio</a>
@@ -22,24 +23,34 @@
           </div>
         </div>
       </nav>
-      <section class="content-panel" aria-label="NOMOO project content">
+
+      <nav class="case-section-nav" aria-label="NOMOO case study sections" data-case-section-nav>
+        <p>NOMOO / CASE STUDY</p>
+        <a href="#nomoo-overview" data-case-section-link><span>00</span><span>Overview</span></a>
+        <a href="#nomoo-applications" data-case-section-link><span>01</span><span>Applications</span></a>
+      </nav>
+
+      <section class="content-panel case-study-content" aria-label="NOMOO project content">
         <article class="section-block project-case nomoo-case" id="project-three">
-          <header class="case-hero nomoo-hero">
+          <header class="case-hero nomoo-hero" id="nomoo-overview" data-case-section>
             <h2>NOMOO</h2>
             <p class="project-tag">Editorial Design · Publication Design · Web Design</p>
           </header>
 
           <section class="case-block case-block-large nomoo-overview">
-            <h3>Overview</h3>
+            <h3>Project Overview</h3>
             <p>
-              NOMOO is an editorial design project that extends a publication concept
-              from print into a digital experience. I designed both the physical
-              publication and its accompanying website, focusing on typography,
-              editorial layout, visual hierarchy, imagery, and the relationship between
-              print and screen. The project creates a consistent visual language while
-              adapting the content and reading experience across different formats.
+              NOMOO extends an editorial concept from a printed publication into a
+              companion website. I designed both formats, focusing on typography,
+              editorial layout, visual hierarchy, imagery, and how the reading experience
+              changes between print and screen.
             </p>
           </section>
+
+          <header class="visual-project-heading" id="nomoo-applications" data-case-section>
+            <p>02 / Applications</p>
+            <h3>Print and digital system</h3>
+          </header>
 
           <div class="nomoo-gallery" aria-label="NOMOO project spreads">
             <figure class="nomoo-spread">
@@ -71,6 +82,7 @@
       </section>
     </main>
     <script src="script.js?v=20260914-project-preview"></script>
+    <script src="case-study-nav.js?v=20261105-shared-sidebar"></script>
     <script src="project-nav.js?v=20260922-dropdown"></script>
   </body>
 </html>

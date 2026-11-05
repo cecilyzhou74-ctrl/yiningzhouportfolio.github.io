@@ -10,9 +10,10 @@
     <title>VITBAND — Yining Zhou</title>
     <link rel="stylesheet" href="styles.css?v=20260922-violet-accent" />
     <link rel="stylesheet" href="vitband-case.css?v=20260922-pale-bg" />
-    <link rel="stylesheet" href="project-nav.css?v=20260922-font-sync-2" />
+    <link rel="stylesheet" href="project-nav.css?v=20261105-behavior-only" />
+    <link rel="stylesheet" href="vitband-editorial.css?v=20261105-isolated" />
   </head>
-  <body class="project-detail-page vitband-page">
+  <body class="project-detail-page vitband-page has-case-section-nav">
     <header class="vb-site-header">
       <a href="index.html" class="vb-back" aria-label="Back to portfolio">YINING ZHOU ↙</a>
       <div class="project-switcher" data-project-switcher>
@@ -27,14 +28,34 @@
       </div>
     </header>
 
-    <main class="vb-case">
-      <section class="vb-hero" aria-labelledby="vitband-title">
+    <nav class="case-section-nav" aria-label="VITBAND case study sections" data-case-section-nav>
+      <p>VITBAND / CASE STUDY</p>
+      <a href="#vitband-overview" data-case-section-link><span>00</span><span>Overview</span></a>
+      <a href="#vitband-context" data-case-section-link><span>01</span><span>Context</span></a>
+      <a href="#vitband-challenge" data-case-section-link><span>02</span><span>Challenge</span></a>
+      <a href="#vitband-research" data-case-section-link><span>03</span><span>Research</span></a>
+      <a href="#vitband-competitive" data-case-section-link><span>04</span><span>Competitive Review</span></a>
+      <a href="#vitband-audience" data-case-section-link><span>05</span><span>Audience</span></a>
+      <a href="#vitband-insights" data-case-section-link><span>06</span><span>Insights</span></a>
+      <a href="#vitband-strategy" data-case-section-link><span>07</span><span>Strategy</span></a>
+      <a href="#vitband-lowfi" data-case-section-link><span>08</span><span>Lo-Fi</span></a>
+      <a href="#vitband-ai" data-case-section-link><span>09</span><span>AI Coach</span></a>
+      <a href="#vitband-fatigue" data-case-section-link><span>10</span><span>Fatigue Scale</span></a>
+      <a href="#vitband-highfi" data-case-section-link><span>11</span><span>Hi-Fi</span></a>
+      <a href="#vitband-hierarchy" data-case-section-link><span>12</span><span>Hierarchy</span></a>
+      <a href="#vitband-outcome" data-case-section-link><span>13</span><span>Outcome</span></a>
+      <a href="#vitband-recognition" data-case-section-link><span>14</span><span>Recognition</span></a>
+      <a href="#vitband-reflection" data-case-section-link><span>15</span><span>Reflection</span></a>
+    </nav>
+
+    <main class="vb-case case-study-content">
+      <section class="vb-hero" id="vitband-overview" aria-labelledby="vitband-title" data-case-section>
         <div class="vb-container vb-grid">
           <p class="vb-hero-kicker">PRODUCT DESIGN / UI UX<br />2025–2026</p>
           <h1 id="vitband-title">VITBAND</h1>
 
           <div class="vb-hero-statement">
-            <p>UNDERSTAND YOUR MUSCLES.<br />TRAIN WITH MORE CLARITY.</p>
+            <p>MUSCLE-FATIGUE MONITORING FOR TRAINING.</p>
           </div>
           <p class="vb-hero-intro">
             A fitness technology experience that translates real-time muscle performance
@@ -57,11 +78,11 @@
         </div>
       </section>
 
-      <section class="vb-section vb-context" aria-labelledby="context-title">
+      <section class="vb-section vb-context" id="vitband-context" aria-labelledby="context-title" data-case-section>
         <div class="vb-container">
           <p class="vb-index">01 / CONTEXT</p>
           <div class="vb-grid vb-context-grid">
-            <h2 id="context-title">FROM A TECHNICAL<br />PROTOTYPE TO A<br />CONSUMER EXPERIENCE.</h2>
+            <h2 id="context-title">PROJECT CONTEXT</h2>
             <div class="vb-copy">
               <p>
                 VITBAND already had its core wearable technology and an early mobile
@@ -80,12 +101,10 @@
         </div>
       </section>
 
-      <section class="vb-section vb-challenge" aria-labelledby="challenge-title">
+      <section class="vb-section vb-challenge" id="vitband-challenge" aria-labelledby="challenge-title" data-case-section>
         <div class="vb-container">
           <p class="vb-index">02 / THE CHALLENGE</p>
-          <h2 id="challenge-title" class="vb-display-heading">
-            HOW MIGHT WE TURN<br />COMPLEX MUSCLE DATA<br />INTO TRAINING DECISIONS<br />USERS CAN MAKE<br />IN SECONDS?
-          </h2>
+          <h2 id="challenge-title" class="vb-display-heading">MUSCLE DATA INTERPRETATION</h2>
 
           <div class="vb-three-column">
             <article>
@@ -114,18 +133,14 @@
             </article>
           </div>
 
-          <div class="vb-problem-statement">
-            <p>THE PROBLEM WASN’T<br />A LACK OF DATA.</p>
-            <p>IT WAS THE DISTANCE<br />BETWEEN DATA AND ACTION.</p>
-          </div>
         </div>
       </section>
 
-      <section class="vb-section vb-research" aria-labelledby="research-title">
+      <section class="vb-section vb-research" id="vitband-research" aria-labelledby="research-title" data-case-section>
         <div class="vb-container">
           <p class="vb-index">03 / RESEARCH</p>
           <div class="vb-grid vb-section-intro">
-            <h2 id="research-title">UNDERSTANDING THE<br />PRODUCT BEFORE<br />REDESIGNING IT.</h2>
+            <h2 id="research-title">PRODUCT AND INTERFACE AUDIT</h2>
             <p>
               Rather than starting with visual styling, I first looked at how the existing
               product communicated information, how comparable fitness platforms structured
@@ -135,7 +150,7 @@
 
           <div class="vb-research-framework">
             <article>
-              <span>01 ↘</span>
+              <span>01</span>
               <h3>PROTOTYPE AUDIT</h3>
               <p>
                 Reviewed the existing prototype to identify friction in navigation,
@@ -143,7 +158,7 @@
               </p>
             </article>
             <article>
-              <span>02 ↘</span>
+              <span>02</span>
               <h3>COMPETITIVE ANALYSIS</h3>
               <p>
                 Studied how established fitness platforms translate physiological data into
@@ -151,7 +166,7 @@
               </p>
             </article>
             <article>
-              <span>03 ↘</span>
+              <span>03</span>
               <h3>PRODUCT + TECH REVIEW</h3>
               <p>
                 Worked with the team to understand the underlying muscle data, technical
@@ -159,7 +174,7 @@
               </p>
             </article>
             <article>
-              <span>04 ↘</span>
+              <span>04</span>
               <h3>DESIGN EXPLORATION</h3>
               <p>
                 Translated these findings into alternative information structures,
@@ -170,11 +185,11 @@
         </div>
       </section>
 
-      <section class="vb-section vb-competitive" aria-labelledby="competitive-title">
+      <section class="vb-section vb-competitive" id="vitband-competitive" aria-labelledby="competitive-title" data-case-section>
         <div class="vb-container">
           <p class="vb-index">04 / COMPETITIVE LANDSCAPE</p>
           <div class="vb-grid vb-section-intro">
-            <h2 id="competitive-title">LEARNING FROM<br />FITNESS DATA PRODUCTS.</h2>
+            <h2 id="competitive-title">COMPETITIVE REVIEW</h2>
             <p>
               I looked at established fitness platforms including WHOOP, Polar, and Oura to
               understand how complex physiological information is translated into everyday
@@ -216,18 +231,18 @@
           </div>
 
           <div class="vb-opportunity">
-            <span>OPPORTUNITY ↘</span>
-            <p>THE GOAL WASN’T<br />TO SHOW MORE DATA.</p>
-            <p>IT WAS TO MAKE<br />THE DATA MORE USEFUL.</p>
+            <span>DESIGN OPPORTUNITY ↘</span>
+            <p>PRIORITISE MUSCLE-SPECIFIC TRAINING GUIDANCE.</p>
+            <p>REDUCE NAVIGATION AND METRIC INTERPRETATION DURING ACTIVE WORKOUTS.</p>
           </div>
         </div>
       </section>
 
-      <section class="vb-section vb-audience" aria-labelledby="audience-title">
+      <section class="vb-section vb-audience" id="vitband-audience" aria-labelledby="audience-title" data-case-section>
         <div class="vb-container">
           <p class="vb-index">05 / AUDIENCE SIGNALS</p>
           <div class="vb-grid vb-section-intro">
-            <h2 id="audience-title">WHAT INFORMATION<br />MATTERS MOST?</h2>
+            <h2 id="audience-title">TRAINING INFORMATION PRIORITIES</h2>
             <p>
               Existing audience research helped highlight which types of training
               information were perceived as most valuable.
@@ -259,51 +274,49 @@
         </div>
       </section>
 
-      <section class="vb-section vb-insights" aria-labelledby="insights-title">
+      <section class="vb-section vb-insights" id="vitband-insights" aria-labelledby="insights-title" data-case-section>
         <div class="vb-container">
           <p class="vb-index">06 / KEY INSIGHTS</p>
-          <h2 id="insights-title">FROM SIGNALS<br />TO DESIGN DIRECTION.</h2>
+          <h2 id="insights-title">DESIGN INSIGHTS</h2>
           <div class="vb-insight-grid">
             <article>
               <span>01</span>
-              <h3>DATA NEEDS<br />CONTEXT</h3>
+              <h3>METRIC CONTEXT</h3>
               <p>
                 Performance data becomes more useful when users can understand what it
                 means and what they should do next.
               </p>
-              <h4>DESIGN RESPONSE ↘</h4>
+              <h4>DESIGN RESPONSE</h4>
               <p>Pair important metrics with clear explanations and recommendations.</p>
             </article>
             <article>
               <span>02</span>
-              <h3>CLARITY OVER<br />COMPLEXITY</h3>
+              <h3>SIMPLIFIED DATA PRESENTATION</h3>
               <p>
                 During training, users need to recognize their current condition without
                 navigating through dense layers of information.
               </p>
-              <h4>DESIGN RESPONSE ↘</h4>
+              <h4>DESIGN RESPONSE</h4>
               <p>Create stronger hierarchy and surface the most important signals first.</p>
             </article>
             <article>
               <span>03</span>
-              <h3>PROGRESS SHOULD<br />FEEL POSITIVE</h3>
+              <h3>POSITIVE PROGRESS MODEL</h3>
               <p>
                 Training feedback should reinforce effort and accomplishment rather than
                 making progress feel like continuous depletion.
               </p>
-              <h4>DESIGN RESPONSE ↘</h4>
+              <h4>DESIGN RESPONSE</h4>
               <p>Use progress-oriented visual models wherever the underlying data allows it.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="vb-section vb-strategy" aria-labelledby="strategy-title">
+      <section class="vb-section vb-strategy" id="vitband-strategy" aria-labelledby="strategy-title" data-case-section>
         <div class="vb-container">
           <p class="vb-index">07 / DESIGN STRATEGY</p>
-          <h2 id="strategy-title" class="vb-strategy-words">
-            <span>CLEAR.</span><span>ACTIONABLE.</span><span>MOTIVATING.</span><span>CONSISTENT.</span>
-          </h2>
+          <h2 id="strategy-title" class="vb-strategy-words"><span>DESIGN PRINCIPLES</span></h2>
           <div class="vb-strategy-grid">
             <p><b>01 / CLEAR</b><br />Surface the most important information first.</p>
             <p><b>02 / ACTIONABLE</b><br />Connect performance signals to meaningful next steps.</p>
@@ -313,11 +326,11 @@
         </div>
       </section>
 
-      <section class="vb-section vb-lowfi" aria-labelledby="lowfi-title">
+      <section class="vb-section vb-lowfi" id="vitband-lowfi" aria-labelledby="lowfi-title" data-case-section>
         <div class="vb-container">
           <p class="vb-index">08 / EARLY EXPLORATION</p>
           <div class="vb-grid vb-section-intro">
-            <h2 id="lowfi-title">STRUCTURE FIRST.<br />VISUALS SECOND.</h2>
+            <h2 id="lowfi-title">LOW-FIDELITY WIREFRAMES</h2>
             <p>
               Before refining the visual language, I explored how key information should
               be organized across the core product experience.
@@ -335,16 +348,16 @@
         </div>
       </section>
 
-      <section class="vb-section vb-ai-decision" aria-labelledby="ai-title">
+      <section class="vb-section vb-ai-decision" id="vitband-ai" aria-labelledby="ai-title" data-case-section>
         <div class="vb-container">
           <p class="vb-index">09 / KEY DESIGN DECISION</p>
           <p class="vb-subindex">AI COACH / ITERATION 01</p>
-          <h2 id="ai-title">MAKING AI USEFUL,<br />NOT DISTRACTING.</h2>
+          <h2 id="ai-title">AI COACH ITERATION</h2>
 
           <div class="vb-ai-flow">
             <article class="vb-ai-before">
               <span>BEFORE</span>
-              <h3>CHARACTER-DRIVEN<br />AI ASSISTANT</h3>
+              <h3>CHARACTER-DRIVEN AI ASSISTANT</h3>
               <p>
                 The early concept gave AI Coach a stronger character presence to make the
                 product feel more conversational.
@@ -363,7 +376,7 @@
             </article>
             <article class="vb-ai-after">
               <span>AFTER</span>
-              <h3>GUIDANCE-DRIVEN<br />AI COACH</h3>
+              <h3>GUIDANCE-DRIVEN AI COACH</h3>
               <p>
                 We reduced the character-driven elements and repositioned AI as a layer of
                 guidance within the training experience.
@@ -373,16 +386,16 @@
           </div>
 
           <div class="vb-ai-conclusion">
-            <p>LESS ABOUT<br />“TALKING TO AI.”</p><span>→</span><p>MORE ABOUT<br />“WHAT SHOULD I DO NEXT?”</p>
+            <p>AI ASSISTANT</p><span>→</span><p>TRAINING GUIDANCE</p>
           </div>
         </div>
       </section>
 
-      <section class="vb-section vb-energy" aria-labelledby="energy-title">
+      <section class="vb-section vb-energy" id="vitband-fatigue" aria-labelledby="energy-title" data-case-section>
         <div class="vb-container">
           <p class="vb-index">10 / KEY DESIGN DECISION</p>
           <p class="vb-subindex">MUSCLE ENERGY / ITERATION 02</p>
-          <h2 id="energy-title">TURNING DEPLETION<br />INTO PROGRESS.</h2>
+          <h2 id="energy-title">FATIGUE SCALE ITERATION</h2>
 
           <div class="vb-energy-comparison">
             <article>
@@ -417,15 +430,14 @@
               process could communicate progress and accomplishment more clearly.
             </p>
           </div>
-          <p class="vb-energy-ending">THE DATA<br />DIDN’T CHANGE.<br /><br />THE WAY USERS<br />EXPERIENCED IT DID.</p>
         </div>
       </section>
 
-      <section class="vb-section vb-highfi" id="vitband-highfi" aria-labelledby="highfi-title">
+      <section class="vb-section vb-highfi" id="vitband-highfi" aria-labelledby="highfi-title" data-case-section>
         <div class="vb-container">
           <p class="vb-index">11 / HIGH-FIDELITY DESIGN</p>
           <div class="vb-grid vb-section-intro">
-            <h2 id="highfi-title">FROM STRUCTURE<br />TO EXPERIENCE.</h2>
+            <h2 id="highfi-title">HIGH-FIDELITY INTERFACE</h2>
             <p>
               The final visual direction brings together clearer information hierarchy,
               simplified navigation, and a more focused system for communicating training data.
@@ -490,11 +502,11 @@
         </div>
       </section>
 
-      <section class="vb-section vb-hierarchy" aria-labelledby="hierarchy-title">
+      <section class="vb-section vb-hierarchy" id="vitband-hierarchy" aria-labelledby="hierarchy-title" data-case-section>
         <div class="vb-container">
           <p class="vb-index">12 / INFORMATION HIERARCHY</p>
           <div class="vb-grid vb-section-intro">
-            <h2 id="hierarchy-title">DESIGNED TO BE<br />UNDERSTOOD<br />IN SECONDS.</h2>
+            <h2 id="hierarchy-title">DASHBOARD INFORMATION HIERARCHY</h2>
             <p>
               During training, users should not need to study a dashboard. The interface
               prioritizes immediate muscle condition and training guidance before secondary
@@ -514,11 +526,11 @@
         </div>
       </section>
 
-      <section class="vb-section vb-outcome" aria-labelledby="outcome-title">
+      <section class="vb-section vb-outcome" id="vitband-outcome" aria-labelledby="outcome-title" data-case-section>
         <div class="vb-container">
           <p class="vb-index">13 / OUTCOME</p>
           <div class="vb-grid vb-section-intro">
-            <h2 id="outcome-title">THE EXPERIENCE,<br />BROUGHT TOGETHER.</h2>
+            <h2 id="outcome-title">FINAL PRODUCT SCREENS</h2>
             <p>
               The final experience brings monitoring, coaching, workout history, and
               performance feedback into one cohesive visual system.
@@ -552,7 +564,7 @@
         </div>
       </section>
 
-      <section class="vb-section vb-recognition" aria-labelledby="recognition-title">
+      <section class="vb-section vb-recognition" id="vitband-recognition" aria-labelledby="recognition-title" data-case-section>
         <div class="vb-container">
           <p class="vb-index">14 / RECOGNITION</p>
           <div class="vb-grid">
@@ -568,37 +580,31 @@
         </div>
       </section>
 
-      <section class="vb-section vb-reflection" aria-labelledby="reflection-title">
+      <section class="vb-section vb-reflection" id="vitband-reflection" aria-labelledby="reflection-title" data-case-section>
         <div class="vb-container">
           <p class="vb-index">15 / REFLECTION</p>
           <div class="vb-grid vb-section-intro">
-            <h2 id="reflection-title">GOOD DATA ISN’T<br />ENOUGH ON ITS OWN.</h2>
+            <h2 id="reflection-title">REFLECTION</h2>
             <div>
               <p>
-                This project reinforced that simplifying data is not about removing
-                information. It is about deciding what matters, when it matters, and how it
-                should shape the user’s next decision.
+                I learned that simplifying data requires prioritising what users need at
+                each moment, not simply removing information.
               </p>
               <p>
-                The redesign pushed me to think beyond individual screens and consider how
-                information hierarchy, interaction patterns, and visual feedback work
-                together to turn technical capability into a usable product experience.
+                I also had to coordinate information hierarchy, interaction patterns, and
+                visual feedback across monitoring, coaching, and history instead of treating
+                each screen as an isolated interface.
               </p>
             </div>
           </div>
-          <p class="vb-reflection-ending">DESIGN THE DATA.<br /><span>→</span><br />SHAPE THE DECISION.</p>
         </div>
       </section>
 
-      <a class="vb-next-project" href="heytea.html">
-        <span>NEXT PROJECT ↗</span>
-        <strong>HEYTEA</strong>
-        <small>Rebrand / Visual Design</small>
-      </a>
     </main>
 
     <script src="script.js?v=20260916-vitband-editorial"></script>
     <script src="vitband-case.js?v=20260916-density-motion"></script>
+    <script src="case-study-nav.js?v=20261105-shared-sidebar"></script>
     <script src="project-nav.js?v=20260922-dropdown"></script>
   </body>
 </html>

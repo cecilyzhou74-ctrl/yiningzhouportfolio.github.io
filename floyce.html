@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css?v=20260922-violet-accent" />
-    <link rel="stylesheet" href="project-nav.css?v=20260922-font-sync-2" />
+    <link rel="stylesheet" href="project-nav.css?v=20261105-behavior-only" />
+    <link rel="stylesheet" href="floyce-case.css?v=20261105-isolated" />
   </head>
-  <body class="project-detail-page">
+  <body class="project-detail-page floyce-page has-case-section-nav">
     <main class="project-page-shell">
       <nav class="project-page-nav" aria-label="Project navigation">
         <a href="index.html">Back to Portfolio</a>
@@ -22,25 +23,34 @@
           </div>
         </div>
       </nav>
-      <section class="content-panel" aria-label="Floyce project content">
+
+      <nav class="case-section-nav" aria-label="FLOYCE case study sections" data-case-section-nav>
+        <p>FLOYCE / CASE STUDY</p>
+        <a href="#floyce-overview" data-case-section-link><span>00</span><span>Overview</span></a>
+        <a href="#floyce-applications" data-case-section-link><span>01</span><span>Applications</span></a>
+      </nav>
+
+      <section class="content-panel case-study-content" aria-label="Floyce project content">
         <article class="section-block project-case floyce-case" id="project-four">
-          <header class="case-hero floyce-hero">
+          <header class="case-hero floyce-hero" id="floyce-overview" data-case-section>
             <h2>FLOYCE</h2>
             <p class="project-tag">Art Direction · Campaign Design · Content Creation</p>
           </header>
 
           <section class="case-block case-block-large floyce-overview">
-            <h3>Overview</h3>
+            <h3>Project Overview</h3>
             <p>
-              FLOYCE is a women’s footwear brand project focused on creating visual
-              content that communicates the personality and qualities of its products. I
-              worked across creative concept development, art direction, photography,
-              video production, editing, motion graphics, and campaign design. Through a
-              series of product-focused visuals and social media content, I developed
-              playful and experimental ways to present the shoes while maintaining a
-              consistent brand identity.
+              FLOYCE is a campaign for a women’s footwear brand. I developed the creative
+              concept, art direction, photography, video, editing, motion graphics, and
+              social assets. The final series uses playful product compositions while
+              maintaining a consistent brand identity.
             </p>
           </section>
+
+          <header class="visual-project-heading" id="floyce-applications" data-case-section>
+            <p>02 / Applications</p>
+            <h3>Campaign applications</h3>
+          </header>
 
           <div class="floyce-gallery" aria-label="Floyce Instagram poster designs">
             <figure class="floyce-poster">
@@ -60,6 +70,7 @@
       </section>
     </main>
     <script src="script.js?v=20260914-project-preview"></script>
+    <script src="case-study-nav.js?v=20261105-shared-sidebar"></script>
     <script src="project-nav.js?v=20260922-dropdown"></script>
   </body>
 </html>

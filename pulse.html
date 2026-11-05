@@ -9,10 +9,11 @@
     />
     <title>PULSE — Yining Zhou</title>
     <link rel="stylesheet" href="styles.css?v=20260922-violet-accent" />
-    <link rel="stylesheet" href="pulse-case.css?v=20260922-pale-bg" />
-    <link rel="stylesheet" href="project-nav.css?v=20260922-font-sync-2" />
+    <link rel="stylesheet" href="pulse-case.css?v=20261007-userflow-scrollbar" />
+    <link rel="stylesheet" href="project-nav.css?v=20261105-behavior-only" />
+    <link rel="stylesheet" href="pulse-editorial.css?v=20261105-isolated" />
   </head>
-  <body class="project-detail-page pulse-page">
+  <body class="project-detail-page pulse-page has-case-section-nav">
     <main class="project-page-shell">
       <nav class="project-page-nav" aria-label="Project navigation">
         <a href="index.html">Back to Portfolio</a>
@@ -28,7 +29,25 @@
         </div>
       </nav>
 
-      <article class="pulse-case">
+      <nav class="pulse-section-nav" aria-label="PULSE case study sections">
+        <p>PULSE / CASE STUDY</p>
+        <a href="#pulse-section-01" data-pulse-section-link><span>01</span><span>Problem</span></a>
+        <a href="#pulse-section-02" data-pulse-section-link><span>02</span><span>Research</span></a>
+        <a href="#pulse-section-03" data-pulse-section-link><span>03</span><span>Opportunity</span></a>
+        <a href="#pulse-section-04" data-pulse-section-link><span>04</span><span>Strategy</span></a>
+        <a href="#pulse-section-05" data-pulse-section-link><span>05</span><span>Structure</span></a>
+        <a href="#pulse-section-06" data-pulse-section-link><span>06</span><span>User Flow</span></a>
+        <a href="#pulse-section-07" data-pulse-section-link><span>07</span><span>Lo-Fi</span></a>
+        <a href="#pulse-section-08" data-pulse-section-link><span>08</span><span>Hi-Fi</span></a>
+        <a
+          class="pulse-section-nav__figma"
+          href="https://www.figma.com/design/UjKoILnFvuzLKXntUggOBT/PULSE-%E2%80%94-Lo-Fi-UX-Prototype?node-id=283-1477&amp;t=KQSA0owTVfsOMHuZ-1"
+          target="_blank"
+          rel="noopener noreferrer"
+        >View in Figma ↗</a>
+      </nav>
+
+      <article class="pulse-case case-study-content">
         <header class="pulse-hero" aria-labelledby="pulse-title">
           <div class="pulse-wrap pulse-hero__layout">
             <p class="pulse-kicker pulse-reveal">Independent Product Design</p>
@@ -36,7 +55,13 @@
             <figure class="pulse-hero__visual" aria-label="PULSE mobile app interface mockups">
               <img src="assets/pulse/pulse-hero-main.png" alt="PULSE nightlife app interface mockups" />
             </figure>
-            <p class="pulse-hero__tagline pulse-reveal">Find your rave.</p>
+            <p class="pulse-hero__tagline pulse-reveal">Nightlife discovery and planning</p>
+            <a
+              class="pulse-hero__figma pulse-reveal"
+              href="https://www.figma.com/design/UjKoILnFvuzLKXntUggOBT/PULSE-%E2%80%94-Lo-Fi-UX-Prototype?node-id=283-1477&amp;t=KQSA0owTVfsOMHuZ-1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >View in Figma <span aria-hidden="true">↗</span></a>
             <p class="pulse-hero__intro pulse-reveal">
               PULSE is a nightlife discovery app designed to help ravers understand unfamiliar
               DJs, find events that match their music taste, and see where their friends are
@@ -55,11 +80,11 @@
           </div>
         </header>
 
-        <section class="pulse-section pulse-problem" aria-labelledby="problem-title">
+        <section class="pulse-section pulse-problem" id="pulse-section-01" aria-labelledby="problem-title">
           <div class="pulse-wrap">
             <p class="pulse-index pulse-reveal">01 / The Problem</p>
             <div class="pulse-heading-grid">
-              <h2 id="problem-title" class="pulse-reveal-title">Finding events is easy.<br />Choosing one isn’t.</h2>
+              <h2 id="problem-title" class="pulse-reveal-title">Event Selection Problem</h2>
               <div class="pulse-lead pulse-reveal">
                 <p>Event listings provide <strong>basic information</strong>, but <strong>not enough context</strong> to judge whether an event is personally relevant.</p>
                 <p><strong>Unfamiliar DJs</strong> make it difficult for users to understand what an event will actually sound and feel like.</p>
@@ -72,34 +97,30 @@
             <div class="pulse-three pulse-sequence">
               <article>
                 <span>01</span>
-                <h3>“I don’t know this DJ.”</h3>
+                <h3>Unfamiliar Artists</h3>
                 <p>A lineup can include dozens of artists, but recognizing a name and understanding their sound are two different things.</p>
                 <p>Users often leave the event app and search Spotify, SoundCloud, Instagram or YouTube before deciding.</p>
               </article>
               <article>
                 <span>02</span>
-                <h3>“Where is everyone going?”</h3>
+                <h3>Fragmented Social Context</h3>
                 <p>Rave communities are often large and loosely connected. Friends may split across several events on the same night, making it difficult to know where everyone is heading.</p>
               </article>
               <article>
                 <span>03</span>
-                <h3>“We keep talking, but no one decides.”</h3>
+                <h3>Group Decision Friction</h3>
                 <p>Group chats repeatedly cycle through the same questions: Who is this DJ? What do they play? Who’s going? Which event are we choosing?</p>
               </article>
             </div>
 
-            <div class="pulse-statement pulse-reveal">
-              <p>The problem wasn’t a lack of events.</p>
-              <strong>It was the uncertainty between discovering an event and actually deciding to go.</strong>
-            </div>
           </div>
         </section>
 
-        <section class="pulse-section pulse-research" aria-labelledby="research-title">
+        <section class="pulse-section pulse-research" id="pulse-section-02" aria-labelledby="research-title">
           <div class="pulse-wrap">
             <p class="pulse-index pulse-reveal">02 / Research &amp; Insight</p>
             <div class="pulse-heading-grid">
-              <h2 id="research-title" class="pulse-reveal-title">How people actually plan a rave night</h2>
+              <h2 id="research-title" class="pulse-reveal-title">Nightlife Planning Behaviours</h2>
               <div class="pulse-lead pulse-reveal">
                 <p>The initial problem came from my own experience navigating nightlife in New York.</p>
                 <p>Finding events was rarely difficult. The friction appeared after discovery: comparing unfamiliar artists, checking their sound, figuring out the vibe, and asking where friends were going.</p>
@@ -117,59 +138,58 @@
 
             <div class="pulse-key-insight pulse-reveal">
               <p>Key Insight</p>
-              <h3>The problem wasn’t event discovery.<br />It was fragmented decision-making.</h3>
+              <h3>Fragmented Decision-Making</h3>
             </div>
 
             <div class="pulse-three pulse-insights pulse-sequence">
-              <article><span>01</span><h3>Sound &gt; Labels</h3><p>Users may not always understand genre terminology, but they usually know what they like when they hear it.</p></article>
-              <article><span>02</span><h3>Taste Is Emotional</h3><p>People often describe music through feelings such as dark, groovy, hypnotic or euphoric rather than strict genre labels.</p></article>
-              <article><span>03</span><h3>Social Context Matters</h3><p>An event becomes more relevant when users know that people they care about are already planning to attend.</p></article>
+              <article><span>01</span><h3>Audio Before Genre Labels</h3><p>Users may not always understand genre terminology, but they usually know what they like when they hear it.</p></article>
+              <article><span>02</span><h3>Vibe-Based Preferences</h3><p>People often describe music through feelings such as dark, groovy, hypnotic or euphoric rather than strict genre labels.</p></article>
+              <article><span>03</span><h3>Friend Activity as Context</h3><p>An event becomes more relevant when users know that people they care about are already planning to attend.</p></article>
             </div>
 
             <div class="pulse-insight-summary pulse-reveal">
-              <p>The most important shift in this project was realizing that nightlife discovery was not really a search problem.</p>
-              <p>People already had ways to find events.</p>
-              <p>The opportunity was helping them move from:</p>
-              <strong>“This event exists.”</strong><span>to</span><strong>“This feels right for me, my friends are going, and I’m ready to choose it.”</strong>
+              <p>Users moved between event listings, music platforms, social media, and group chats before choosing an event. PULSE brings those decision signals into one product.</p>
             </div>
           </div>
         </section>
 
-        <section class="pulse-section pulse-opportunity" aria-labelledby="opportunity-title">
+        <section class="pulse-section pulse-opportunity" id="pulse-section-03" aria-labelledby="opportunity-title">
           <div class="pulse-wrap">
             <p class="pulse-index pulse-reveal">03 / Design Opportunity</p>
-            <h2 id="opportunity-title" class="pulse-reveal-title">From discovery<br />to confidence.</h2>
-            <div class="pulse-questions">
-              <p class="pulse-reveal"><span>How might we</span> help ravers quickly understand unfamiliar artists and confidently choose events that match their taste?</p>
-              <p class="pulse-reveal"><span>And how might we</span> make deciding where to go with friends easier?</p>
+            <h2 id="opportunity-title" class="pulse-reveal-title">Design Opportunity</h2>
+            <div class="pulse-opportunity-intro pulse-reveal">
+              <p>Event listings often foreground artist names, dates and venues, but offer limited help in understanding how the music will actually feel. For someone exploring unfamiliar DJs, this creates a gap between finding an event and knowing whether it is worth attending.</p>
+              <p>PULSE connects musical context, personal preferences and friend activity to support that decision.</p>
+              <p class="pulse-opportunity-question"><strong>How might we help ravers evaluate unfamiliar artists, narrow down relevant events, and decide where to go with greater confidence?</strong></p>
             </div>
 
-            <div class="pulse-pathway pulse-reveal">
+            <div class="pulse-pathway pulse-sequence">
               <article>
-                <h3>Discover</h3>
-                <p>See what is happening without getting lost in an endless event feed.</p>
+                <p class="pulse-pathway__label">Discover</p>
+                <h3>Relevant Event Discovery</h3>
+                <p>Support two browsing needs: exploring events on a specific date and narrowing down recommendations for a night out. Date-based discovery and the Tonight feed provide distinct entry points, allowing users to browse broadly or review one option at a time.</p>
               </article>
-              <span aria-hidden="true">→</span>
               <article>
-                <h3>Understand</h3>
-                <p>Quickly understand an unfamiliar artist through sound, vibe and context.</p>
+                <p class="pulse-pathway__label">Understand</p>
+                <h3>Artist and Music Context</h3>
+                <p>Bring music previews, style descriptions and taste match into the artist experience. Clear information hierarchy helps users move from a quick impression to a closer evaluation, rather than relying on a DJ’s name or a genre label alone.</p>
               </article>
-              <span aria-hidden="true">→</span>
               <article>
-                <h3>Decide</h3>
-                <p>Bring personal taste and friend activity into the moment of decision.</p>
+                <p class="pulse-pathway__label">Decide</p>
+                <h3>Saved Events and Attendance</h3>
+                <p>Distinguish saving an event from committing to attend. Saved Dates lets users revisit possibilities, while friend activity adds social context. “I’m Going” provides a clear attendance state, helping users move from considering an event to choosing it.</p>
               </article>
             </div>
           </div>
         </section>
 
-        <section class="pulse-section pulse-strategy" aria-labelledby="strategy-title">
+        <section class="pulse-section pulse-strategy" id="pulse-section-04" aria-labelledby="strategy-title">
           <div class="pulse-wrap">
             <p class="pulse-index pulse-reveal">04 / Product Strategy</p>
             <div class="pulse-heading-grid">
-              <h2 id="strategy-title" class="pulse-reveal-title">From event discovery<br />to decision support.</h2>
+              <h2 id="strategy-title" class="pulse-reveal-title">Product Strategy</h2>
               <div class="pulse-lead pulse-reveal">
-                <p>PULSE is not designed to surface more events. The strategy is to reduce the uncertainty between <strong>finding an event</strong> and <strong>feeling confident enough to choose it</strong>.</p>
+                <p>The strategy reduces uncertainty between <strong>finding an event</strong> and <strong>deciding to attend</strong>.</p>
                 <p>The product focuses on four decision signals: <strong>personal taste, relevance, sound, and social context.</strong></p>
               </div>
             </div>
@@ -218,26 +238,69 @@
           </div>
         </section>
 
-        <section class="pulse-section pulse-user-flow" aria-labelledby="flow-title">
+        <section class="pulse-section pulse-product-structure" id="pulse-section-05" aria-labelledby="product-structure-title">
           <div class="pulse-wrap">
-            <p class="pulse-index pulse-reveal">05 / User Flow</p>
+            <p class="pulse-index pulse-reveal">05 / Product Structure</p>
             <div class="pulse-heading-grid">
-              <h2 id="flow-title" class="pulse-reveal-title">One continuous path<br />from taste to decision.</h2>
-              <p class="pulse-lead pulse-reveal">Rather than separating discovery, music research and social planning into different experiences, I designed PULSE around one continuous decision journey.</p>
+              <h2 id="product-structure-title" class="pulse-reveal-title">Product Structure</h2>
+            </div>
+
+            <div class="pulse-structure-grid pulse-sequence">
+              <article>
+                <h3>Tonight</h3>
+                <ul>
+                  <li>Discover DJs through a personalised card feed.</li>
+                  <li>Save or pass to narrow down your options.</li>
+                  <li>Revisit saved events and mark “I’m going.”</li>
+                </ul>
+              </article>
+              <article>
+                <h3>Discovery</h3>
+                <ul>
+                  <li>Browse events by date.</li>
+                  <li>Explore each DJ’s sound, style and taste match.</li>
+                  <li>Preview music and decide whether to join.</li>
+                </ul>
+              </article>
+              <article>
+                <h3>Crew</h3>
+                <ul>
+                  <li>Find and add friends.</li>
+                  <li>Compare music tastes and see where friends are going.</li>
+                  <li>Explore their nights out through personal Passports.</li>
+                </ul>
+              </article>
+              <article>
+                <h3>Profile</h3>
+                <ul>
+                  <li>See your evolving music taste profile.</li>
+                  <li>Express your identity through interests and a personal bio.</li>
+                  <li>Revisit past nights, venues and artists in your Passport.</li>
+                </ul>
+              </article>
             </div>
           </div>
-          <figure class="pulse-flow-figure pulse-wide pulse-reveal">
-            <div class="pulse-flow-scroll">
-              <img src="assets/pulse/PULSE — USER FLOW (1).png" alt="PULSE complete user flow from onboarding and taste setup through event discovery, music preview, social planning and nightlife history" />
-            </div>
-          </figure>
         </section>
 
-        <section class="pulse-section pulse-screens pulse-lofi" aria-labelledby="lofi-title">
+        <section class="pulse-section pulse-user-flow" id="pulse-section-06" aria-label="06 / User Flow">
+          <div class="pulse-wrap">
+            <p class="pulse-index pulse-reveal">06 / User Flow</p>
+            <figure class="pulse-flow-figure pulse-reveal">
+              <div class="pulse-flow-scroll" tabindex="0" aria-label="Scrollable PULSE user flow diagram">
+                <img src="assets/pulse/PULSE — USER FLOW.png?v=20261007-transparent" alt="PULSE complete user flow from taste setup through Tonight, Discovery, Crew and Profile" />
+              </div>
+              <span class="pulse-flow-scrollbar" aria-hidden="true">
+                <span class="pulse-flow-scrollbar__thumb"></span>
+              </span>
+            </figure>
+          </div>
+        </section>
+
+        <section class="pulse-section pulse-screens pulse-lofi" id="pulse-section-07" aria-labelledby="lofi-title">
           <div class="pulse-wrap pulse-screen-intro">
-            <p class="pulse-index pulse-reveal">06 / Lo-Fi Design</p>
+            <p class="pulse-index pulse-reveal">07 / Lo-Fi Design</p>
             <p class="pulse-kicker pulse-reveal">Early Product Direction</p>
-            <h2 id="lofi-title" class="pulse-reveal-title">Structure before visuals.</h2>
+            <h2 id="lofi-title" class="pulse-reveal-title">Low-Fidelity Wireframes</h2>
             <p class="pulse-lead pulse-reveal">Before defining the visual language, I focused on the decision flow: how much information should appear at each step, when users need more context, and how to reduce unnecessary navigation.</p>
           </div>
 
@@ -262,11 +325,11 @@
           </div>
         </section>
 
-        <section class="pulse-section pulse-screens pulse-hifi" aria-labelledby="hifi-title">
+        <section class="pulse-section pulse-screens pulse-hifi" id="pulse-section-08" aria-labelledby="hifi-title">
           <div class="pulse-wrap pulse-screen-intro">
-            <p class="pulse-index pulse-reveal">07 / Hi-Fi Design</p>
+            <p class="pulse-index pulse-reveal">08 / Hi-Fi Design</p>
             <p class="pulse-kicker pulse-reveal">Final Interface</p>
-            <h2 id="hifi-title" class="pulse-reveal-title">From structure<br />to experience.</h2>
+            <h2 id="hifi-title" class="pulse-reveal-title">High-Fidelity Interface</h2>
             <div class="pulse-lead pulse-reveal">
               <p>Once the product structure was defined, I developed a visual and interaction system built around nightlife, sound and decision-making.</p>
               <p>The final interface uses a near-black environment with orange reserved for active, selected and high-confidence states.</p>
@@ -274,38 +337,59 @@
           </div>
 
           <section class="pulse-screen-group pulse-wide" aria-labelledby="hifi-learn">
-            <div class="pulse-group-copy"><p>01 / Learn</p><h3 id="hifi-learn">Teach PULSE your taste.</h3><span>Onboarding begins with listening rather than filling out a preference form. Short music samples and vibe choices gradually create Your Pulse.</span></div>
-            <div class="pulse-screen-rail pulse-rail--five" data-pulse-sequence>
-              <figure><img src="assets/pulse/HIFI — 01 Welcome.png?v=20260922-0126" alt="Final PULSE welcome screen" /></figure>
-              <figure><img src="assets/pulse/HIFI — 02 Sign Up.png?v=20260922-0126" alt="Final PULSE sign up screen" /></figure>
-              <figure><img src="assets/pulse/HIFI — 03 Sound Taste.png?v=20260922-012945" alt="Final sound taste screen" /></figure>
-              <figure><img src="assets/pulse/HIFI — 04 Vibe Pick.png?v=20260922-0126" alt="Final vibe selection screen" /></figure>
-              <figure><img src="assets/pulse/HIFI — 05 Your Pulse.png?v=20260922-0126" alt="Final Your Pulse profile screen" /></figure>
+            <div class="pulse-group-copy"><p>01 / Learn</p><h3 id="hifi-learn">Taste Onboarding</h3><span>New users begin with a short taste test, helping them discover which sounds and nightlife styles they are most likely to enjoy.</span></div>
+            <div class="pulse-screen-rail pulse-rail--six pulse-rail--onboarding" data-pulse-sequence>
+              <figure><img src="assets/pulse/HIFI — 01 Welcome.png?v=20261007" alt="PULSE welcome screen introducing the nightlife experience" /></figure>
+              <figure><img src="assets/pulse/HIFI — 02 Sign Up.png?v=20261007" alt="PULSE lightweight sign up screen" /></figure>
+              <figure><img src="assets/pulse/HIFI — 03 Sound Taste.png?v=20261007" alt="PULSE sound taste test screen" /></figure>
+              <figure><img src="assets/pulse/HIFI — 03B Sound Taste Result.png?v=20261007" alt="PULSE sound taste result screen" /></figure>
+              <figure><img src="assets/pulse/HIFI — 04 Vibe Pick.png?v=20261007" alt="PULSE vibe selection screen" /></figure>
+              <figure><img src="assets/pulse/HIFI — 05 Your Pulse.png?v=20261007" alt="PULSE personalized taste profile screen" /></figure>
+            </div>
+          </section>
+
+          <section class="pulse-screen-group pulse-tonight pulse-wide" aria-labelledby="hifi-tonight">
+            <div class="pulse-tonight__layout">
+              <div class="pulse-tonight__carousel pulse-reveal" data-tonight-carousel data-direction="next" tabindex="0" aria-label="Tonight DJ recommendation screens">
+                <div class="pulse-tonight__viewport">
+                  <figure class="is-active" data-tonight-slide aria-hidden="false"><img src="assets/pulse/HIFI — 10 Tonight.png?v=20261007" alt="Tonight recommendation for John Summit" /></figure>
+                  <figure data-tonight-slide aria-hidden="true"><img src="assets/pulse/HIFI — 10A Tonight INNELLEA.png?v=20261007" alt="Tonight recommendation for INNELLEA" /></figure>
+                  <figure data-tonight-slide aria-hidden="true"><img src="assets/pulse/HIFI — 10B Tonight 999999999.png?v=20261007" alt="Tonight recommendation for 999999999" /></figure>
+                </div>
+                <div class="pulse-tonight__controls" aria-label="Tonight screen navigation">
+                  <button type="button" data-tonight-prev aria-label="Previous Tonight screen">‹</button>
+                  <p><span data-tonight-current>01</span> / 03</p>
+                  <button type="button" data-tonight-next aria-label="Next Tonight screen">›</button>
+                </div>
+              </div>
+
+              <div class="pulse-tonight__copy pulse-reveal">
+                <p class="pulse-kicker">02 / Tonight</p>
+                <h3 id="hifi-tonight">Tonight Recommendation Feed</h3>
+                <p class="pulse-tonight__lead">Tonight turns a long lineup into a focused decision loop. Users review one DJ at a time, then swipe left to pass or right to save.</p>
+                <ul>
+                  <li>A single-card view reduces comparison overload and keeps attention on the current recommendation.</li>
+                  <li>Match score, genre, and event time remain visible so every swipe is an informed choice.</li>
+                  <li>Saving builds a lightweight shortlist without interrupting discovery, helping users move from browsing to a plan.</li>
+                </ul>
+              </div>
             </div>
           </section>
 
           <section class="pulse-screen-group pulse-wide" aria-labelledby="hifi-discover">
-            <div class="pulse-group-copy"><p>02 / Discover</p><h3 id="hifi-discover">Find the right night.</h3><span>Discover keeps browsing lightweight while giving users more context only when an event starts to feel relevant.</span></div>
-            <div class="pulse-screen-rail pulse-rail--six" data-pulse-sequence>
-              <figure><img src="assets/pulse/HIFI — 06 Discover Home/Date List.png?v=20260922-0126" alt="Final discovery date list" /></figure>
-              <figure><img src="assets/pulse/HIFI — 06A Discover Home/Saturday Selected.png?v=20260922-0126" alt="Final discovery Saturday selected state" /></figure>
-              <figure><img src="assets/pulse/HIFI — 06B Discover Home/Scroll State.png?v=20260922-0126" alt="Final discovery scroll state" /></figure>
-              <figure><img src="assets/pulse/HIFI — 07 Discover Home/Event Expanded.png?v=20260922-0126" alt="Final expanded event state" /></figure>
-              <figure><img src="assets/pulse/HIFI — 08 Music Preview.png?v=20260922-0126" alt="Final music preview" /></figure>
-              <figure><img src="assets/pulse/HIFI — 09 Event Detail.png?v=20260922-0126" alt="Final event detail" /></figure>
+            <div class="pulse-group-copy"><p>03 / Discover</p><h3 id="hifi-discover">Event Discovery</h3><span>Discover keeps browsing lightweight while giving users more context only when an event starts to feel relevant.</span></div>
+            <div class="pulse-screen-rail pulse-rail--six pulse-rail--discover" data-pulse-sequence>
+              <figure><img src="assets/pulse/HIFI — 06A Discover Home/Saturday Selected.png?v=20261007-0233" alt="Final discovery Saturday 19 selected state" /></figure>
+              <figure><img src="assets/pulse/HIFI — 06B Discover Home/DATE 12.png?v=20261007-0233" alt="Final discovery Saturday 12 event list" /></figure>
+              <figure><img src="assets/pulse/HIFI — 09 Event Detail.png?v=20261007-0231" alt="Final event detail" /></figure>
+              <figure><img src="assets/pulse/HIFI — 09 Event Detail KI.png?v=20261007-0239" alt="Final KI/KI event detail" /></figure>
+              <figure><img src="assets/pulse/HIFI — 10 Who’s Going.png?v=20261007-0245" alt="Final event attendance screen" /></figure>
+              <figure><img src="assets/pulse/HIFI — 11 Crew.png?v=20261007-0243" alt="Final Crew screen" /></figure>
             </div>
           </section>
 
-          <section class="pulse-screen-group pulse-wide" aria-labelledby="hifi-decide">
-            <div class="pulse-group-copy"><p>03 / Decide</p><h3 id="hifi-decide">Know where your people are going.</h3><span>Taste helps narrow the options. Social context helps turn consideration into a decision.</span></div>
-            <div class="pulse-screen-rail pulse-rail--two" data-pulse-sequence>
-              <figure><img src="assets/pulse/HIFI — 10 Tonight.png?v=20260922-0126" alt="Final Tonight screen" /></figure>
-              <figure><img src="assets/pulse/HIFI — 11 Crew.png?v=20260922-0126" alt="Final Crew social planning screen" /></figure>
-            </div>
-          </section>
-
-          <section class="pulse-screen-group pulse-wide" aria-labelledby="hifi-remember">
-            <div class="pulse-group-copy"><p>04 / Remember</p><h3 id="hifi-remember">Turn nights out into a history.</h3><span>Profile and Passport turn previous events, venues and artists into part of the user’s evolving nightlife identity.</span></div>
+          <section class="pulse-screen-group pulse-wide" aria-labelledby="hifi-profile">
+            <div class="pulse-group-copy"><p>04 / Profile</p><h3 id="hifi-profile">Profile and Passport</h3><span>Profile and Passport turn previous events, venues and artists into part of the user’s evolving nightlife identity.</span></div>
             <div class="pulse-screen-rail pulse-rail--three" data-pulse-sequence>
               <figure><img src="assets/pulse/HIFI — 12 Profile.png?v=20260922-0126" alt="Final profile screen" /></figure>
               <figure><img src="assets/pulse/HIFI — 13 Passport.png?v=20260922-0126" alt="Final nightlife passport screen" /></figure>
@@ -317,11 +401,11 @@
         <section class="pulse-section pulse-decisions" aria-labelledby="decisions-title">
           <div class="pulse-wrap">
             <p class="pulse-index pulse-reveal">Design Decisions</p>
-            <h2 id="decisions-title" class="pulse-reveal-title">Three choices that shaped the product.</h2>
+            <h2 id="decisions-title" class="pulse-reveal-title">Key Product Decisions</h2>
             <div class="pulse-three pulse-sequence">
-              <article><span>01</span><h3>Taste should be felt,<br />not filled out.</h3><p>A traditional onboarding flow could ask users to select genres from a checklist. Instead, I designed onboarding around short audio samples and simple reactions.</p><p>Users may not know how to label their taste, but they usually know what they like when they hear it.</p></article>
-              <article><span>02</span><h3>Exploration moves.<br />Preference settles.</h3><p>Genre alone cannot describe the emotional quality of a night. Unselected vibe preferences gently move while selected preferences become visually stable and gain an orange edge glow.</p><p>Motion communicates state rather than simply decorating the interface.</p></article>
-              <article><span>03</span><h3>Social context<br />at the moment it matters.</h3><p>PULSE is not designed as another social feed.</p><p>Friend activity appears beside the events users are already considering, helping reduce uncertainty without shifting the focus away from the event.</p></article>
+              <article><span>01</span><h3>Audio-Based Taste Setup</h3><p>A traditional onboarding flow could ask users to select genres from a checklist. Instead, I designed onboarding around short audio samples and simple reactions.</p><p>Users may not know how to label their taste, but they usually know what they like when they hear it.</p></article>
+              <article><span>02</span><h3>Motion as Selection Feedback</h3><p>Genre alone cannot describe the emotional quality of a night. Unselected vibe preferences gently move while selected preferences become visually stable and gain an orange edge glow.</p><p>Motion communicates state rather than simply decorating the interface.</p></article>
+              <article><span>03</span><h3>Contextual Friend Activity</h3><p>Friend activity appears beside the events users are already considering, helping reduce uncertainty without shifting the focus away from the event.</p></article>
             </div>
           </div>
         </section>
@@ -330,12 +414,11 @@
           <div class="pulse-wrap">
             <p class="pulse-ending__line pulse-reveal-title">Find your sound.<br />Find your people.<br />Find your night.</p>
             <p class="pulse-ending__brand pulse-reveal-title">PULSE</p>
-            <a class="pulse-next" href="vitband.html"><span>Next Project</span><strong>VITBAND →</strong></a>
           </div>
         </footer>
       </article>
     </main>
-    <script src="pulse-case.js?v=20260922-pulse-refine"></script>
+    <script src="pulse-case.js?v=20261007-flow-scrollbar"></script>
     <script src="project-nav.js?v=20260922-dropdown"></script>
   </body>
 </html>

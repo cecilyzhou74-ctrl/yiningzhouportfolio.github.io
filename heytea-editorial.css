@@ -1,0 +1,163 @@
+:root {
+  --heytea-reading: 700px;
+  --heytea-section-space: clamp(72px, 7vw, 96px);
+}
+
+body.heytea-page {
+  --ht-sans: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.heytea-page .project-page-nav > a,
+.heytea-page .project-switcher__toggle,
+.heytea-page .project-switcher__links a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+.heytea-page .case-section-nav {
+  position: fixed;
+  z-index: 45;
+  top: 50%;
+  left: clamp(18px, 2.3vw, 38px);
+  display: grid;
+  width: 174px;
+  gap: 2px;
+  transform: translateY(-45%);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.heytea-page .case-section-nav > p {
+  margin: 0 0 11px;
+  color: #77717c;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.heytea-page .case-section-nav a {
+  display: grid;
+  grid-template-columns: 25px minmax(0, 1fr);
+  gap: 5px;
+  padding: 7px 0;
+  color: #8a8490;
+  font-size: 11px;
+  line-height: 1.35;
+  text-decoration: none;
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.heytea-page .case-section-nav a span:first-child {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 9px;
+}
+
+.heytea-page .case-section-nav a:hover,
+.heytea-page .case-section-nav a:focus-visible,
+.heytea-page .case-section-nav a.is-active {
+  color: #80699d;
+  font-weight: 500;
+}
+
+@media (min-width: 1100px) {
+  .heytea-page .case-study-content {
+    box-sizing: border-box;
+    padding-left: clamp(220px, 16vw, 250px);
+  }
+}
+
+.heytea-page .ht-section,
+.heytea-page .ht-section.ht-cultural,
+.heytea-page .ht-section.ht-identity,
+.heytea-page .ht-section.ht-language,
+.heytea-page .ht-section.ht-posters,
+.heytea-page .ht-section.ht-physical,
+.heytea-page .ht-section.ht-outcome,
+.heytea-page .ht-section.ht-reflection {
+  padding-block: var(--heytea-section-space);
+}
+
+.heytea-page .ht-hero {
+  min-height: 0;
+  padding-block: clamp(72px, 7vw, 96px) 56px;
+}
+
+.heytea-page .ht-hero h1 {
+  font-size: clamp(3rem, 5vw, 4rem);
+  line-height: 0.96;
+}
+
+.heytea-page .ht-hero-statement {
+  max-width: 720px;
+  font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+.heytea-page .ht-section h2,
+.heytea-page .ht-reflection h2,
+.heytea-page .ht-character > .ht-wrap > h2 {
+  max-width: 780px;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.heytea-page .ht-section h3 {
+  font-size: clamp(1.125rem, 1.7vw, 1.375rem);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.heytea-page .ht-lead-copy,
+.heytea-page p.ht-lead-copy,
+.heytea-page .ht-hero-copy,
+.heytea-page .ht-section article p,
+.heytea-page .ht-reflection-copy {
+  max-width: var(--heytea-reading);
+  font-size: 1rem;
+  line-height: 1.68;
+}
+
+.heytea-page .ht-intro-grid {
+  grid-template-columns: minmax(0, 0.85fr) minmax(320px, 0.75fr);
+  gap: clamp(36px, 5vw, 64px);
+}
+
+@media (max-width: 1099px) {
+  .heytea-page .case-section-nav {
+    position: sticky;
+    top: 68px;
+    left: auto;
+    display: flex;
+    width: 100%;
+    gap: 4px;
+    overflow-x: auto;
+    padding: 9px 20px;
+    transform: none;
+    background: rgba(242, 239, 250, 0.94);
+    scrollbar-width: none;
+  }
+
+  .heytea-page .case-section-nav > p,
+  .heytea-page .case-section-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .heytea-page .case-section-nav a {
+    flex: 0 0 auto;
+    grid-template-columns: auto auto;
+    padding: 7px 10px;
+  }
+}
+
+@media (max-width: 760px) {
+  .heytea-page .ht-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

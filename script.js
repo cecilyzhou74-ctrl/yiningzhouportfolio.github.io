@@ -418,7 +418,7 @@ document.addEventListener("keydown", (event) => {
 
 updateHeroSelection(selectedHeroIndex);
 
-const heroHome = document.querySelector(".hero-home");
+const catInteractionSurface = document.querySelector("[data-cat-interaction-surface]");
 const catContainer = document.querySelector("[data-cat-container]");
 const catImages = [...document.querySelectorAll("[data-cat-angle]")];
 const catFrames = new Map(catImages.map((image) => [Number(image.dataset.catAngle), image]));
@@ -453,7 +453,7 @@ function updateCatDirection() {
   setCatAngle(nearestAngle);
 }
 
-heroHome?.addEventListener("pointermove", (event) => {
+catInteractionSurface?.addEventListener("pointermove", (event) => {
   lastCatPointer = { x: event.clientX, y: event.clientY };
   if (catPointerFrame === null) {
     catPointerFrame = window.requestAnimationFrame(updateCatDirection);

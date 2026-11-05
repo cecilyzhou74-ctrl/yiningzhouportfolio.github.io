@@ -1,0 +1,84 @@
+:root {
+  --pulse-reading: 700px;
+  --pulse-section-space: clamp(72px, 7vw, 96px);
+}
+
+.pulse-page .project-page-nav > a,
+.pulse-page .project-switcher__toggle,
+.pulse-page .project-switcher__links a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+.pulse-page .pulse-hero {
+  min-height: 0;
+  padding: clamp(72px, 7vw, 96px) 0 56px;
+}
+
+.pulse-page .pulse-hero h1 {
+  font-size: clamp(3rem, 5vw, 4rem) !important;
+  line-height: 0.96 !important;
+}
+
+.pulse-page .pulse-hero__tagline {
+  font-size: clamp(1.75rem, 3vw, 2.25rem) !important;
+  line-height: 1.12 !important;
+}
+
+.pulse-page .pulse-hero__intro,
+.pulse-page .pulse-lead,
+.pulse-page .pulse-opportunity-intro,
+.pulse-page .pulse-insight-summary {
+  max-width: var(--pulse-reading);
+}
+
+.pulse-page .pulse-section {
+  padding-block: var(--pulse-section-space);
+}
+
+.pulse-page .pulse-section h2,
+.pulse-page .pulse-screen-intro h2,
+.pulse-page .pulse-opportunity > .pulse-wrap > h2,
+.pulse-page .pulse-key-insight h3 {
+  max-width: 780px;
+  font-size: clamp(1.75rem, 3vw, 2.25rem) !important;
+  font-weight: 600 !important;
+  line-height: 1.15 !important;
+}
+
+.pulse-page .pulse-section h3,
+.pulse-page .pulse-group-copy h3,
+.pulse-page .pulse-tonight__copy h3 {
+  font-size: clamp(1.125rem, 1.7vw, 1.375rem) !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+}
+
+.pulse-page .pulse-hero__intro,
+.pulse-page .pulse-lead,
+.pulse-page .pulse-lead p,
+.pulse-page .pulse-opportunity-intro,
+.pulse-page .pulse-opportunity-intro p,
+.pulse-page .pulse-tonight__lead,
+.pulse-page .pulse-group-copy span,
+.pulse-page .pulse-section article p,
+.pulse-page .pulse-section article li,
+.pulse-page .pulse-insight-summary p {
+  font-size: 1rem !important;
+  line-height: 1.68 !important;
+}
+
+.pulse-page .pulse-key-insight,
+.pulse-page .pulse-insight-summary {
+  margin-top: clamp(44px, 5vw, 64px);
+}
+
+@media (max-width: 760px) {
+  .pulse-page .pulse-section {
+    padding-block: 64px;
+  }
+}
