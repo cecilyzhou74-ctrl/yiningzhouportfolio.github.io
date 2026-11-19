@@ -1,4 +1,30 @@
 (() => {
+  const interfaceMarqueeSets = Array.from(
+    document.querySelectorAll(".pulse-interface-marquee__set")
+  );
+
+  if (interfaceMarqueeSets.length === 2) {
+    const [primarySet, duplicateSet] = interfaceMarqueeSets;
+    const shuffledImages = Array.from(primarySet.querySelectorAll("img"));
+
+    for (let index = shuffledImages.length - 1; index > 0; index -= 1) {
+      const randomIndex = Math.floor(Math.random() * (index + 1));
+      [shuffledImages[index], shuffledImages[randomIndex]] = [
+        shuffledImages[randomIndex],
+        shuffledImages[index],
+      ];
+    }
+
+    shuffledImages.forEach((image) => primarySet.append(image));
+    duplicateSet.replaceChildren(
+      ...shuffledImages.map((image) => {
+        const duplicate = image.cloneNode(true);
+        duplicate.alt = "";
+        return duplicate;
+      })
+    );
+  }
+
   const sectionLinks = Array.from(document.querySelectorAll("[data-pulse-section-link]"));
   const sectionTargets = sectionLinks
     .map((link) => document.querySelector(link.getAttribute("href")))

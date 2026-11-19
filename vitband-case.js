@@ -81,10 +81,7 @@ const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)")
 if (!reducedMotionQuery.matches) {
   const maskedTitleSelectors = new Set([
     ".vb-challenge h2",
-    ".vb-energy > .vb-container > h2",
     ".vb-highfi h2",
-    ".vb-outcome h2",
-    ".vb-reflection h2",
   ]);
   const titleSelectors = [
     ".vb-context h2",
@@ -93,13 +90,7 @@ if (!reducedMotionQuery.matches) {
     ".vb-competitive h2",
     ".vb-audience h2",
     ".vb-insights h2",
-    ".vb-lowfi h2",
-    ".vb-ai-decision > .vb-container > h2",
-    ".vb-energy > .vb-container > h2",
     ".vb-highfi h2",
-    ".vb-hierarchy h2",
-    ".vb-outcome h2",
-    ".vb-reflection h2",
   ];
 
   function wrapTitleLines(title, masked) {
@@ -136,9 +127,6 @@ if (!reducedMotionQuery.matches) {
     [".vb-chart-bars", 55],
     [".vb-insight-grid", 110],
     [".vb-strategy-grid", 80],
-    [".vb-ai-flow", 100],
-    [".vb-energy-comparison", 120],
-    [".vb-outcome-grid", 90],
   ];
 
   revealGroups.forEach(([selector, interval]) => {

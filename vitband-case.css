@@ -25,7 +25,7 @@ body.vitband-page {
   overflow-y: visible !important;
   background: var(--vb-lavender) !important;
   color: var(--vb-black) !important;
-  font-family: Arial, Helvetica, sans-serif !important;
+  font-family: Inter, "Helvetica Neue", Arial, sans-serif !important;
   letter-spacing: 0 !important;
 }
 

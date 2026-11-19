@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles.css?v=20260922-violet-accent" />
     <link rel="stylesheet" href="pulse-case.css?v=20261007-userflow-scrollbar" />
     <link rel="stylesheet" href="project-nav.css?v=20261105-behavior-only" />
-    <link rel="stylesheet" href="pulse-editorial.css?v=20261105-isolated" />
+    <link rel="stylesheet" href="pulse-editorial.css?v=20261119-contained-marquee" />
   </head>
   <body class="project-detail-page pulse-page has-case-section-nav">
     <main class="project-page-shell">
@@ -80,35 +80,64 @@
           </div>
         </header>
 
-        <section class="pulse-section pulse-problem" id="pulse-section-01" aria-labelledby="problem-title">
-          <div class="pulse-wrap">
-            <p class="pulse-index pulse-reveal">01 / The Problem</p>
-            <div class="pulse-heading-grid">
-              <h2 id="problem-title" class="pulse-reveal-title">Event Selection Problem</h2>
-              <div class="pulse-lead pulse-reveal">
-                <p>Event listings provide <strong>basic information</strong>, but <strong>not enough context</strong> to judge whether an event is personally relevant.</p>
-                <p><strong>Unfamiliar DJs</strong> make it difficult for users to understand what an event will actually sound and feel like.</p>
-                <p><strong>Music taste, event vibe, and friend activity</strong> are spread across different platforms.</p>
-                <p>Users must <strong>piece together this information manually</strong> before deciding where to go.</p>
-                <p>The result is a <strong>fragmented and high-friction decision process</strong>.</p>
+        <section class="pulse-interface-marquee" aria-label="PULSE interface gallery">
+          <div class="pulse-interface-marquee__viewport">
+            <div class="pulse-interface-marquee__track">
+              <div class="pulse-interface-marquee__set">
+                <img src="assets/pulse/HIFI — 05 Your Pulse.png" alt="PULSE taste profile screen" />
+                <img src="assets/pulse/HIFI — 11 Crew.png" alt="PULSE crew screen" />
+                <img src="assets/pulse/HIFI — 02 Sign Up.png" alt="PULSE sign up screen" />
+                <img src="assets/pulse/HIFI — 09 Event Detail.png" alt="PULSE event detail screen" />
+                <img src="assets/pulse/HIFI — 04 Vibe Pick.png" alt="PULSE vibe selection screen" />
+                <img src="assets/pulse/HIFI — 13 Passport.png" alt="PULSE passport screen" />
+                <img src="assets/pulse/HIFI — 10 Tonight.png" alt="PULSE Tonight recommendation screen" />
+                <img src="assets/pulse/HIFI — 01 Welcome.png" alt="PULSE welcome screen" />
+                <img src="assets/pulse/HIFI — 12 Profile.png" alt="PULSE profile screen" />
+                <img src="assets/pulse/HIFI — 03 Sound Taste.png" alt="PULSE sound taste screen" />
+                <img src="assets/pulse/HIFI — 10 Who’s Going.png" alt="PULSE attendance screen" />
+                <img src="assets/pulse/HIFI — 06A Discover Home/Saturday Selected.png" alt="PULSE event discovery screen" />
+              </div>
+              <div class="pulse-interface-marquee__set" aria-hidden="true">
+                <img src="assets/pulse/HIFI — 05 Your Pulse.png" alt="" />
+                <img src="assets/pulse/HIFI — 11 Crew.png" alt="" />
+                <img src="assets/pulse/HIFI — 02 Sign Up.png" alt="" />
+                <img src="assets/pulse/HIFI — 09 Event Detail.png" alt="" />
+                <img src="assets/pulse/HIFI — 04 Vibe Pick.png" alt="" />
+                <img src="assets/pulse/HIFI — 13 Passport.png" alt="" />
+                <img src="assets/pulse/HIFI — 10 Tonight.png" alt="" />
+                <img src="assets/pulse/HIFI — 01 Welcome.png" alt="" />
+                <img src="assets/pulse/HIFI — 12 Profile.png" alt="" />
+                <img src="assets/pulse/HIFI — 03 Sound Taste.png" alt="" />
+                <img src="assets/pulse/HIFI — 10 Who’s Going.png" alt="" />
+                <img src="assets/pulse/HIFI — 06A Discover Home/Saturday Selected.png" alt="" />
               </div>
             </div>
+          </div>
+        </section>
 
-            <div class="pulse-three pulse-sequence">
+        <section class="pulse-section pulse-problem" id="pulse-section-01" aria-labelledby="problem-title">
+          <div class="pulse-wrap">
+            <p class="pulse-index pulse-reveal" id="problem-title">01 / The Problem</p>
+            <div class="pulse-lead pulse-problem__lead pulse-reveal">
+              <p>Event listings provide <strong>basic information</strong>, but <strong>not enough context</strong> to judge whether an event is personally relevant.</p>
+              <p><strong>Unfamiliar DJs</strong> make it difficult for users to understand what an event will actually sound and feel like.</p>
+              <p><strong>Music taste, event vibe, and friend activity</strong> are spread across different platforms.</p>
+              <p>Users must <strong>piece together this information manually</strong> before deciding where to go.</p>
+              <p>The result is a <strong>fragmented and high-friction decision process</strong>.</p>
+            </div>
+
+            <div class="pulse-three pulse-problem-points pulse-sequence">
               <article>
                 <span>01</span>
-                <h3>Unfamiliar Artists</h3>
                 <p>A lineup can include dozens of artists, but recognizing a name and understanding their sound are two different things.</p>
                 <p>Users often leave the event app and search Spotify, SoundCloud, Instagram or YouTube before deciding.</p>
               </article>
               <article>
                 <span>02</span>
-                <h3>Fragmented Social Context</h3>
                 <p>Rave communities are often large and loosely connected. Friends may split across several events on the same night, making it difficult to know where everyone is heading.</p>
               </article>
               <article>
                 <span>03</span>
-                <h3>Group Decision Friction</h3>
                 <p>Group chats repeatedly cycle through the same questions: Who is this DJ? What do they play? Who’s going? Which event are we choosing?</p>
               </article>
             </div>
@@ -296,31 +325,47 @@
           </div>
         </section>
 
-        <section class="pulse-section pulse-screens pulse-lofi" id="pulse-section-07" aria-labelledby="lofi-title">
+        <section class="pulse-section pulse-screens pulse-lofi" id="pulse-section-07" aria-label="07 / Lo-Fi Design">
           <div class="pulse-wrap pulse-screen-intro">
             <p class="pulse-index pulse-reveal">07 / Lo-Fi Design</p>
-            <p class="pulse-kicker pulse-reveal">Early Product Direction</p>
-            <h2 id="lofi-title" class="pulse-reveal-title">Low-Fidelity Wireframes</h2>
-            <p class="pulse-lead pulse-reveal">Before defining the visual language, I focused on the decision flow: how much information should appear at each step, when users need more context, and how to reduce unnecessary navigation.</p>
           </div>
 
           <div class="pulse-lofi-overview pulse-wide" aria-label="Complete PULSE low-fidelity screen sequence">
-            <div class="pulse-lofi-rail" data-pulse-sequence>
-              <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 01 Welcome.png" alt="Lo-Fi welcome screen" /></figure>
-              <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 02 Sign Up.png" alt="Lo-Fi sign up screen" /></figure>
-              <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 03 Sound Taste.png" alt="Lo-Fi sound taste screen" /></figure>
-              <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 04 Vibe Pick.png" alt="Lo-Fi vibe selection screen" /></figure>
-              <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 05 Your Pulse.png" alt="Lo-Fi Your Pulse profile screen" /></figure>
-              <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 06 Discover Home/Date List.png" alt="Lo-Fi discovery date list" /></figure>
-              <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 06A Discover Home/Saturday Selected.png" alt="Lo-Fi discovery Saturday selected state" /></figure>
-              <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 06B Discover Home/Scroll State.png" alt="Lo-Fi discovery scroll state" /></figure>
-              <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 07 Discover Home/Event Expanded.png" alt="Lo-Fi expanded event state" /></figure>
-              <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 08 Music Preview.png" alt="Lo-Fi artist music preview" /></figure>
-              <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 09 Event Detail.png" alt="Lo-Fi event detail" /></figure>
-              <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 10 Tonight.png" alt="Lo-Fi Tonight screen" /></figure>
-              <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 11 Crew.png" alt="Lo-Fi Crew social planning screen" /></figure>
-              <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 12 Profile.png" alt="Lo-Fi profile screen" /></figure>
-              <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 13 Passport.png" alt="Lo-Fi nightlife passport screen" /></figure>
+            <div class="pulse-lofi-marquee">
+              <div class="pulse-lofi-rail" data-pulse-sequence>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 01 Welcome.png" alt="" /></figure>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 02 Sign Up.png" alt="" /></figure>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 03 Sound Taste.png" alt="" /></figure>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 04 Vibe Pick.png" alt="" /></figure>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 05 Your Pulse.png" alt="" /></figure>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 06 Discover Home/Date List.png" alt="" /></figure>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 06A Discover Home/Saturday Selected.png" alt="" /></figure>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 06B Discover Home/Scroll State.png" alt="" /></figure>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 07 Discover Home/Event Expanded.png" alt="" /></figure>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 08 Music Preview.png" alt="" /></figure>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 09 Event Detail.png" alt="" /></figure>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 10 Tonight.png" alt="" /></figure>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 11 Crew.png" alt="" /></figure>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 12 Profile.png" alt="" /></figure>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 13 Passport.png" alt="" /></figure>
+              </div>
+              <div class="pulse-lofi-rail" aria-hidden="true">
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 01 Welcome.png" alt="" /></figure>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 02 Sign Up.png" alt="" /></figure>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 03 Sound Taste.png" alt="" /></figure>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 04 Vibe Pick.png" alt="" /></figure>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 05 Your Pulse.png" alt="" /></figure>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 06 Discover Home/Date List.png" alt="" /></figure>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 06A Discover Home/Saturday Selected.png" alt="" /></figure>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 06B Discover Home/Scroll State.png" alt="" /></figure>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 07 Discover Home/Event Expanded.png" alt="" /></figure>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 08 Music Preview.png" alt="" /></figure>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 09 Event Detail.png" alt="" /></figure>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 10 Tonight.png" alt="" /></figure>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 11 Crew.png" alt="" /></figure>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 12 Profile.png" alt="" /></figure>
+                <figure><img src="assets/pulse/PULSE — Lo-Fi UX Prototype/V2 — 13 Passport.png" alt="" /></figure>
+              </div>
             </div>
           </div>
         </section>
@@ -418,7 +463,7 @@
         </footer>
       </article>
     </main>
-    <script src="pulse-case.js?v=20261007-flow-scrollbar"></script>
+    <script src="pulse-case.js?v=20261119-random-interface-marquee"></script>
     <script src="project-nav.js?v=20260922-dropdown"></script>
   </body>
 </html>

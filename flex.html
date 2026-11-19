@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="styles.css?v=20261006-flex" />
     <link rel="stylesheet" href="flex-case.css?v=20261006-context-type" />
     <link rel="stylesheet" href="project-nav.css?v=20260922-font-sync-2" />
-    <link rel="stylesheet" href="flex-editorial.css?v=20261105-ritik-restore" />
+    <link rel="stylesheet" href="flex-editorial.css?v=20261119-desktop-flow-videos" />
   </head>
-  <body class="project-detail-page flex-page">
+  <body class="project-detail-page flex-page has-case-section-nav">
     <main class="project-page-shell">
       <nav class="project-page-nav" aria-label="Project navigation">
         <a href="index.html">Back to Portfolio</a>
@@ -39,7 +39,7 @@
         <a href="#flex-supporting" data-flex-section-link><span>05</span><span>Supporting Paths</span></a>
       </nav>
 
-      <article class="flex-case">
+      <article class="flex-case case-study-content">
         <header class="flex-hero" id="flex-overview" data-flex-section aria-labelledby="flex-title">
           <div class="flex-wrap">
             <p class="flex-eyebrow flex-reveal">UX strategy / Web design / Conversion flows / Interactive prototype</p>
@@ -67,11 +67,8 @@
 
         <section class="flex-section flex-audience" id="flex-problem" data-flex-section aria-labelledby="audience-title">
           <div class="flex-wrap">
-            <p class="flex-index flex-reveal">01 / Problem &amp; Audience</p>
-            <div class="flex-heading-grid">
-              <h2 id="audience-title" class="flex-reveal-title">The Challenge</h2>
-              <p class="flex-section-lead flex-reveal">The page needed to establish credibility with visitors sceptical of online courses and help two audiences identify the right programme. The design had to distinguish their needs while keeping Launch, the brief’s priority, prominent.</p>
-            </div>
+            <p id="audience-title" class="flex-index flex-reveal">01 / Problem &amp; Audience</p>
+            <p class="flex-section-lead flex-section-lead--left flex-reveal">The page needed to establish credibility with visitors sceptical of online courses and help two audiences identify the right programme. The design had to distinguish their needs while keeping Launch, the brief’s priority, prominent.</p>
 
             <div class="flex-audience-grid flex-sequence">
               <article>
@@ -92,8 +89,7 @@
 
         <section class="flex-section flex-highlights" id="flex-decisions" data-flex-section aria-labelledby="highlights-title">
           <div class="flex-wrap">
-            <p class="flex-index flex-reveal">02 / Design Decisions</p>
-            <h2 id="highlights-title" class="flex-reveal-title">Design Decisions</h2>
+            <p id="highlights-title" class="flex-index flex-reveal">02 / Design Decisions</p>
 
             <article class="flex-feature flex-feature--wide">
               <div class="flex-feature__copy flex-reveal">
@@ -144,8 +140,7 @@
 
         <section class="flex-section flex-landing" id="flex-final" data-flex-section aria-labelledby="landing-title">
           <div class="flex-wrap">
-            <p class="flex-index flex-reveal">03 / Final Design</p>
-            <h2 id="landing-title" class="flex-reveal-title">Responsive Landing Page</h2>
+            <p id="landing-title" class="flex-index flex-reveal">03 / Final Design</p>
             <div class="flex-browser flex-reveal" aria-label="Scrollable full Flex Academy landing page">
               <div class="flex-browser__bar" aria-hidden="true"><span></span><span></span><span></span><p>flex academy — landing page</p></div>
               <div class="flex-browser__viewport" tabindex="0">
@@ -158,37 +153,28 @@
 
         <section class="flex-section flex-flow" id="flex-flows" data-flex-section aria-labelledby="flow-title">
           <div class="flex-wrap">
-            <p class="flex-index flex-reveal">04 / Conversion Flows</p>
-            <div class="flex-heading-grid">
-              <h2 id="flow-title" class="flex-reveal-title">Webinar and Strategy-call Flows</h2>
-              <p class="flex-section-lead flex-reveal">A short inline form leads to a confirmation state, allowing visitors to register within the landing page. A separate booking flow collects context about the visitor’s rental business to support a relevant conversation.</p>
-            </div>
+            <p id="flow-title" class="flex-index flex-reveal">04 / Conversion Flows</p>
+            <p class="flex-section-lead flex-section-lead--left flex-reveal">A short inline form leads to a confirmation state, allowing visitors to register within the landing page. A separate booking flow collects context about the visitor’s rental business to support a relevant conversation.</p>
 
-            <div class="flex-flow-player flex-reveal" data-flex-flow tabindex="0">
-              <div class="flex-flow-tabs" role="tablist" aria-label="Conversion flow">
-                <button type="button" role="tab" aria-selected="true" data-flow-group="webinar">Webinar registration</button>
-                <button type="button" role="tab" aria-selected="false" data-flow-group="strategy">Strategy call booking</button>
-              </div>
-              <div class="flex-flow-stage" data-flow-stage>
-                <img data-flow-image src="assets/flex/webinar-registration.png" alt="Webinar registration" />
-              </div>
-              <p class="flex-flow-description" data-flow-description>A short inline form keeps the first commitment straightforward.</p>
-              <div class="flex-flow-controls">
-                <button type="button" data-flow-nav="prev" aria-label="Previous step">←</button>
-                <div><strong data-flow-name>Registration</strong><span data-flow-count>01 / 02</span></div>
-                <button type="button" data-flow-nav="next" aria-label="Next step">→</button>
-              </div>
+            <div class="flex-conversion-videos flex-reveal" aria-label="Flex Academy conversion flow demonstrations">
+              <figure class="flex-conversion-video">
+                <video autoplay muted loop playsinline preload="auto" aria-label="Webinar registration flow demonstration">
+                  <source src="assets/flex/conversion-flow-webinar.mp4" type="video/mp4" />
+                </video>
+              </figure>
+              <figure class="flex-conversion-video">
+                <video autoplay muted loop playsinline preload="auto" aria-label="Strategy call booking flow demonstration">
+                  <source src="assets/flex/conversion-flow-strategy.mp4" type="video/mp4" />
+                </video>
+              </figure>
             </div>
           </div>
         </section>
 
         <section class="flex-section flex-lightweight" id="flex-supporting" data-flex-section aria-labelledby="lightweight-title">
           <div class="flex-wrap">
-            <p class="flex-index flex-reveal">05 / Supporting Paths</p>
-            <div class="flex-heading-grid">
-              <h2 id="lightweight-title" class="flex-reveal-title">Checklist and Waitlist</h2>
-              <p class="flex-section-lead flex-reveal">An email-only form offers a lower-commitment option for visitors still exploring. Compact confirmation states acknowledge each request without introducing another full page.</p>
-            </div>
+            <p id="lightweight-title" class="flex-index flex-reveal">05 / Supporting Paths</p>
+            <p class="flex-section-lead flex-section-lead--left flex-reveal">An email-only form offers a lower-commitment option for visitors still exploring. Compact confirmation states acknowledge each request without introducing another full page.</p>
 
             <div class="flex-overlay-grid flex-sequence">
               <figure><div><img src="assets/flex/checklist-capture.png" alt="Checklist email capture overlay" /></div><figcaption><strong>Checklist request</strong><span>An email-only entry point for visitors who want to explore first.</span></figcaption></figure>

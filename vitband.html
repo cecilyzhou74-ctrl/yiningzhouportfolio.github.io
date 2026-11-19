@@ -8,10 +8,16 @@
       content="VITBAND product design case study by Yining Zhou."
     />
     <title>VITBAND — Yining Zhou</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css?v=20260922-violet-accent" />
     <link rel="stylesheet" href="vitband-case.css?v=20260922-pale-bg" />
     <link rel="stylesheet" href="project-nav.css?v=20261105-behavior-only" />
-    <link rel="stylesheet" href="vitband-editorial.css?v=20261105-isolated" />
+    <link rel="stylesheet" href="vitband-editorial.css?v=20261119-detail-polish" />
   </head>
   <body class="project-detail-page vitband-page has-case-section-nav">
     <header class="vb-site-header">
@@ -31,71 +37,151 @@
     <nav class="case-section-nav" aria-label="VITBAND case study sections" data-case-section-nav>
       <p>VITBAND / CASE STUDY</p>
       <a href="#vitband-overview" data-case-section-link><span>00</span><span>Overview</span></a>
-      <a href="#vitband-context" data-case-section-link><span>01</span><span>Context</span></a>
+      <a href="#vitband-highfi" data-case-section-link><span>01</span><span>Hi-Fi</span></a>
       <a href="#vitband-challenge" data-case-section-link><span>02</span><span>Challenge</span></a>
       <a href="#vitband-research" data-case-section-link><span>03</span><span>Research</span></a>
-      <a href="#vitband-competitive" data-case-section-link><span>04</span><span>Competitive Review</span></a>
-      <a href="#vitband-audience" data-case-section-link><span>05</span><span>Audience</span></a>
-      <a href="#vitband-insights" data-case-section-link><span>06</span><span>Insights</span></a>
-      <a href="#vitband-strategy" data-case-section-link><span>07</span><span>Strategy</span></a>
-      <a href="#vitband-lowfi" data-case-section-link><span>08</span><span>Lo-Fi</span></a>
-      <a href="#vitband-ai" data-case-section-link><span>09</span><span>AI Coach</span></a>
-      <a href="#vitband-fatigue" data-case-section-link><span>10</span><span>Fatigue Scale</span></a>
-      <a href="#vitband-highfi" data-case-section-link><span>11</span><span>Hi-Fi</span></a>
-      <a href="#vitband-hierarchy" data-case-section-link><span>12</span><span>Hierarchy</span></a>
-      <a href="#vitband-outcome" data-case-section-link><span>13</span><span>Outcome</span></a>
-      <a href="#vitband-recognition" data-case-section-link><span>14</span><span>Recognition</span></a>
-      <a href="#vitband-reflection" data-case-section-link><span>15</span><span>Reflection</span></a>
+      <a href="#vitband-audience" data-case-section-link><span>04</span><span>Audience</span></a>
+      <a href="#vitband-insights" data-case-section-link><span>05</span><span>Insights</span></a>
+      <a href="#vitband-strategy" data-case-section-link><span>06</span><span>Strategy</span></a>
+      <a href="#vitband-decisions" data-case-section-link><span>07</span><span>Key Decisions</span></a>
+      <a href="#vitband-ai-coach" data-case-section-link><span>08</span><span>AI Coach</span></a>
+      <a href="#vitband-recognition" data-case-section-link><span>09</span><span>Recognition</span></a>
     </nav>
 
     <main class="vb-case case-study-content">
       <section class="vb-hero" id="vitband-overview" aria-labelledby="vitband-title" data-case-section>
-        <div class="vb-container vb-grid">
-          <p class="vb-hero-kicker">PRODUCT DESIGN / UI UX<br />2025–2026</p>
+        <div class="vb-container vb-hero-overview">
           <h1 id="vitband-title">VITBAND</h1>
+          <p class="vb-hero-subtitle">Wearable muscle fatigue monitoring for everyday training</p>
+          <div class="vb-hero-body">
+            <div class="vb-hero-copy">
+              <p class="vb-hero-description">
+                VITBAND is a wearable muscle fatigue monitor paired with a mobile app for
+                everyday training. The app turns muscle performance data into a fatigue score
+                users can read at a glance, with a dashboard for tracking changes over time and
+                an AI Coach for questions about training and recovery.
+              </p>
 
-          <div class="vb-hero-statement">
-            <p>MUSCLE-FATIGUE MONITORING FOR TRAINING.</p>
+              <dl class="vb-hero-meta">
+                <div><dt>Role</dt><dd>Design Lead</dd></div>
+                <div><dt>Scope</dt><dd>Strategy, UI/UX Design, 0 to 1</dd></div>
+                <div><dt>Recognition</dt><dd>Red Dot Award 2026</dd></div>
+              </dl>
+            </div>
           </div>
-          <p class="vb-hero-intro">
-            A fitness technology experience that translates real-time muscle performance
-            data into clear, actionable training guidance.
-          </p>
-
-          <figure class="vb-hero-visual">
-            <img
-              src="assets/vitband-hand-phone.png"
-              alt="VITBAND mobile dashboard shown in hand"
-            />
-          </figure>
-
-          <dl class="vb-hero-meta">
-            <div><dt>ROLE</dt><dd>UI/UX Designer</dd></div>
-            <div><dt>SCOPE</dt><dd>End-to-End Product Redesign</dd></div>
-            <div><dt>PLATFORM</dt><dd>Mobile + Wearable</dd></div>
-            <div><dt>RECOGNITION</dt><dd>Red Dot Award 2026</dd></div>
-          </dl>
         </div>
+        <figure class="vb-hero-phone">
+          <img
+            src="assets/vitband-hand-phone.png"
+            alt="VITBAND dashboard displayed on a phone held in hand"
+          />
+        </figure>
       </section>
 
-      <section class="vb-section vb-context" id="vitband-context" aria-labelledby="context-title" data-case-section>
+      <section class="vb-section vb-highfi vb-highfi-loop" id="vitband-highfi" aria-label="VITBAND high-fidelity interface gallery" data-case-section>
         <div class="vb-container">
-          <p class="vb-index">01 / CONTEXT</p>
-          <div class="vb-grid vb-context-grid">
-            <h2 id="context-title">PROJECT CONTEXT</h2>
-            <div class="vb-copy">
-              <p>
-                VITBAND already had its core wearable technology and an early mobile
-                prototype when I joined the project. While the prototype demonstrated the
-                product’s technical capabilities, the experience was largely
-                technology-driven: information was dense, the visual language felt
-                academic, and key training insights required too much interpretation.
-              </p>
-              <p>
-                As the primary UI/UX designer, I was responsible for rethinking the mobile
-                experience and translating complex muscle-performance data into a clearer,
-                more intuitive product for everyday training.
-              </p>
+          <p class="vb-index">01 / HI-FI</p>
+          <div class="vb-highfi-viewport">
+            <div class="vb-highfi-columns vb-highfi-columns--desktop" aria-hidden="true">
+              <div class="vb-highfi-column vb-highfi-column--up">
+                <div class="vb-highfi-track">
+                  <div class="vb-highfi-set">
+                    <img src="assets/vitband-hi-fi/dashboard-overview.png" alt="" />
+                    <img src="assets/vitband-hi-fi/coach-home.png" alt="" />
+                  </div>
+                  <div class="vb-highfi-set">
+                    <img src="assets/vitband-hi-fi/dashboard-overview.png" alt="" />
+                    <img src="assets/vitband-hi-fi/coach-home.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="vb-highfi-column vb-highfi-column--down">
+                <div class="vb-highfi-track">
+                  <div class="vb-highfi-set">
+                    <img src="assets/vitband-hi-fi/dashboard-activation.png" alt="" />
+                    <img src="assets/vitband-hi-fi/coach-thinking.png" alt="" />
+                  </div>
+                  <div class="vb-highfi-set">
+                    <img src="assets/vitband-hi-fi/dashboard-activation.png" alt="" />
+                    <img src="assets/vitband-hi-fi/coach-thinking.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="vb-highfi-column vb-highfi-column--up">
+                <div class="vb-highfi-track">
+                  <div class="vb-highfi-set">
+                    <img src="assets/vitband-hi-fi/dashboard-force.png" alt="" />
+                    <img src="assets/vitband-hi-fi/coach-response.png" alt="" />
+                  </div>
+                  <div class="vb-highfi-set">
+                    <img src="assets/vitband-hi-fi/dashboard-force.png" alt="" />
+                    <img src="assets/vitband-hi-fi/coach-response.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="vb-highfi-column vb-highfi-column--down">
+                <div class="vb-highfi-track">
+                  <div class="vb-highfi-set">
+                    <img src="assets/vitband-hi-fi/dashboard-load.png" alt="" />
+                    <img src="assets/vitband-hi-fi/coach-history.png" alt="" />
+                  </div>
+                  <div class="vb-highfi-set">
+                    <img src="assets/vitband-hi-fi/dashboard-load.png" alt="" />
+                    <img src="assets/vitband-hi-fi/coach-history.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="vb-highfi-column vb-highfi-column--up">
+                <div class="vb-highfi-track">
+                  <div class="vb-highfi-set">
+                    <img src="assets/vitband-hi-fi/dashboard-fatigue.png" alt="" />
+                    <img src="assets/vitband-hi-fi/history.png" alt="" />
+                  </div>
+                  <div class="vb-highfi-set">
+                    <img src="assets/vitband-hi-fi/dashboard-fatigue.png" alt="" />
+                    <img src="assets/vitband-hi-fi/history.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="vb-highfi-columns vb-highfi-columns--mobile" aria-hidden="true">
+              <div class="vb-highfi-column vb-highfi-column--up">
+                <div class="vb-highfi-track">
+                  <div class="vb-highfi-set">
+                    <img src="assets/vitband-hi-fi/dashboard-overview.png" alt="" />
+                    <img src="assets/vitband-hi-fi/dashboard-force.png" alt="" />
+                    <img src="assets/vitband-hi-fi/dashboard-fatigue.png" alt="" />
+                    <img src="assets/vitband-hi-fi/coach-thinking.png" alt="" />
+                    <img src="assets/vitband-hi-fi/coach-history.png" alt="" />
+                  </div>
+                  <div class="vb-highfi-set">
+                    <img src="assets/vitband-hi-fi/dashboard-overview.png" alt="" />
+                    <img src="assets/vitband-hi-fi/dashboard-force.png" alt="" />
+                    <img src="assets/vitband-hi-fi/dashboard-fatigue.png" alt="" />
+                    <img src="assets/vitband-hi-fi/coach-thinking.png" alt="" />
+                    <img src="assets/vitband-hi-fi/coach-history.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="vb-highfi-column vb-highfi-column--down">
+                <div class="vb-highfi-track">
+                  <div class="vb-highfi-set">
+                    <img src="assets/vitband-hi-fi/dashboard-activation.png" alt="" />
+                    <img src="assets/vitband-hi-fi/dashboard-load.png" alt="" />
+                    <img src="assets/vitband-hi-fi/history.png" alt="" />
+                    <img src="assets/vitband-hi-fi/coach-home.png" alt="" />
+                    <img src="assets/vitband-hi-fi/coach-response.png" alt="" />
+                  </div>
+                  <div class="vb-highfi-set">
+                    <img src="assets/vitband-hi-fi/dashboard-activation.png" alt="" />
+                    <img src="assets/vitband-hi-fi/dashboard-load.png" alt="" />
+                    <img src="assets/vitband-hi-fi/history.png" alt="" />
+                    <img src="assets/vitband-hi-fi/coach-home.png" alt="" />
+                    <img src="assets/vitband-hi-fi/coach-response.png" alt="" />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -103,8 +189,7 @@
 
       <section class="vb-section vb-challenge" id="vitband-challenge" aria-labelledby="challenge-title" data-case-section>
         <div class="vb-container">
-          <p class="vb-index">02 / THE CHALLENGE</p>
-          <h2 id="challenge-title" class="vb-display-heading">MUSCLE DATA INTERPRETATION</h2>
+          <p class="vb-index" id="challenge-title">02 / THE CHALLENGE</p>
 
           <div class="vb-three-column">
             <article>
@@ -138,15 +223,12 @@
 
       <section class="vb-section vb-research" id="vitband-research" aria-labelledby="research-title" data-case-section>
         <div class="vb-container">
-          <p class="vb-index">03 / RESEARCH</p>
-          <div class="vb-grid vb-section-intro">
-            <h2 id="research-title">PRODUCT AND INTERFACE AUDIT</h2>
-            <p>
-              Rather than starting with visual styling, I first looked at how the existing
-              product communicated information, how comparable fitness platforms structured
-              complex data, and where VITBAND could simplify the training experience.
-            </p>
-          </div>
+          <p class="vb-index" id="research-title">03 / RESEARCH</p>
+          <p class="vb-research-intro">
+            Rather than starting with visual styling, I first looked at how the existing
+            product communicated information, how comparable fitness platforms structured
+            complex data, and where VITBAND could simplify the training experience.
+          </p>
 
           <div class="vb-research-framework">
             <article>
@@ -182,78 +264,61 @@
               </p>
             </article>
           </div>
-        </div>
-      </section>
 
-      <section class="vb-section vb-competitive" id="vitband-competitive" aria-labelledby="competitive-title" data-case-section>
-        <div class="vb-container">
-          <p class="vb-index">04 / COMPETITIVE LANDSCAPE</p>
-          <div class="vb-grid vb-section-intro">
-            <h2 id="competitive-title">COMPETITIVE REVIEW</h2>
-            <p>
+          <div class="vb-competitive-review">
+            <h2>Competitive Review</h2>
+            <p class="vb-competitive-intro">
               I looked at established fitness platforms including WHOOP, Polar, and Oura to
               understand how complex physiological information is translated into everyday
               training and recovery experiences.
             </p>
-          </div>
 
-          <div class="vb-competitor-grid">
-            <article>
-              <h3>WHOOP</h3>
-              <h4>STRENGTH ↘</h4>
-              <p>Turns complex physiological data into recognizable performance signals.</p>
-              <h4>OPPORTUNITY ↘</h4>
-              <p>
-                Preserve data depth while making the meaning of each signal immediately
-                understandable.
-              </p>
-            </article>
-            <article>
-              <h3>POLAR</h3>
-              <h4>STRENGTH ↘</h4>
-              <p>Provides detailed training and performance analysis.</p>
-              <h4>OPPORTUNITY ↘</h4>
-              <p>
-                Reduce navigation and information density when users need answers during an
-                active workout.
-              </p>
-            </article>
-            <article>
-              <h3>OURA</h3>
-              <h4>STRENGTH ↘</h4>
-              <p>Uses clear visual signals to make recovery and readiness easier to understand.</p>
-              <h4>OPPORTUNITY ↘</h4>
-              <p>
-                Differentiate VITBAND through active training and muscle-specific feedback
-                rather than general wellness.
-              </p>
-            </article>
-          </div>
+            <div class="vb-competitor-grid">
+              <article>
+                <h3>WHOOP</h3>
+                <h4>STRENGTH</h4>
+                <p>Turns complex physiological data into recognizable performance signals.</p>
+                <h4>OPPORTUNITY</h4>
+                <p>
+                  Preserve data depth while making the meaning of each signal immediately
+                  understandable.
+                </p>
+              </article>
+              <article>
+                <h3>POLAR</h3>
+                <h4>STRENGTH</h4>
+                <p>Provides detailed training and performance analysis.</p>
+                <h4>OPPORTUNITY</h4>
+                <p>
+                  Reduce navigation and information density when users need answers during an
+                  active workout.
+                </p>
+              </article>
+              <article>
+                <h3>OURA</h3>
+                <h4>STRENGTH</h4>
+                <p>Uses clear visual signals to make recovery and readiness easier to understand.</p>
+              </article>
+            </div>
 
-          <div class="vb-opportunity">
-            <span>DESIGN OPPORTUNITY ↘</span>
-            <p>PRIORITISE MUSCLE-SPECIFIC TRAINING GUIDANCE.</p>
-            <p>REDUCE NAVIGATION AND METRIC INTERPRETATION DURING ACTIVE WORKOUTS.</p>
+            <div class="vb-opportunity">
+              <span>DESIGN OPPORTUNITIES</span>
+              <p>Prioritise muscle-specific training guidance.</p>
+              <p>Reduce navigation and metric interpretation during active workouts.</p>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="vb-section vb-audience" id="vitband-audience" aria-labelledby="audience-title" data-case-section>
         <div class="vb-container">
-          <p class="vb-index">05 / AUDIENCE SIGNALS</p>
-          <div class="vb-grid vb-section-intro">
-            <h2 id="audience-title">TRAINING INFORMATION PRIORITIES</h2>
-            <p>
-              Existing audience research helped highlight which types of training
-              information were perceived as most valuable.
-            </p>
-          </div>
+          <p class="vb-index" id="audience-title">04 / AUDIENCE</p>
+          <p class="vb-audience-intro">
+            Existing audience research helped highlight which types of training
+            information were perceived as most valuable.
+          </p>
 
           <div class="vb-chart" aria-label="Audience research chart">
-            <div class="vb-chart-primary">
-              <strong>75</strong>
-              <span>MUSCLE FATIGUE</span>
-            </div>
             <div class="vb-chart-bars">
               <div class="vb-bar vb-bar-featured" style="--value: 75">
                 <span>An indicator of muscle fatigue</span><i></i><b>75</b>
@@ -269,15 +334,12 @@
               <div class="vb-bar" style="--value: 48"><span>Track my progress and performance</span><i></i><b>48</b></div>
             </div>
           </div>
-
-          <p class="vb-transition-label">WHAT THIS MEANT FOR THE DESIGN ↘</p>
         </div>
       </section>
 
       <section class="vb-section vb-insights" id="vitband-insights" aria-labelledby="insights-title" data-case-section>
         <div class="vb-container">
-          <p class="vb-index">06 / KEY INSIGHTS</p>
-          <h2 id="insights-title">DESIGN INSIGHTS</h2>
+          <p class="vb-index" id="insights-title">05 / KEY INSIGHTS</p>
           <div class="vb-insight-grid">
             <article>
               <span>01</span>
@@ -315,250 +377,113 @@
 
       <section class="vb-section vb-strategy" id="vitband-strategy" aria-labelledby="strategy-title" data-case-section>
         <div class="vb-container">
-          <p class="vb-index">07 / DESIGN STRATEGY</p>
-          <h2 id="strategy-title" class="vb-strategy-words"><span>DESIGN PRINCIPLES</span></h2>
+          <p class="vb-index" id="strategy-title">06 / DESIGN STRATEGIES</p>
           <div class="vb-strategy-grid">
-            <p><b>01 / CLEAR</b><br />Surface the most important information first.</p>
-            <p><b>02 / ACTIONABLE</b><br />Connect performance signals to meaningful next steps.</p>
-            <p><b>03 / MOTIVATING</b><br />Frame feedback around progress and accomplishment.</p>
-            <p><b>04 / CONSISTENT</b><br />Build a visual language that works across monitoring, coaching, and history.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="vb-section vb-lowfi" id="vitband-lowfi" aria-labelledby="lowfi-title" data-case-section>
-        <div class="vb-container">
-          <p class="vb-index">08 / EARLY EXPLORATION</p>
-          <div class="vb-grid vb-section-intro">
-            <h2 id="lowfi-title">LOW-FIDELITY WIREFRAMES</h2>
-            <p>
-              Before refining the visual language, I explored how key information should
-              be organized across the core product experience.
-            </p>
-          </div>
-
-          <div class="vb-lowfi-composition">
-            <p class="vb-annotation vb-annotation-dashboard"><span>01</span> ─────────→ DASHBOARD<br /><small>Current condition and immediate feedback.</small></p>
-            <figure>
-              <img src="assets/vitband/low-fidelity.png" alt="VITBAND low-fidelity wireframes" />
-            </figure>
-            <p class="vb-annotation vb-annotation-coach"><span>02</span> ─────────→ AI COACH<br /><small>Guidance within the training experience.</small></p>
-            <p class="vb-annotation vb-annotation-history"><span>03</span> ─────────→ HISTORY<br /><small>Progress patterns over time.</small></p>
-          </div>
-        </div>
-      </section>
-
-      <section class="vb-section vb-ai-decision" id="vitband-ai" aria-labelledby="ai-title" data-case-section>
-        <div class="vb-container">
-          <p class="vb-index">09 / KEY DESIGN DECISION</p>
-          <p class="vb-subindex">AI COACH / ITERATION 01</p>
-          <h2 id="ai-title">AI COACH ITERATION</h2>
-
-          <div class="vb-ai-flow">
-            <article class="vb-ai-before">
-              <span>BEFORE</span>
-              <h3>CHARACTER-DRIVEN AI ASSISTANT</h3>
-              <p>
-                The early concept gave AI Coach a stronger character presence to make the
-                product feel more conversational.
-              </p>
-              <img src="assets/vitband/coach-start.png" alt="Early VITBAND AI Coach interface" />
-            </article>
-            <article class="vb-ai-review">
-              <span>↓</span>
-              <h3>INTERNAL REVIEW</h3>
-              <p>
-                During internal design reviews, we found that the assistant competed with
-                the dashboard for attention and introduced another visual focal point into
-                an already data-heavy experience.
-              </p>
-              <b>→</b>
-            </article>
-            <article class="vb-ai-after">
-              <span>AFTER</span>
-              <h3>GUIDANCE-DRIVEN AI COACH</h3>
-              <p>
-                We reduced the character-driven elements and repositioned AI as a layer of
-                guidance within the training experience.
-              </p>
-              <img src="assets/vitband/coach-chat-2.png" alt="Refined VITBAND AI Coach interface" />
-            </article>
-          </div>
-
-          <div class="vb-ai-conclusion">
-            <p>AI ASSISTANT</p><span>→</span><p>TRAINING GUIDANCE</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="vb-section vb-energy" id="vitband-fatigue" aria-labelledby="energy-title" data-case-section>
-        <div class="vb-container">
-          <p class="vb-index">10 / KEY DESIGN DECISION</p>
-          <p class="vb-subindex">MUSCLE ENERGY / ITERATION 02</p>
-          <h2 id="energy-title">FATIGUE SCALE ITERATION</h2>
-
-          <div class="vb-energy-comparison">
             <article>
-              <span>BEFORE</span>
-              <div class="vb-number-line"><strong>100</strong><i></i><b>→</b><strong>0</strong></div>
-              <h3>DEPLETION MODEL</h3>
-              <p>
-                The original model represented muscle energy as a resource being depleted
-                throughout a workout.
-              </p>
+              <b>CLEAR</b>
+              <p>Surface the most important information first.</p>
             </article>
-            <div class="vb-energy-proposal"><span>MY DESIGN PROPOSAL</span><b>↓</b></div>
             <article>
-              <span>AFTER</span>
-              <div class="vb-number-line"><strong>0</strong><i></i><b>→</b><strong>100</strong></div>
-              <h3>PROGRESS MODEL</h3>
-              <p>
-                I proposed reversing the visual model so users could see their effort build
-                throughout a training session rather than watching a number move toward zero.
-              </p>
+              <b>ACTIONABLE</b>
+              <p>Connect performance signals to meaningful next steps.</p>
             </article>
-          </div>
-
-          <div class="vb-energy-copy vb-grid">
-            <p>
-              The original logic was technically understandable, but experientially it
-              created a negative signal: the harder users trained, the closer the interface
-              moved toward zero.
-            </p>
-            <p>
-              By reframing the visualization around accumulated effort, the same training
-              process could communicate progress and accomplishment more clearly.
-            </p>
+            <article>
+              <b>MOTIVATING</b>
+              <p>Frame feedback around progress and accomplishment.</p>
+            </article>
+            <article>
+              <b>CONSISTENT</b>
+              <p>Build a visual language that works across monitoring, coaching, and history.</p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="vb-section vb-highfi" id="vitband-highfi" aria-labelledby="highfi-title" data-case-section>
+      <section class="vb-section vb-decisions" id="vitband-decisions" aria-labelledby="decisions-title" data-case-section>
         <div class="vb-container">
-          <p class="vb-index">11 / HIGH-FIDELITY DESIGN</p>
-          <div class="vb-grid vb-section-intro">
-            <h2 id="highfi-title">HIGH-FIDELITY INTERFACE</h2>
-            <p>
-              The final visual direction brings together clearer information hierarchy,
-              simplified navigation, and a more focused system for communicating training data.
-            </p>
-          </div>
+          <p class="vb-index" id="decisions-title">07 / KEY DESIGN DECISIONS</p>
 
-          <div class="vb-showcase-meta" aria-live="polite">
-            <span>CURRENT SCREEN</span>
-            <strong data-vb-screen-count>01 / 09</strong>
-          </div>
-
-          <div class="screen-carousel vb-screen-carousel" data-carousel>
-            <button class="carousel-button carousel-button-prev" type="button" data-carousel-prev aria-label="Previous screen">
-              <span aria-hidden="true">←</span>
-            </button>
-            <div class="carousel-viewport">
-              <div class="carousel-track">
-                <figure class="screen-slide" data-screen-name="Dashboard">
-                  <img src="assets/vitband/dashboard-performance.png" alt="Dashboard performance overview screen" />
-                </figure>
-                <figure class="screen-slide" data-screen-name="Activation">
-                  <img src="assets/vitband/dashboard-activation.png" alt="Dashboard activation detail screen" />
-                </figure>
-                <figure class="screen-slide" data-screen-name="Load Balance">
-                  <img src="assets/vitband/dashboard-load.png" alt="Dashboard internal and external load screen" />
-                </figure>
-                <figure class="screen-slide" data-screen-name="Force + Velocity">
-                  <img src="assets/vitband/dashboard-force.png" alt="Dashboard force and velocity screen" />
-                </figure>
-                <figure class="screen-slide" data-screen-name="Muscle Fatigue">
-                  <img src="assets/vitband/dashboard-fatigue.png" alt="Dashboard fatigue detail screen" />
-                </figure>
-                <figure class="screen-slide" data-screen-name="AI Coach">
-                  <img src="assets/vitband/coach-start.png" alt="AI coach start screen" />
-                </figure>
-                <figure class="screen-slide" data-screen-name="Quick Actions">
-                  <img src="assets/vitband/coach-chat-2.png" alt="AI coach quick actions screen" />
-                </figure>
-                <figure class="screen-slide" data-screen-name="Coach Response">
-                  <img src="assets/vitband/coach-chat-1.png" alt="AI coach response screen" />
-                </figure>
-                <figure class="screen-slide" data-screen-name="Chat History">
-                  <img src="assets/vitband/coach-past-chat.png" alt="AI coach past chat history screen" />
-                </figure>
-              </div>
+          <div class="vb-decisions-panel">
+            <div class="vb-decisions-screens" aria-label="VITBAND dashboard interface comparisons">
+              <figure>
+                <img
+                  src="assets/vitband/dashboard-performance-overview.png"
+                  alt="VITBAND dashboard overview with the fatigue score and performance metrics"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="assets/vitband/dashboard-performance-detail.png"
+                  alt="VITBAND expanded performance dashboard with internal and external load details"
+                />
+              </figure>
             </div>
-            <button class="carousel-button carousel-button-next" type="button" data-carousel-next aria-label="Next screen">
-              <span aria-hidden="true">→</span>
-            </button>
-          </div>
 
-          <div class="vb-showcase-caption">
-            <h3 data-vb-screen-name>DASHBOARD</h3>
-            <p data-vb-screen-description>Performance overview and immediate training status.</p>
+            <div class="vb-decisions-list">
+              <article>
+                <h3>Fatigue Score</h3>
+                <p>
+                  Replaced a 100→0 energy score with a 0→100 fatigue score, so users can
+                  immediately read a higher number as more muscle fatigue.
+                </p>
+              </article>
+              <article>
+                <h3>Dashboard Hierarchy</h3>
+                <p>
+                  Made the fatigue score the focal point of a dashboard with 6+ metrics, so
+                  users can check their current state at a glance and explore the details
+                  when needed.
+                </p>
+              </article>
+              <article>
+                <h3>Recovery Guidance &amp; AI Coach</h3>
+                <p>
+                  Put a suggested recovery step directly on the dashboard and gave AI Coach
+                  four quick actions so users can start a follow-up conversation without
+                  having to write a question from scratch.
+                </p>
+              </article>
+            </div>
           </div>
-
-          <ol class="vb-screen-progress" aria-label="High-fidelity screen progress">
-            <li class="is-active" data-vb-screen-step>01</li><li data-vb-screen-step>02</li><li data-vb-screen-step>03</li>
-            <li data-vb-screen-step>04</li><li data-vb-screen-step>05</li><li data-vb-screen-step>06</li>
-            <li data-vb-screen-step>07</li><li data-vb-screen-step>08</li><li data-vb-screen-step>09</li>
-          </ol>
         </div>
       </section>
 
-      <section class="vb-section vb-hierarchy" id="vitband-hierarchy" aria-labelledby="hierarchy-title" data-case-section>
+      <section class="vb-section vb-coach-experience" id="vitband-ai-coach" aria-labelledby="coach-experience-title" data-case-section>
         <div class="vb-container">
-          <p class="vb-index">12 / INFORMATION HIERARCHY</p>
-          <div class="vb-grid vb-section-intro">
-            <h2 id="hierarchy-title">DASHBOARD INFORMATION HIERARCHY</h2>
+          <p class="vb-index" id="coach-experience-title">08 / KEY EXPERIENCE — AI COACH</p>
+          <div class="vb-coach-intro">
             <p>
-              During training, users should not need to study a dashboard. The interface
-              prioritizes immediate muscle condition and training guidance before secondary
-              historical information.
+              The dashboard shows users how fatigued they are. AI Coach helps them work
+              through what to do next. I designed four quick actions that give users a
+              starting point for interpreting their fatigue, thinking through recovery,
+              and asking follow-up questions about their training.
             </p>
           </div>
 
-          <div class="vb-hierarchy-visual">
-            <p class="vb-callout vb-callout-01">01 ─────────→ CURRENT STATUS</p>
-            <p class="vb-callout vb-callout-02">02 ─────────→ MUSCLE FATIGUE</p>
+          <div class="vb-coach-gallery" aria-label="AI Coach conversation flow">
             <figure>
-              <img src="assets/vitband/dashboard-performance.png" alt="VITBAND dashboard information hierarchy" />
+              <img
+                src="assets/vitband/ai-coach-01-start.png"
+                alt="AI Coach start screen with four quick actions"
+              />
             </figure>
-            <p class="vb-callout vb-callout-03">03 ─────────→ TRAINING GUIDANCE</p>
-            <p class="vb-callout vb-callout-04">04 ─────────→ WORKOUT PROGRESS</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="vb-section vb-outcome" id="vitband-outcome" aria-labelledby="outcome-title" data-case-section>
-        <div class="vb-container">
-          <p class="vb-index">13 / OUTCOME</p>
-          <div class="vb-grid vb-section-intro">
-            <h2 id="outcome-title">FINAL PRODUCT SCREENS</h2>
-            <p>
-              The final experience brings monitoring, coaching, workout history, and
-              performance feedback into one cohesive visual system.
-            </p>
-          </div>
-
-          <div class="vb-outcome-grid">
-            <figure class="vb-mockup vb-mockup-01">
-              <figcaption>REAL-TIME MONITORING ↘</figcaption>
-              <img src="assets/vitband/mockups/mockup-01.jpg" alt="VITBAND dashboard phone mockup in hand" />
+            <figure>
+              <img
+                src="assets/vitband/ai-coach-02-thinking.png"
+                alt="AI Coach processing a Make a Plan request"
+              />
             </figure>
-            <figure class="vb-mockup vb-mockup-02">
-              <img src="assets/vitband/mockups/mockup-02.jpg" alt="VITBAND analytics phone mockup in hand" />
+            <figure>
+              <img
+                src="assets/vitband/ai-coach-03-response.png"
+                alt="AI Coach recovery guidance response"
+              />
             </figure>
-            <figure class="vb-mockup vb-mockup-03">
-              <figcaption>TRAINING GUIDANCE ↘</figcaption>
-              <img src="assets/vitband/mockups/mockup-03.jpg" alt="VITBAND AI coach phone mockup outdoors" />
-            </figure>
-            <figure class="vb-mockup vb-mockup-04">
-              <figcaption>PROGRESS TRACKING ↘</figcaption>
-              <img src="assets/vitband/mockups/mockup-04.jpg" alt="VITBAND dashboard athletic phone mockup" />
-            </figure>
-            <figure class="vb-mockup vb-mockup-05">
-              <figcaption>WORKOUT HISTORY ↘</figcaption>
-              <img src="assets/vitband/mockups/mockup-05.jpg" alt="VITBAND chat history phone mockup" />
-            </figure>
-            <figure class="vb-mockup vb-mockup-06">
-              <img src="assets/vitband/mockups/mockup-06.jpg" alt="VITBAND coach close-up phone mockup" />
+            <figure>
+              <img
+                src="assets/vitband/ai-coach-04-history.png"
+                alt="AI Coach past conversation history"
+              />
             </figure>
           </div>
         </div>
@@ -566,7 +491,7 @@
 
       <section class="vb-section vb-recognition" id="vitband-recognition" aria-labelledby="recognition-title" data-case-section>
         <div class="vb-container">
-          <p class="vb-index">14 / RECOGNITION</p>
+          <p class="vb-index">09 / RECOGNITION</p>
           <div class="vb-grid">
             <h2 id="recognition-title">RED DOT<br />AWARD<br />2026</h2>
             <div>
@@ -574,26 +499,6 @@
               <p>
                 VITBAND was recognized with a 2026 Red Dot Award in Brands &amp;
                 Communication Design.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="vb-section vb-reflection" id="vitband-reflection" aria-labelledby="reflection-title" data-case-section>
-        <div class="vb-container">
-          <p class="vb-index">15 / REFLECTION</p>
-          <div class="vb-grid vb-section-intro">
-            <h2 id="reflection-title">REFLECTION</h2>
-            <div>
-              <p>
-                I learned that simplifying data requires prioritising what users need at
-                each moment, not simply removing information.
-              </p>
-              <p>
-                I also had to coordinate information hierarchy, interaction patterns, and
-                visual feedback across monitoring, coaching, and history instead of treating
-                each screen as an isolated interface.
               </p>
             </div>
           </div>
